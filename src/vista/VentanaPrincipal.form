@@ -207,6 +207,7 @@
                 </Property>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jpTrabajaEnMouseClicked"/>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jpTrabajaEnMouseEntered"/>
                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jpTrabajaEnMouseExited"/>
               </Events>
@@ -260,6 +261,7 @@
                 </Property>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jpProyectoMouseClicked"/>
                 <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jpProyectoMouseEntered"/>
                 <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jpProyectoMouseExited"/>
               </Events>

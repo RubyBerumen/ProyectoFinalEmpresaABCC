@@ -137,6 +137,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jpTrabajaEn.setBackground(new java.awt.Color(133, 39, 71));
         jpTrabajaEn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jpTrabajaEn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpTrabajaEnMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jpTrabajaEnMouseEntered(evt);
             }
@@ -171,6 +174,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jpProyecto.setBackground(new java.awt.Color(133, 39, 71));
         jpProyecto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jpProyecto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpProyectoMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jpProyectoMouseEntered(evt);
             }
@@ -279,6 +285,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         MenuEmpleado me = new MenuEmpleado();
         mostrarPanelMenuABCC(me);
     }//GEN-LAST:event_jpEmpleadoMouseClicked
+
+    private void jpTrabajaEnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpTrabajaEnMouseClicked
+        MenuTrabajaEn mt = new MenuTrabajaEn();
+        mostrarPanelMenuABCC(mt);
+    }//GEN-LAST:event_jpTrabajaEnMouseClicked
+
+    private void jpProyectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpProyectoMouseClicked
+        MenuProyecto mp = new MenuProyecto();
+        mostrarPanelMenuABCC(mp);
+    }//GEN-LAST:event_jpProyectoMouseClicked
 
     
     private void mostrarPanelMenuABCC (JPanel p){
