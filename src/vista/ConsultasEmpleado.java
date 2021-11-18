@@ -28,39 +28,40 @@ public class ConsultasEmpleado extends javax.swing.JPanel {
 
         Titulo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        FechaNac = new javax.swing.JLabel();
         jtfNombre = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jtfAp = new javax.swing.JTextField();
-        ApellidoP = new javax.swing.JLabel();
-        ApellidoM = new javax.swing.JLabel();
         jtfAm = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
-        Dni = new javax.swing.JLabel();
         jtfDni = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
-        Nombre = new javax.swing.JLabel();
         jcbDia = new javax.swing.JComboBox<>();
         jcbMes = new javax.swing.JComboBox<>();
         jcbAño = new javax.swing.JComboBox<>();
-        Direccion = new javax.swing.JLabel();
         jtfDireccion = new javax.swing.JTextField();
         jSeparator6 = new javax.swing.JSeparator();
-        Sexo = new javax.swing.JLabel();
         jcbSexo = new javax.swing.JComboBox<>();
-        Sueldo = new javax.swing.JLabel();
         jtfSueldo = new javax.swing.JTextField();
         jSeparator7 = new javax.swing.JSeparator();
-        DniSuper = new javax.swing.JLabel();
         jtfDniSuper = new javax.swing.JTextField();
         jSeparator8 = new javax.swing.JSeparator();
-        NoDpto = new javax.swing.JLabel();
         jtfNoDpto = new javax.swing.JTextField();
         jSeparator9 = new javax.swing.JSeparator();
         btnBuscar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButton4 = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        jRadioButton7 = new javax.swing.JRadioButton();
+        jRadioButton8 = new javax.swing.JRadioButton();
+        jRadioButton9 = new javax.swing.JRadioButton();
+        jRadioButton10 = new javax.swing.JRadioButton();
+        jRadioButton11 = new javax.swing.JRadioButton();
 
         setBackground(new java.awt.Color(245, 198, 165));
         setPreferredSize(new java.awt.Dimension(960, 600));
@@ -72,51 +73,26 @@ public class ConsultasEmpleado extends javax.swing.JPanel {
         add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, 41));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 880, 21));
 
-        FechaNac.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        FechaNac.setForeground(new java.awt.Color(102, 102, 102));
-        FechaNac.setText("Fecha de nacimiento");
-        add(FechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, 30));
-
         jtfNombre.setBorder(null);
         jtfNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfNombreActionPerformed(evt);
             }
         });
-        add(jtfNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 159, 30));
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 159, 20));
-        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 159, 20));
+        add(jtfNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 159, 30));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 159, 20));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 159, 20));
 
         jtfAp.setBorder(null);
-        add(jtfAp, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 159, 30));
-
-        ApellidoP.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        ApellidoP.setForeground(new java.awt.Color(102, 102, 102));
-        ApellidoP.setText("Apellido paterno");
-        add(ApellidoP, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, -1, 30));
-
-        ApellidoM.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        ApellidoM.setForeground(new java.awt.Color(102, 102, 102));
-        ApellidoM.setText("Apellido materno");
-        add(ApellidoM, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 110, -1, 30));
+        add(jtfAp, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 130, 159, 30));
 
         jtfAm.setBorder(null);
-        add(jtfAm, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, 159, 30));
-        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, 159, 20));
-
-        Dni.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        Dni.setForeground(new java.awt.Color(102, 102, 102));
-        Dni.setText("Dni");
-        add(Dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, 30));
+        add(jtfAm, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 130, 159, 30));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 160, 159, 20));
 
         jtfDni.setBorder(null);
-        add(jtfDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 159, 30));
-        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 159, 20));
-
-        Nombre.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        Nombre.setForeground(new java.awt.Color(102, 102, 102));
-        Nombre.setText("Nombre(s)");
-        add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, 30));
+        add(jtfDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 159, 30));
+        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 159, 20));
 
         jcbDia.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbDia.setForeground(new java.awt.Color(102, 102, 102));
@@ -126,7 +102,7 @@ public class ConsultasEmpleado extends javax.swing.JPanel {
                 jcbDiaActionPerformed(evt);
             }
         });
-        add(jcbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, -1, 30));
+        add(jcbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 190, -1, 30));
 
         jcbMes.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbMes.setForeground(new java.awt.Color(102, 102, 102));
@@ -136,7 +112,7 @@ public class ConsultasEmpleado extends javax.swing.JPanel {
                 jcbMesActionPerformed(evt);
             }
         });
-        add(jcbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, -1, 30));
+        add(jcbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, -1, 30));
 
         jcbAño.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAño.setForeground(new java.awt.Color(102, 102, 102));
@@ -146,21 +122,11 @@ public class ConsultasEmpleado extends javax.swing.JPanel {
                 jcbAñoActionPerformed(evt);
             }
         });
-        add(jcbAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 170, -1, 30));
-
-        Direccion.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        Direccion.setForeground(new java.awt.Color(102, 102, 102));
-        Direccion.setText("Dirección");
-        add(Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 170, -1, 30));
+        add(jcbAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 190, -1, 30));
 
         jtfDireccion.setBorder(null);
-        add(jtfDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 170, 190, 30));
-        add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 190, 20));
-
-        Sexo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        Sexo.setForeground(new java.awt.Color(102, 102, 102));
-        Sexo.setText("Sexo");
-        add(Sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, 30));
+        add(jtfDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 190, 190, 30));
+        add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 220, 190, 20));
 
         jcbSexo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbSexo.setForeground(new java.awt.Color(102, 102, 102));
@@ -170,55 +136,141 @@ public class ConsultasEmpleado extends javax.swing.JPanel {
                 jcbSexoActionPerformed(evt);
             }
         });
-        add(jcbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, -1, 30));
-
-        Sueldo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        Sueldo.setForeground(new java.awt.Color(102, 102, 102));
-        Sueldo.setText("Sueldo");
-        add(Sueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, 30));
+        add(jcbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, 30));
 
         jtfSueldo.setBorder(null);
-        add(jtfSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 130, 30));
-        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 130, 20));
-
-        DniSuper.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        DniSuper.setForeground(new java.awt.Color(102, 102, 102));
-        DniSuper.setText("Dni supervisor");
-        add(DniSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, -1, 30));
+        add(jtfSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 130, 30));
+        add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 130, 20));
 
         jtfDniSuper.setBorder(null);
-        add(jtfDniSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 159, 30));
-        add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 159, 20));
-
-        NoDpto.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        NoDpto.setForeground(new java.awt.Color(102, 102, 102));
-        NoDpto.setText("Número departamento");
-        add(NoDpto, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 230, -1, 30));
+        add(jtfDniSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 250, 159, 30));
+        add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 280, 159, 20));
 
         jtfNoDpto.setBorder(null);
-        add(jtfNoDpto, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 230, 40, 30));
-        add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 260, 40, 20));
+        add(jtfNoDpto, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 250, 40, 30));
+        add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 280, 40, 20));
 
         btnBuscar.setBackground(new java.awt.Color(162, 65, 107));
         btnBuscar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
         btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
         btnBuscar.setText("Buscar");
         btnBuscar.setBorder(null);
-        add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 120, 30));
+        add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 120, 30));
 
         btnBorrar.setBackground(new java.awt.Color(162, 65, 107));
         btnBorrar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
         btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
         btnBorrar.setText("Borrar");
         btnBorrar.setBorder(null);
-        add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, 120, 30));
+        add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 120, 30));
 
         btnCancelar.setBackground(new java.awt.Color(162, 65, 107));
         btnCancelar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
         btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
         btnCancelar.setText("Cancelar");
         btnCancelar.setBorder(null);
-        add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, 120, 30));
+        add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 320, 120, 30));
+
+        jRadioButton1.setBackground(new java.awt.Color(245, 198, 165));
+        jRadioButton1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jRadioButton1.setForeground(new java.awt.Color(102, 102, 102));
+        jRadioButton1.setText("Apellido materno");
+        add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, -1, 30));
+
+        jRadioButton2.setBackground(new java.awt.Color(245, 198, 165));
+        jRadioButton2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jRadioButton2.setForeground(new java.awt.Color(102, 102, 102));
+        jRadioButton2.setText("Dni");
+        add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+
+        jRadioButton3.setBackground(new java.awt.Color(245, 198, 165));
+        jRadioButton3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jRadioButton3.setForeground(new java.awt.Color(102, 102, 102));
+        jRadioButton3.setText("Fecha de nacimiento");
+        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton3ActionPerformed(evt);
+            }
+        });
+        add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, -1, 30));
+
+        jRadioButton4.setBackground(new java.awt.Color(245, 198, 165));
+        jRadioButton4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jRadioButton4.setForeground(new java.awt.Color(102, 102, 102));
+        jRadioButton4.setText("Apellido paterno");
+        jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton4ActionPerformed(evt);
+            }
+        });
+        add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, -1, 30));
+
+        jRadioButton5.setBackground(new java.awt.Color(245, 198, 165));
+        jRadioButton5.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jRadioButton5.setForeground(new java.awt.Color(102, 102, 102));
+        jRadioButton5.setText("Número departamento");
+        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton5ActionPerformed(evt);
+            }
+        });
+        add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 250, -1, -1));
+
+        jRadioButton6.setBackground(new java.awt.Color(245, 198, 165));
+        jRadioButton6.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jRadioButton6.setForeground(new java.awt.Color(102, 102, 102));
+        jRadioButton6.setText("Dirección");
+        add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 190, -1, 30));
+
+        jRadioButton7.setBackground(new java.awt.Color(245, 198, 165));
+        jRadioButton7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jRadioButton7.setForeground(new java.awt.Color(102, 102, 102));
+        jRadioButton7.setText("Nombre(s)");
+        add(jRadioButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, 30));
+
+        jRadioButton8.setBackground(new java.awt.Color(245, 198, 165));
+        jRadioButton8.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jRadioButton8.setForeground(new java.awt.Color(102, 102, 102));
+        jRadioButton8.setText("Todos");
+        jRadioButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton8ActionPerformed(evt);
+            }
+        });
+        add(jRadioButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+
+        jRadioButton9.setBackground(new java.awt.Color(245, 198, 165));
+        jRadioButton9.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jRadioButton9.setForeground(new java.awt.Color(102, 102, 102));
+        jRadioButton9.setText("Sexo");
+        jRadioButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton9ActionPerformed(evt);
+            }
+        });
+        add(jRadioButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, -1));
+
+        jRadioButton10.setBackground(new java.awt.Color(245, 198, 165));
+        jRadioButton10.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jRadioButton10.setForeground(new java.awt.Color(102, 102, 102));
+        jRadioButton10.setText("Sueldo");
+        jRadioButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton10ActionPerformed(evt);
+            }
+        });
+        add(jRadioButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, -1, -1));
+
+        jRadioButton11.setBackground(new java.awt.Color(245, 198, 165));
+        jRadioButton11.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jRadioButton11.setForeground(new java.awt.Color(102, 102, 102));
+        jRadioButton11.setText("Dni supervisor");
+        jRadioButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton11ActionPerformed(evt);
+            }
+        });
+        add(jRadioButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 250, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jcbAñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAñoActionPerformed
@@ -241,22 +293,51 @@ public class ConsultasEmpleado extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfNombreActionPerformed
 
+    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton3ActionPerformed
+
+    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton5ActionPerformed
+
+    private void jRadioButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton9ActionPerformed
+
+    private void jRadioButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton10ActionPerformed
+
+    private void jRadioButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton11ActionPerformed
+
+    private void jRadioButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton4ActionPerformed
+
+    private void jRadioButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton8ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ApellidoM;
-    private javax.swing.JLabel ApellidoP;
-    private javax.swing.JLabel Direccion;
-    private javax.swing.JLabel Dni;
-    private javax.swing.JLabel DniSuper;
-    private javax.swing.JLabel FechaNac;
-    private javax.swing.JLabel NoDpto;
-    private javax.swing.JLabel Nombre;
-    private javax.swing.JLabel Sexo;
-    private javax.swing.JLabel Sueldo;
     private javax.swing.JLabel Titulo;
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton10;
+    private javax.swing.JRadioButton jRadioButton11;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButton4;
+    private javax.swing.JRadioButton jRadioButton5;
+    private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JRadioButton jRadioButton7;
+    private javax.swing.JRadioButton jRadioButton8;
+    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
