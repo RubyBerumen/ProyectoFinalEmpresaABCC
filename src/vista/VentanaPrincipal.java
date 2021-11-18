@@ -45,12 +45,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jpBienvenido = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jpContenido = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1200, 700));
         setResizable(false);
 
-        background.setBackground(new java.awt.Color(245, 198, 165));
         background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jpMenu.setBackground(new java.awt.Color(133, 39, 71));
@@ -235,6 +234,21 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         background.add(jpBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 960, 100));
 
+        jpContenido.setBackground(new java.awt.Color(245, 198, 165));
+
+        javax.swing.GroupLayout jpContenidoLayout = new javax.swing.GroupLayout(jpContenido);
+        jpContenido.setLayout(jpContenidoLayout);
+        jpContenidoLayout.setHorizontalGroup(
+            jpContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 960, Short.MAX_VALUE)
+        );
+        jpContenidoLayout.setVerticalGroup(
+            jpContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+
+        background.add(jpContenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 960, 600));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -353,6 +367,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel jlTrabajaEn;
     private javax.swing.JPanel jpBienvenido;
+    private javax.swing.JPanel jpContenido;
     private javax.swing.JPanel jpEmpleado;
     private javax.swing.JPanel jpHorasEmpleado;
     private javax.swing.JPanel jpMenu;

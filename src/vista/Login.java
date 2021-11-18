@@ -39,8 +39,8 @@ public class Login extends javax.swing.JFrame {
         contraseñaPswf = new javax.swing.JPasswordField();
         jSeparator2 = new javax.swing.JSeparator();
         btnIngresar = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Iniciar sesión");
@@ -123,13 +123,12 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel1.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 100, 40));
 
-        jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("EMPRESA");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel2.setText("EMPRESA");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(433, 180, 110, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/building.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/building.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 250, 250));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -186,8 +185,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btnIngresar;
     private javax.swing.JPasswordField contraseñaPswf;
     private javax.swing.JLabel imgUser;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
