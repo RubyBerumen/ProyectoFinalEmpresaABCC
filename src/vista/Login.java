@@ -29,6 +29,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnIngresar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         imgUser = new javax.swing.JLabel();
         lblIniSesion = new javax.swing.JLabel();
@@ -38,9 +39,25 @@ public class Login extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         contraseñaPswf = new javax.swing.JPasswordField();
         jSeparator2 = new javax.swing.JSeparator();
-        btnIngresar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        btnIngresar1 = new javax.swing.JButton();
+
+        btnIngresar.setBackground(new java.awt.Color(133, 39, 71));
+        btnIngresar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
+        btnIngresar.setText("Ingresar");
+        btnIngresar.setBorder(null);
+        btnIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnIngresarMouseClicked(evt);
+            }
+        });
+        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresarActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Iniciar sesión");
@@ -106,29 +123,29 @@ public class Login extends javax.swing.JFrame {
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 290, 20));
 
-        btnIngresar.setBackground(new java.awt.Color(133, 39, 71));
-        btnIngresar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
-        btnIngresar.setText("Ingresar");
-        btnIngresar.setBorder(null);
-        btnIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnIngresarMouseClicked(evt);
-            }
-        });
-        btnIngresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIngresarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 100, 40));
-
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         jLabel2.setText("EMPRESA");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(433, 180, 110, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/building.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 250, 250));
+
+        btnIngresar1.setBackground(new java.awt.Color(133, 39, 71));
+        btnIngresar1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        btnIngresar1.setForeground(new java.awt.Color(255, 255, 255));
+        btnIngresar1.setText("Ingresar");
+        btnIngresar1.setBorder(null);
+        btnIngresar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnIngresar1MouseClicked(evt);
+            }
+        });
+        btnIngresar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresar1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnIngresar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, 100, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -176,6 +193,14 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnIngresarMouseClicked
 
+    private void btnIngresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIngresar1ActionPerformed
+
+    private void btnIngresar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresar1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIngresar1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -183,6 +208,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIngresar;
+    private javax.swing.JButton btnIngresar1;
     private javax.swing.JPasswordField contraseñaPswf;
     private javax.swing.JLabel imgUser;
     private javax.swing.JLabel jLabel1;

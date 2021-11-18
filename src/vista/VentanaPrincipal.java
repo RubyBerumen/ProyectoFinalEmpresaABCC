@@ -321,6 +321,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jpBienvenido.repaint();
     }
     
+    
+    
    
     /**
      * @param args the command line arguments
@@ -374,4 +376,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jpProyecto;
     private javax.swing.JPanel jpTrabajaEn;
     // End of variables declaration//GEN-END:variables
+
+    public JPanel getJpContenido() {
+        return jpContenido;
+    }
 }

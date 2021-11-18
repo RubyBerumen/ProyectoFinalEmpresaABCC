@@ -4,7 +4,9 @@
  */
 package vista;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
+import javax.swing.JPanel;
 
 /**
  *
@@ -44,6 +46,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         btnAltasEmp.setBackground(new java.awt.Color(162, 65, 107));
         btnAltasEmp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAltasEmp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAltasEmpMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnAltasEmpMouseEntered(evt);
             }
@@ -214,7 +219,24 @@ public class MenuEmpleado extends javax.swing.JPanel {
         btnConsultasEmp.setBackground(c1);
     }//GEN-LAST:event_btnConsultasEmpMouseExited
 
+    private void btnAltasEmpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAltasEmpMouseClicked
+        AltasEmpleado ae = new AltasEmpleado();
+        mostrarPanelContenido(ae);
+    }//GEN-LAST:event_btnAltasEmpMouseClicked
 
+    
+    private void mostrarPanelContenido (JPanel p){
+        p.setSize(960, 600);
+        p.setLocation(0, 0);
+        
+        vp.getJpContenido().removeAll();
+        vp.getJpContenido().add(p, BorderLayout.CENTER);
+        vp.getJpContenido().revalidate();
+        vp.getJpContenido().repaint();
+       
+    }
+
+    VentanaPrincipal vp = new VentanaPrincipal();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnAltasEmp;
     private javax.swing.JPanel btnBajasEmp;
