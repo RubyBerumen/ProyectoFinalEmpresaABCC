@@ -28,7 +28,7 @@ public class ResultSetTableModel extends AbstractTableModel {
       Class.forName( controlador );
 
       // conectarse a la base de datos
-      conexion = DriverManager.getConnection( url,"root","aguacate" );
+      conexion = DriverManager.getConnection( url,"ruby","aguacate" );
 
       // crear objeto Statement para consultar la base de datos
       instruccion = conexion.createStatement(

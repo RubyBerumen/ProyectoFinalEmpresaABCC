@@ -4,19 +4,14 @@
  */
 package vista;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import javax.swing.JPanel;
-
 /**
  *
  * @author clara
  */
 public class MenuEmpleado extends javax.swing.JPanel {
-     Color c1 = new Color(162,65,107);
-     Color c2 = new Color(190,65,100);
+
     /**
-     * Creates new form MenuEmpleado
+     * Creates new form MenuEmpleado1
      */
     public MenuEmpleado() {
         initComponents();
@@ -31,220 +26,376 @@ public class MenuEmpleado extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAltasEmp = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        btnBajasEmp = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        btnConsultasEmp = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        btnCambiosEmp = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        jpTitulo = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jtpContenidoABCC = new javax.swing.JTabbedPane();
+        jpAltas = new javax.swing.JPanel();
+        jSeparator1 = new javax.swing.JSeparator();
+        Titulo = new javax.swing.JLabel();
+        Nombre = new javax.swing.JLabel();
+        jtfNombre = new javax.swing.JTextField();
+        jSeparator2 = new javax.swing.JSeparator();
+        ApellidoP = new javax.swing.JLabel();
+        jtfAp = new javax.swing.JTextField();
+        jSeparator3 = new javax.swing.JSeparator();
+        ApellidoM = new javax.swing.JLabel();
+        jtfAm = new javax.swing.JTextField();
+        jSeparator4 = new javax.swing.JSeparator();
+        Dni = new javax.swing.JLabel();
+        jtfDni = new javax.swing.JTextField();
+        jSeparator5 = new javax.swing.JSeparator();
+        FechaNac = new javax.swing.JLabel();
+        jcbDia = new javax.swing.JComboBox<>();
+        jcbMes = new javax.swing.JComboBox<>();
+        jcbAño = new javax.swing.JComboBox<>();
+        Direccion = new javax.swing.JLabel();
+        jtfDireccion = new javax.swing.JTextField();
+        jSeparator6 = new javax.swing.JSeparator();
+        Sexo = new javax.swing.JLabel();
+        jcbSexo = new javax.swing.JComboBox<>();
+        Sueldo = new javax.swing.JLabel();
+        jtfSueldo = new javax.swing.JTextField();
+        jSeparator7 = new javax.swing.JSeparator();
+        DniSuper = new javax.swing.JLabel();
+        jtfDniSuper = new javax.swing.JTextField();
+        jSeparator8 = new javax.swing.JSeparator();
+        NoDpto = new javax.swing.JLabel();
+        jtfNoDpto = new javax.swing.JTextField();
+        jSeparator9 = new javax.swing.JSeparator();
+        btnCancelar = new javax.swing.JButton();
+        btnBorrar = new javax.swing.JButton();
+        btnAgregar = new javax.swing.JButton();
+        jpBajas = new javax.swing.JPanel();
+        jpCambios = new javax.swing.JPanel();
+        jpConsultas = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
 
-        setPreferredSize(new java.awt.Dimension(960, 100));
+        setBackground(new java.awt.Color(245, 198, 165));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnAltasEmp.setBackground(new java.awt.Color(162, 65, 107));
-        btnAltasEmp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAltasEmp.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAltasEmpMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnAltasEmpMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnAltasEmpMouseExited(evt);
+        jpTitulo.setBackground(new java.awt.Color(162, 65, 107));
+
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Empleado");
+
+        javax.swing.GroupLayout jpTituloLayout = new javax.swing.GroupLayout(jpTitulo);
+        jpTitulo.setLayout(jpTituloLayout);
+        jpTituloLayout.setHorizontalGroup(
+            jpTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpTituloLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel1)
+                .addContainerGap(819, Short.MAX_VALUE))
+        );
+        jpTituloLayout.setVerticalGroup(
+            jpTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTituloLayout.createSequentialGroup()
+                .addContainerGap(39, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(30, 30, 30))
+        );
+
+        add(jpTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 960, 100));
+
+        jtpContenidoABCC.setBackground(new java.awt.Color(245, 198, 165));
+        jtpContenidoABCC.setForeground(new java.awt.Color(102, 102, 102));
+        jtpContenidoABCC.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+
+        jpAltas.setBackground(new java.awt.Color(245, 198, 165));
+        jpAltas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jpAltas.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 880, 21));
+
+        Titulo.setBackground(new java.awt.Color(255, 255, 255));
+        Titulo.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
+        Titulo.setForeground(new java.awt.Color(255, 255, 255));
+        Titulo.setText("Agregar Empleado");
+        jpAltas.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, 41));
+
+        Nombre.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Nombre.setForeground(new java.awt.Color(102, 102, 102));
+        Nombre.setText("Nombre(s)");
+        jpAltas.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, 30));
+
+        jtfNombre.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNombre.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfNombre.setBorder(null);
+        jtfNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNombreActionPerformed(evt);
             }
         });
-
-        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Altas");
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        javax.swing.GroupLayout btnAltasEmpLayout = new javax.swing.GroupLayout(btnAltasEmp);
-        btnAltasEmp.setLayout(btnAltasEmpLayout);
-        btnAltasEmpLayout.setHorizontalGroup(
-            btnAltasEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnAltasEmpLayout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(jLabel3)
-                .addContainerGap(109, Short.MAX_VALUE))
-        );
-        btnAltasEmpLayout.setVerticalGroup(
-            btnAltasEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnAltasEmpLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel3)
-                .addContainerGap(40, Short.MAX_VALUE))
-        );
-
-        add(btnAltasEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 100));
-
-        btnBajasEmp.setBackground(new java.awt.Color(162, 65, 107));
-        btnBajasEmp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnBajasEmp.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnBajasEmpMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnBajasEmpMouseExited(evt);
+        jtfNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfNombreKeyTyped(evt);
             }
         });
+        jpAltas.add(jtfNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 159, 30));
 
-        jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Bajas");
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jpAltas.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 159, 20));
 
-        javax.swing.GroupLayout btnBajasEmpLayout = new javax.swing.GroupLayout(btnBajasEmp);
-        btnBajasEmp.setLayout(btnBajasEmpLayout);
-        btnBajasEmpLayout.setHorizontalGroup(
-            btnBajasEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnBajasEmpLayout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(jLabel4)
-                .addContainerGap(104, Short.MAX_VALUE))
-        );
-        btnBajasEmpLayout.setVerticalGroup(
-            btnBajasEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnBajasEmpLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel4)
-                .addContainerGap(40, Short.MAX_VALUE))
-        );
+        ApellidoP.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        ApellidoP.setForeground(new java.awt.Color(102, 102, 102));
+        ApellidoP.setText("Apellido paterno");
+        jpAltas.add(ApellidoP, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, -1, 30));
 
-        add(btnBajasEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 240, 100));
+        jtfAp.setBackground(new java.awt.Color(245, 198, 165));
+        jtfAp.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfAp.setBorder(null);
+        jpAltas.add(jtfAp, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 159, 30));
 
-        btnConsultasEmp.setBackground(new java.awt.Color(162, 65, 107));
-        btnConsultasEmp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnConsultasEmp.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnConsultasEmpMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnConsultasEmpMouseExited(evt);
-            }
-        });
+        jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
+        jpAltas.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 159, 20));
 
-        jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Consultas");
-        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        ApellidoM.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        ApellidoM.setForeground(new java.awt.Color(102, 102, 102));
+        ApellidoM.setText("Apellido materno");
+        jpAltas.add(ApellidoM, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 110, -1, 30));
 
-        javax.swing.GroupLayout btnConsultasEmpLayout = new javax.swing.GroupLayout(btnConsultasEmp);
-        btnConsultasEmp.setLayout(btnConsultasEmpLayout);
-        btnConsultasEmpLayout.setHorizontalGroup(
-            btnConsultasEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnConsultasEmpLayout.createSequentialGroup()
-                .addContainerGap(79, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(76, 76, 76))
-        );
-        btnConsultasEmpLayout.setVerticalGroup(
-            btnConsultasEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnConsultasEmpLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jLabel5)
-                .addContainerGap(38, Short.MAX_VALUE))
-        );
+        jtfAm.setBackground(new java.awt.Color(245, 198, 165));
+        jtfAm.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfAm.setBorder(null);
+        jpAltas.add(jtfAm, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, 159, 30));
 
-        add(btnConsultasEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 240, 100));
+        jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
+        jpAltas.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, 159, 20));
 
-        btnCambiosEmp.setBackground(new java.awt.Color(162, 65, 107));
-        btnCambiosEmp.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCambiosEmp.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnCambiosEmpMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnCambiosEmpMouseExited(evt);
+        Dni.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Dni.setForeground(new java.awt.Color(102, 102, 102));
+        Dni.setText("Dni");
+        jpAltas.add(Dni, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, 30));
+
+        jtfDni.setBackground(new java.awt.Color(245, 198, 165));
+        jtfDni.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfDni.setBorder(null);
+        jpAltas.add(jtfDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 159, 30));
+
+        jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
+        jpAltas.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 159, 20));
+
+        FechaNac.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        FechaNac.setForeground(new java.awt.Color(102, 102, 102));
+        FechaNac.setText("Fecha de nacimiento");
+        jpAltas.add(FechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, 30));
+
+        jcbDia.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jcbDia.setForeground(new java.awt.Color(102, 102, 102));
+        jcbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        jcbDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbDiaActionPerformed(evt);
             }
         });
+        jpAltas.add(jcbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, -1, 30));
 
-        jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Cambios");
-        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jcbMes.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jcbMes.setForeground(new java.awt.Color(102, 102, 102));
+        jcbMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Nov", "Dic" }));
+        jcbMes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbMesActionPerformed(evt);
+            }
+        });
+        jpAltas.add(jcbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, -1, 30));
 
-        javax.swing.GroupLayout btnCambiosEmpLayout = new javax.swing.GroupLayout(btnCambiosEmp);
-        btnCambiosEmp.setLayout(btnCambiosEmpLayout);
-        btnCambiosEmpLayout.setHorizontalGroup(
-            btnCambiosEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnCambiosEmpLayout.createSequentialGroup()
-                .addContainerGap(85, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addGap(76, 76, 76))
+        jcbAño.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jcbAño.setForeground(new java.awt.Color(102, 102, 102));
+        jcbAño.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005" }));
+        jcbAño.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbAñoActionPerformed(evt);
+            }
+        });
+        jpAltas.add(jcbAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, -1, 30));
+
+        Direccion.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Direccion.setForeground(new java.awt.Color(102, 102, 102));
+        Direccion.setText("Dirección");
+        jpAltas.add(Direccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 170, -1, 30));
+
+        jtfDireccion.setBackground(new java.awt.Color(245, 198, 165));
+        jtfDireccion.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfDireccion.setBorder(null);
+        jpAltas.add(jtfDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 170, 190, 30));
+
+        jSeparator6.setForeground(new java.awt.Color(255, 255, 255));
+        jpAltas.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 190, 20));
+
+        Sexo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Sexo.setForeground(new java.awt.Color(102, 102, 102));
+        Sexo.setText("Sexo");
+        jpAltas.add(Sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, 30));
+
+        jcbSexo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jcbSexo.setForeground(new java.awt.Color(102, 102, 102));
+        jcbSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M", "H" }));
+        jcbSexo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbSexoActionPerformed(evt);
+            }
+        });
+        jpAltas.add(jcbSexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, -1, 30));
+
+        Sueldo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Sueldo.setForeground(new java.awt.Color(102, 102, 102));
+        Sueldo.setText("Sueldo");
+        jpAltas.add(Sueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, 30));
+
+        jtfSueldo.setBackground(new java.awt.Color(245, 198, 165));
+        jtfSueldo.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfSueldo.setBorder(null);
+        jpAltas.add(jtfSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 130, 30));
+
+        jSeparator7.setForeground(new java.awt.Color(255, 255, 255));
+        jpAltas.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 130, 20));
+
+        DniSuper.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        DniSuper.setForeground(new java.awt.Color(102, 102, 102));
+        DniSuper.setText("Dni supervisor");
+        jpAltas.add(DniSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, -1, 30));
+
+        jtfDniSuper.setBackground(new java.awt.Color(245, 198, 165));
+        jtfDniSuper.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfDniSuper.setBorder(null);
+        jpAltas.add(jtfDniSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 159, 30));
+
+        jSeparator8.setForeground(new java.awt.Color(255, 255, 255));
+        jpAltas.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 159, 20));
+
+        NoDpto.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NoDpto.setForeground(new java.awt.Color(102, 102, 102));
+        NoDpto.setText("Número departamento");
+        jpAltas.add(NoDpto, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 230, -1, 30));
+
+        jtfNoDpto.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNoDpto.setBorder(null);
+        jpAltas.add(jtfNoDpto, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 230, 40, 30));
+        jpAltas.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 260, 40, 20));
+
+        btnCancelar.setBackground(new java.awt.Color(162, 65, 107));
+        btnCancelar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setText("Cancelar");
+        btnCancelar.setBorder(null);
+        jpAltas.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, 120, 30));
+
+        btnBorrar.setBackground(new java.awt.Color(162, 65, 107));
+        btnBorrar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar.setText("Borrar");
+        btnBorrar.setBorder(null);
+        jpAltas.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, 120, 30));
+
+        btnAgregar.setBackground(new java.awt.Color(162, 65, 107));
+        btnAgregar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnAgregar.setForeground(new java.awt.Color(255, 255, 255));
+        btnAgregar.setText("Agregar");
+        btnAgregar.setBorder(null);
+        jpAltas.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 120, 30));
+
+        jtpContenidoABCC.addTab("Altas", jpAltas);
+
+        jpBajas.setBackground(new java.awt.Color(245, 198, 165));
+        jpBajas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jtpContenidoABCC.addTab("Bajas", jpBajas);
+
+        jpCambios.setBackground(new java.awt.Color(245, 198, 165));
+        jpCambios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jtpContenidoABCC.addTab("Cambios", jpCambios);
+
+        jpConsultas.setBackground(new java.awt.Color(245, 198, 165));
+        jpConsultas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jtpContenidoABCC.addTab("Consultas", jpConsultas);
+
+        add(jtpContenidoABCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 390));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 960, Short.MAX_VALUE)
         );
-        btnCambiosEmpLayout.setVerticalGroup(
-            btnCambiosEmpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(btnCambiosEmpLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jLabel6)
-                .addContainerGap(38, Short.MAX_VALUE))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 210, Short.MAX_VALUE)
         );
 
-        add(btnCambiosEmp, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 240, 100));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 960, 210));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAltasEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAltasEmpMouseEntered
-        btnAltasEmp.setBackground(c2);
-    }//GEN-LAST:event_btnAltasEmpMouseEntered
+    private void jtfNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNombreActionPerformed
 
-    private void btnAltasEmpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAltasEmpMouseExited
-        btnAltasEmp.setBackground(c1);
-    }//GEN-LAST:event_btnAltasEmpMouseExited
+    private void jcbDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbDiaActionPerformed
 
-    private void btnBajasEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBajasEmpMouseEntered
-        btnBajasEmp.setBackground(c2);
-    }//GEN-LAST:event_btnBajasEmpMouseEntered
+    private void jcbMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbMesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbMesActionPerformed
 
-    private void btnBajasEmpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBajasEmpMouseExited
-        btnBajasEmp.setBackground(c1);
-    }//GEN-LAST:event_btnBajasEmpMouseExited
+    private void jcbAñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAñoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbAñoActionPerformed
 
-    private void btnCambiosEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCambiosEmpMouseEntered
-        btnCambiosEmp.setBackground(c2);
-    }//GEN-LAST:event_btnCambiosEmpMouseEntered
+    private void jcbSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbSexoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbSexoActionPerformed
 
-    private void btnCambiosEmpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCambiosEmpMouseExited
-        btnCambiosEmp.setBackground(c1);
-    }//GEN-LAST:event_btnCambiosEmpMouseExited
+    private void jtfNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNombreKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNombreKeyTyped
 
-    private void btnConsultasEmpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConsultasEmpMouseEntered
-        btnConsultasEmp.setBackground(c2);
-    }//GEN-LAST:event_btnConsultasEmpMouseEntered
 
-    private void btnConsultasEmpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConsultasEmpMouseExited
-        btnConsultasEmp.setBackground(c1);
-    }//GEN-LAST:event_btnConsultasEmpMouseExited
-
-    private void btnAltasEmpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAltasEmpMouseClicked
-        AltasEmpleado ae = new AltasEmpleado();
-        mostrarPanelContenido(ae);
-    }//GEN-LAST:event_btnAltasEmpMouseClicked
-
-    
-    private void mostrarPanelContenido (JPanel p){
-        p.setSize(960, 600);
-        p.setLocation(0, 0);
-        
-        vp.getJpContenido().removeAll();
-        vp.getJpContenido().add(p, BorderLayout.CENTER);
-        vp.getJpContenido().revalidate();
-        vp.getJpContenido().repaint();
-       
-    }
-
-    VentanaPrincipal vp = new VentanaPrincipal();
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel btnAltasEmp;
-    private javax.swing.JPanel btnBajasEmp;
-    private javax.swing.JPanel btnCambiosEmp;
-    private javax.swing.JPanel btnConsultasEmp;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel ApellidoM;
+    private javax.swing.JLabel ApellidoP;
+    private javax.swing.JLabel Direccion;
+    private javax.swing.JLabel Dni;
+    private javax.swing.JLabel DniSuper;
+    private javax.swing.JLabel FechaNac;
+    private javax.swing.JLabel NoDpto;
+    private javax.swing.JLabel Nombre;
+    private javax.swing.JLabel Sexo;
+    private javax.swing.JLabel Sueldo;
+    private javax.swing.JLabel Titulo;
+    private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnBorrar;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JComboBox<String> jcbAño;
+    private javax.swing.JComboBox<String> jcbDia;
+    private javax.swing.JComboBox<String> jcbMes;
+    private javax.swing.JComboBox<String> jcbSexo;
+    private javax.swing.JPanel jpAltas;
+    private javax.swing.JPanel jpBajas;
+    private javax.swing.JPanel jpCambios;
+    private javax.swing.JPanel jpConsultas;
+    private javax.swing.JPanel jpTitulo;
+    private javax.swing.JTextField jtfAm;
+    private javax.swing.JTextField jtfAp;
+    private javax.swing.JTextField jtfDireccion;
+    private javax.swing.JTextField jtfDni;
+    private javax.swing.JTextField jtfDniSuper;
+    private javax.swing.JTextField jtfNoDpto;
+    private javax.swing.JTextField jtfNombre;
+    private javax.swing.JTextField jtfSueldo;
+    private javax.swing.JTabbedPane jtpContenidoABCC;
     // End of variables declaration//GEN-END:variables
 }

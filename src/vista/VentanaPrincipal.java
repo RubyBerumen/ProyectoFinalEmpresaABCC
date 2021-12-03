@@ -43,8 +43,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jlTrabajaEn = new javax.swing.JLabel();
         jpProyecto = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        jpBienvenido = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jpContenido = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -212,31 +210,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         background.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 700));
 
-        jpBienvenido.setBackground(new java.awt.Color(162, 65, 107));
-
-        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 21)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Bienvenid@ a empresa");
-
-        javax.swing.GroupLayout jpBienvenidoLayout = new javax.swing.GroupLayout(jpBienvenido);
-        jpBienvenido.setLayout(jpBienvenidoLayout);
-        jpBienvenidoLayout.setHorizontalGroup(
-            jpBienvenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBienvenidoLayout.createSequentialGroup()
-                .addContainerGap(372, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(356, 356, 356))
-        );
-        jpBienvenidoLayout.setVerticalGroup(
-            jpBienvenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpBienvenidoLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel2)
-                .addContainerGap(36, Short.MAX_VALUE))
-        );
-
-        background.add(jpBienvenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 960, 100));
-
         jpContenido.setBackground(new java.awt.Color(245, 198, 165));
 
         javax.swing.GroupLayout jpContenidoLayout = new javax.swing.GroupLayout(jpContenido);
@@ -247,10 +220,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         );
         jpContenidoLayout.setVerticalGroup(
             jpContenidoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 700, Short.MAX_VALUE)
         );
 
-        background.add(jpContenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 960, 600));
+        background.add(jpContenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 960, 700));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -301,6 +274,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void jpEmpleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpEmpleadoMouseClicked
         MenuEmpleado me = new MenuEmpleado();
         mostrarPanelMenuABCC(me);
+        
     }//GEN-LAST:event_jpEmpleadoMouseClicked
 
     private void jpTrabajaEnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpTrabajaEnMouseClicked
@@ -318,16 +292,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jpHorasEmpleadoMouseClicked
 
     
+        
     private void mostrarPanelMenuABCC (JPanel p){
-        p.setSize(960, 100);
+        p.setSize(960, 700);
         p.setLocation(0, 0);
         
-        jpBienvenido.removeAll();
-        jpBienvenido.add(p, BorderLayout.CENTER);
-        jpBienvenido.revalidate();
-        jpBienvenido.repaint();
+        jpContenido.removeAll();
+        jpContenido.add(p, BorderLayout.CENTER);
+        jpContenido.revalidate();
+        jpContenido.repaint();
     }
-    
     
     
    
@@ -369,13 +343,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel jlTrabajaEn;
-    private javax.swing.JPanel jpBienvenido;
     private javax.swing.JPanel jpContenido;
     private javax.swing.JPanel jpEmpleado;
     private javax.swing.JPanel jpHorasEmpleado;
