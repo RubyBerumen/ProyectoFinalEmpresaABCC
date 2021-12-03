@@ -64,6 +64,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jpHorasEmpleado.setBackground(new java.awt.Color(133, 39, 71));
         jpHorasEmpleado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jpHorasEmpleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jpHorasEmpleadoMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jpHorasEmpleadoMouseEntered(evt);
             }
@@ -309,6 +312,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         MenuProyecto mp = new MenuProyecto();
         mostrarPanelMenuABCC(mp);
     }//GEN-LAST:event_jpProyectoMouseClicked
+
+    private void jpHorasEmpleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpHorasEmpleadoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jpHorasEmpleadoMouseClicked
 
     
     private void mostrarPanelMenuABCC (JPanel p){

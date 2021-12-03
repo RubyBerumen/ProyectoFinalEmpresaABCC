@@ -8,12 +8,12 @@ package vista;
  *
  * @author clara
  */
-public class AltasTrabajaEn extends javax.swing.JPanel {
+public class CambiosTrabajaEn extends javax.swing.JPanel {
 
     /**
      * Creates new form AltasEmpleado
      */
-    public AltasTrabajaEn() {
+    public CambiosTrabajaEn() {
         initComponents();
     }
 
@@ -28,12 +28,13 @@ public class AltasTrabajaEn extends javax.swing.JPanel {
 
         Titulo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        FechaNac = new javax.swing.JLabel();
         DniEmpleado = new javax.swing.JLabel();
         jtfDniEmpleado = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
+        FechaNac = new javax.swing.JLabel();
         Horas = new javax.swing.JLabel();
-        btnAgregar = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jtfNumProyecto = new javax.swing.JTextField();
@@ -47,14 +48,9 @@ public class AltasTrabajaEn extends javax.swing.JPanel {
 
         Titulo.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
         Titulo.setForeground(new java.awt.Color(255, 255, 255));
-        Titulo.setText("Agregar en que trabaja un empleado");
+        Titulo.setText("Modificar en que trabaja un empleado");
         add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 30, 500, 41));
         add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 840, 21));
-
-        FechaNac.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        FechaNac.setForeground(new java.awt.Color(102, 102, 102));
-        FechaNac.setText("Número de proyecto");
-        add(FechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
 
         DniEmpleado.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         DniEmpleado.setForeground(new java.awt.Color(102, 102, 102));
@@ -65,32 +61,48 @@ public class AltasTrabajaEn extends javax.swing.JPanel {
         add(jtfDniEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 159, 30));
         add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 159, 20));
 
+        FechaNac.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        FechaNac.setForeground(new java.awt.Color(102, 102, 102));
+        FechaNac.setText("Número de proyecto");
+        add(FechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
+
         Horas.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         Horas.setForeground(new java.awt.Color(102, 102, 102));
         Horas.setText("Horas");
         add(Horas, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, -1, 30));
 
-        btnAgregar.setBackground(new java.awt.Color(162, 65, 107));
-        btnAgregar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnAgregar.setForeground(new java.awt.Color(255, 255, 255));
-        btnAgregar.setText("Agregar");
-        btnAgregar.setBorder(null);
-        btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 120, 30));
+        btnBuscar.setBackground(new java.awt.Color(162, 65, 107));
+        btnBuscar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscar.setText("Buscar");
+        btnBuscar.setBorder(null);
+        add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, 120, 30));
+
+        btnEliminar.setBackground(new java.awt.Color(162, 65, 107));
+        btnEliminar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminar.setText("Guardar cambios");
+        btnEliminar.setBorder(null);
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
+        add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 180, 150, 30));
 
         btnBorrar.setBackground(new java.awt.Color(162, 65, 107));
         btnBorrar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
         btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
         btnBorrar.setText("Borrar");
         btnBorrar.setBorder(null);
-        add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 120, 30));
+        add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 180, 120, 30));
 
         btnCancelar.setBackground(new java.awt.Color(162, 65, 107));
         btnCancelar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
         btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
         btnCancelar.setText("Cancelar");
         btnCancelar.setBorder(null);
-        add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, 120, 30));
+        add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 180, 120, 30));
 
         jtfNumProyecto.setBorder(null);
         add(jtfNumProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 50, 30));
@@ -101,15 +113,20 @@ public class AltasTrabajaEn extends javax.swing.JPanel {
         add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 140, 80, 20));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEliminarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DniEmpleado;
     private javax.swing.JLabel FechaNac;
     private javax.swing.JLabel Horas;
     private javax.swing.JLabel Titulo;
-    private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnBorrar;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnEliminar;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
