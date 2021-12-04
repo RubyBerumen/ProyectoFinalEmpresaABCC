@@ -286,10 +286,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void jpProyectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpProyectoMouseClicked
         MenuProyecto mp = new MenuProyecto();
         mostrarPanelMenuABCC(mp);
+        mp.mostrarTabla();
     }//GEN-LAST:event_jpProyectoMouseClicked
 
     private void jpHorasEmpleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpHorasEmpleadoMouseClicked
-        // TODO add your handling code here:
+        MenuHorasEmpleado mhe = new MenuHorasEmpleado();
+        mostrarPanelMenuABCC(mhe);
+        mhe.mostrarTabla();
+        
     }//GEN-LAST:event_jpHorasEmpleadoMouseClicked
 
     

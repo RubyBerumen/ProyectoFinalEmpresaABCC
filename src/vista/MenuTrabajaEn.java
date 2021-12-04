@@ -4,6 +4,10 @@
  */
 package vista;
 
+import java.awt.Component;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+
 /**
  *
  * @author clara
@@ -32,42 +36,42 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         jpAltas = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jtfDniEmpleado = new javax.swing.JTextField();
         DniEmpleado = new javax.swing.JLabel();
+        jtfDniEmpleado = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
-        FechaNac = new javax.swing.JLabel();
+        NumProyecto = new javax.swing.JLabel();
         jtfNumProyecto = new javax.swing.JTextField();
         jSeparator10 = new javax.swing.JSeparator();
+        Horas = new javax.swing.JLabel();
         jtfHoras = new javax.swing.JTextField();
         jSeparator11 = new javax.swing.JSeparator();
-        Horas = new javax.swing.JLabel();
-        btnCancelar = new javax.swing.JButton();
-        btnBorrar = new javax.swing.JButton();
         btnAgregar = new javax.swing.JButton();
+        btnBorrar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
         jpBajas = new javax.swing.JPanel();
         Titulo1 = new javax.swing.JLabel();
-        DniEmpleado1 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jSeparator6 = new javax.swing.JSeparator();
+        DniEmpleado1 = new javax.swing.JLabel();
         jtfDniEmpleado1 = new javax.swing.JTextField();
-        FechaNac1 = new javax.swing.JLabel();
+        jSeparator6 = new javax.swing.JSeparator();
+        NumProyecto1 = new javax.swing.JLabel();
         jtfNumProyecto1 = new javax.swing.JTextField();
         jSeparator12 = new javax.swing.JSeparator();
-        btnCancelar1 = new javax.swing.JButton();
-        btnBorrar1 = new javax.swing.JButton();
         btnBuscar1 = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
+        btnBorrar1 = new javax.swing.JButton();
+        btnCancelar1 = new javax.swing.JButton();
         jpCambios = new javax.swing.JPanel();
         Titulo2 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         DniEmpleado2 = new javax.swing.JLabel();
         jtfDniEmpleado2 = new javax.swing.JTextField();
         jSeparator7 = new javax.swing.JSeparator();
-        FechaNac2 = new javax.swing.JLabel();
+        NumProyecto2 = new javax.swing.JLabel();
         jtfNumProyecto2 = new javax.swing.JTextField();
         jSeparator13 = new javax.swing.JSeparator();
-        Horas1 = new javax.swing.JLabel();
-        jtfHoras1 = new javax.swing.JTextField();
+        Horas2 = new javax.swing.JLabel();
+        jtfHoras2 = new javax.swing.JTextField();
         jSeparator14 = new javax.swing.JSeparator();
         btnBuscar2 = new javax.swing.JButton();
         btnGuardar2 = new javax.swing.JButton();
@@ -119,49 +123,35 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         jpAltas.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 30, 500, 41));
         jpAltas.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 840, 21));
 
-        jtfDniEmpleado.setBackground(new java.awt.Color(245, 198, 165));
-        jtfDniEmpleado.setBorder(null);
-        jpAltas.add(jtfDniEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 159, 30));
-
         DniEmpleado.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         DniEmpleado.setForeground(new java.awt.Color(102, 102, 102));
         DniEmpleado.setText("Dni empleado");
         jpAltas.add(DniEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, 30));
+
+        jtfDniEmpleado.setBackground(new java.awt.Color(245, 198, 165));
+        jtfDniEmpleado.setBorder(null);
+        jpAltas.add(jtfDniEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 159, 30));
         jpAltas.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 159, 20));
 
-        FechaNac.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        FechaNac.setForeground(new java.awt.Color(102, 102, 102));
-        FechaNac.setText("Número de proyecto");
-        jpAltas.add(FechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
+        NumProyecto.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NumProyecto.setForeground(new java.awt.Color(102, 102, 102));
+        NumProyecto.setText("Número de proyecto");
+        jpAltas.add(NumProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
 
         jtfNumProyecto.setBackground(new java.awt.Color(245, 198, 165));
         jtfNumProyecto.setBorder(null);
         jpAltas.add(jtfNumProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 50, 30));
         jpAltas.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 50, 20));
 
-        jtfHoras.setBackground(new java.awt.Color(245, 198, 165));
-        jtfHoras.setBorder(null);
-        jpAltas.add(jtfHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 80, 30));
-        jpAltas.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 140, 80, 20));
-
         Horas.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         Horas.setForeground(new java.awt.Color(102, 102, 102));
         Horas.setText("Horas");
         jpAltas.add(Horas, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, -1, 30));
 
-        btnCancelar.setBackground(new java.awt.Color(162, 65, 107));
-        btnCancelar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar.setText("Cancelar");
-        btnCancelar.setBorder(null);
-        jpAltas.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, 120, 30));
-
-        btnBorrar.setBackground(new java.awt.Color(162, 65, 107));
-        btnBorrar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnBorrar.setText("Borrar");
-        btnBorrar.setBorder(null);
-        jpAltas.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 120, 30));
+        jtfHoras.setBackground(new java.awt.Color(245, 198, 165));
+        jtfHoras.setBorder(null);
+        jpAltas.add(jtfHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 80, 30));
+        jpAltas.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 140, 80, 20));
 
         btnAgregar.setBackground(new java.awt.Color(162, 65, 107));
         btnAgregar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
@@ -170,6 +160,25 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         btnAgregar.setBorder(null);
         btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jpAltas.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 120, 30));
+
+        btnBorrar.setBackground(new java.awt.Color(162, 65, 107));
+        btnBorrar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar.setText("Borrar");
+        btnBorrar.setBorder(null);
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
+        jpAltas.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 120, 30));
+
+        btnCancelar.setBackground(new java.awt.Color(162, 65, 107));
+        btnCancelar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setText("Cancelar");
+        btnCancelar.setBorder(null);
+        jpAltas.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, 120, 30));
 
         jtpContenidoABCC.addTab("Altas", jpAltas);
 
@@ -180,41 +189,27 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         Titulo1.setForeground(new java.awt.Color(255, 255, 255));
         Titulo1.setText("Eliminar en que trabaja un empleado");
         jpBajas.add(Titulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 30, 500, 41));
+        jpBajas.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 840, 21));
 
         DniEmpleado1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         DniEmpleado1.setForeground(new java.awt.Color(102, 102, 102));
         DniEmpleado1.setText("Dni empleado");
         jpBajas.add(DniEmpleado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, 30));
-        jpBajas.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 840, 21));
-        jpBajas.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 159, 20));
 
         jtfDniEmpleado1.setBackground(new java.awt.Color(245, 198, 165));
         jtfDniEmpleado1.setBorder(null);
         jpBajas.add(jtfDniEmpleado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 159, 30));
+        jpBajas.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 159, 20));
 
-        FechaNac1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        FechaNac1.setForeground(new java.awt.Color(102, 102, 102));
-        FechaNac1.setText("Número de proyecto");
-        jpBajas.add(FechaNac1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
+        NumProyecto1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NumProyecto1.setForeground(new java.awt.Color(102, 102, 102));
+        NumProyecto1.setText("Número de proyecto");
+        jpBajas.add(NumProyecto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
 
         jtfNumProyecto1.setBackground(new java.awt.Color(245, 198, 165));
         jtfNumProyecto1.setBorder(null);
         jpBajas.add(jtfNumProyecto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 50, 30));
         jpBajas.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 50, 20));
-
-        btnCancelar1.setBackground(new java.awt.Color(162, 65, 107));
-        btnCancelar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnCancelar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar1.setText("Cancelar");
-        btnCancelar1.setBorder(null);
-        jpBajas.add(btnCancelar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, 120, 30));
-
-        btnBorrar1.setBackground(new java.awt.Color(162, 65, 107));
-        btnBorrar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnBorrar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnBorrar1.setText("Borrar");
-        btnBorrar1.setBorder(null);
-        jpBajas.add(btnBorrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, 120, 30));
 
         btnBuscar1.setBackground(new java.awt.Color(162, 65, 107));
         btnBuscar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
@@ -240,6 +235,25 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         });
         jpBajas.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 120, 30));
 
+        btnBorrar1.setBackground(new java.awt.Color(162, 65, 107));
+        btnBorrar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnBorrar1.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar1.setText("Borrar");
+        btnBorrar1.setBorder(null);
+        btnBorrar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrar1ActionPerformed(evt);
+            }
+        });
+        jpBajas.add(btnBorrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, 120, 30));
+
+        btnCancelar1.setBackground(new java.awt.Color(162, 65, 107));
+        btnCancelar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnCancelar1.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar1.setText("Cancelar");
+        btnCancelar1.setBorder(null);
+        jpBajas.add(btnCancelar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, 120, 30));
+
         jtpContenidoABCC.addTab("Bajas", jpBajas);
 
         jpCambios.setBackground(new java.awt.Color(245, 198, 165));
@@ -261,24 +275,24 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         jpCambios.add(jtfDniEmpleado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 159, 30));
         jpCambios.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 159, 20));
 
-        FechaNac2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        FechaNac2.setForeground(new java.awt.Color(102, 102, 102));
-        FechaNac2.setText("Número de proyecto");
-        jpCambios.add(FechaNac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
+        NumProyecto2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NumProyecto2.setForeground(new java.awt.Color(102, 102, 102));
+        NumProyecto2.setText("Número de proyecto");
+        jpCambios.add(NumProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
 
         jtfNumProyecto2.setBackground(new java.awt.Color(245, 198, 165));
         jtfNumProyecto2.setBorder(null);
         jpCambios.add(jtfNumProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 50, 30));
         jpCambios.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 50, 20));
 
-        Horas1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        Horas1.setForeground(new java.awt.Color(102, 102, 102));
-        Horas1.setText("Horas");
-        jpCambios.add(Horas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, -1, 30));
+        Horas2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Horas2.setForeground(new java.awt.Color(102, 102, 102));
+        Horas2.setText("Horas");
+        jpCambios.add(Horas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, -1, 30));
 
-        jtfHoras1.setBackground(new java.awt.Color(245, 198, 165));
-        jtfHoras1.setBorder(null);
-        jpCambios.add(jtfHoras1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 80, 30));
+        jtfHoras2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfHoras2.setBorder(null);
+        jpCambios.add(jtfHoras2, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 80, 30));
         jpCambios.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 140, 80, 20));
 
         btnBuscar2.setBackground(new java.awt.Color(162, 65, 107));
@@ -375,23 +389,40 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
     private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
-        // TODO add your handling code here:
+        restablecerComponentes(jtfDniEmpleado2,jtfNumProyecto2,jtfHoras2);
     }//GEN-LAST:event_btnBorrar2ActionPerformed
 
     private void btnCancelar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCancelar2ActionPerformed
 
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        restablecerComponentes(jtfDniEmpleado,jtfNumProyecto,jtfHoras);
+    }//GEN-LAST:event_btnBorrarActionPerformed
+
+    private void btnBorrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar1ActionPerformed
+        restablecerComponentes(jtfDniEmpleado1,jtfNumProyecto1);
+    }//GEN-LAST:event_btnBorrar1ActionPerformed
+
+    
+    public void restablecerComponentes(Component...componentesGraficos) {
+	for (Component c: componentesGraficos) {
+            if  (c instanceof JTextField) {
+		((JTextField)c).setText("");
+            }
+        }
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DniEmpleado;
     private javax.swing.JLabel DniEmpleado1;
     private javax.swing.JLabel DniEmpleado2;
-    private javax.swing.JLabel FechaNac;
-    private javax.swing.JLabel FechaNac1;
-    private javax.swing.JLabel FechaNac2;
     private javax.swing.JLabel Horas;
-    private javax.swing.JLabel Horas1;
+    private javax.swing.JLabel Horas2;
+    private javax.swing.JLabel NumProyecto;
+    private javax.swing.JLabel NumProyecto1;
+    private javax.swing.JLabel NumProyecto2;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo2;
@@ -430,7 +461,7 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
     private javax.swing.JTextField jtfDniEmpleado1;
     private javax.swing.JTextField jtfDniEmpleado2;
     private javax.swing.JTextField jtfHoras;
-    private javax.swing.JTextField jtfHoras1;
+    private javax.swing.JTextField jtfHoras2;
     private javax.swing.JTextField jtfNumProyecto;
     private javax.swing.JTextField jtfNumProyecto1;
     private javax.swing.JTextField jtfNumProyecto2;

@@ -4,11 +4,25 @@
  */
 package vista;
 
+import contolador.ProyectoDAO;
+import java.awt.Component;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import modelo.Proyecto;
+
 /**
  *
  * @author clara
  */
 public class MenuProyecto extends javax.swing.JPanel {
+
+    private Component rootPane;
 
     /**
      * Creates new form MenuEmpleado1
@@ -32,26 +46,26 @@ public class MenuProyecto extends javax.swing.JPanel {
         jpAltas = new javax.swing.JPanel();
         Titulo = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        DniEmpleado = new javax.swing.JLabel();
-        jtfDniEmpleado = new javax.swing.JTextField();
-        DniEmpleado1 = new javax.swing.JLabel();
-        jtfDniEmpleado1 = new javax.swing.JTextField();
+        NomProyecto = new javax.swing.JLabel();
+        jtfNomProyecto = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
-        jSeparator6 = new javax.swing.JSeparator();
-        FechaNac = new javax.swing.JLabel();
+        NumProyecto = new javax.swing.JLabel();
         jtfNumProyecto = new javax.swing.JTextField();
         jSeparator10 = new javax.swing.JSeparator();
-        FechaNac1 = new javax.swing.JLabel();
-        jtfNumProyecto1 = new javax.swing.JTextField();
+        UbiProyecto = new javax.swing.JLabel();
+        jtfUbiProyecto = new javax.swing.JTextField();
+        jSeparator6 = new javax.swing.JSeparator();
+        NumDptoProyecto = new javax.swing.JLabel();
+        jtfNumDptoProyecto = new javax.swing.JTextField();
         jSeparator12 = new javax.swing.JSeparator();
-        btnCancelar = new javax.swing.JButton();
-        btnBorrar = new javax.swing.JButton();
         btnAgregar = new javax.swing.JButton();
+        btnBorrar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
         jpBajas = new javax.swing.JPanel();
         Titulo1 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        FechaNac2 = new javax.swing.JLabel();
-        jtfNumProyecto2 = new javax.swing.JTextField();
+        NumProyecto1 = new javax.swing.JLabel();
+        jtfNumProyecto1 = new javax.swing.JTextField();
         jSeparator11 = new javax.swing.JSeparator();
         btnBuscar1 = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
@@ -60,17 +74,17 @@ public class MenuProyecto extends javax.swing.JPanel {
         jpCambios = new javax.swing.JPanel();
         Titulo2 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
-        DniEmpleado2 = new javax.swing.JLabel();
-        jtfDniEmpleado2 = new javax.swing.JTextField();
+        NomProyecto2 = new javax.swing.JLabel();
+        jtfNomProyecto2 = new javax.swing.JTextField();
         jSeparator7 = new javax.swing.JSeparator();
-        FechaNac3 = new javax.swing.JLabel();
-        jtfNumProyecto3 = new javax.swing.JTextField();
+        NumProyecto2 = new javax.swing.JLabel();
+        jtfNumProyecto2 = new javax.swing.JTextField();
         jSeparator13 = new javax.swing.JSeparator();
-        DniEmpleado3 = new javax.swing.JLabel();
-        jtfDniEmpleado3 = new javax.swing.JTextField();
+        UbiProyecto2 = new javax.swing.JLabel();
+        jtfUbiProyecto2 = new javax.swing.JTextField();
         jSeparator8 = new javax.swing.JSeparator();
-        FechaNac4 = new javax.swing.JLabel();
-        jtfNumProyecto4 = new javax.swing.JTextField();
+        NumDptoProyecto2 = new javax.swing.JLabel();
+        jtfNumDptoProyecto2 = new javax.swing.JTextField();
         jSeparator14 = new javax.swing.JSeparator();
         btnBuscar2 = new javax.swing.JButton();
         btnGuardar2 = new javax.swing.JButton();
@@ -124,32 +138,21 @@ public class MenuProyecto extends javax.swing.JPanel {
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jpAltas.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 840, 21));
 
-        DniEmpleado.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        DniEmpleado.setForeground(new java.awt.Color(102, 102, 102));
-        DniEmpleado.setText("Nombre del proyecto");
-        jpAltas.add(DniEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, 30));
+        NomProyecto.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NomProyecto.setForeground(new java.awt.Color(102, 102, 102));
+        NomProyecto.setText("Nombre del proyecto");
+        jpAltas.add(NomProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, 30));
 
-        jtfDniEmpleado.setBackground(new java.awt.Color(245, 198, 165));
-        jtfDniEmpleado.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jtfDniEmpleado.setBorder(null);
-        jpAltas.add(jtfDniEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 159, 30));
-
-        DniEmpleado1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        DniEmpleado1.setForeground(new java.awt.Color(102, 102, 102));
-        DniEmpleado1.setText("Ubicación del proyecto");
-        jpAltas.add(DniEmpleado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, 30));
-
-        jtfDniEmpleado1.setBackground(new java.awt.Color(245, 198, 165));
-        jtfDniEmpleado1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jtfDniEmpleado1.setBorder(null);
-        jpAltas.add(jtfDniEmpleado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 159, 30));
+        jtfNomProyecto.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNomProyecto.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfNomProyecto.setBorder(null);
+        jpAltas.add(jtfNomProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 159, 30));
         jpAltas.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 159, 20));
-        jpAltas.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 159, 20));
 
-        FechaNac.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        FechaNac.setForeground(new java.awt.Color(102, 102, 102));
-        FechaNac.setText("Número de proyecto");
-        jpAltas.add(FechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
+        NumProyecto.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NumProyecto.setForeground(new java.awt.Color(102, 102, 102));
+        NumProyecto.setText("Número de proyecto");
+        jpAltas.add(NumProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
 
         jtfNumProyecto.setBackground(new java.awt.Color(245, 198, 165));
         jtfNumProyecto.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
@@ -157,30 +160,27 @@ public class MenuProyecto extends javax.swing.JPanel {
         jpAltas.add(jtfNumProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 50, 30));
         jpAltas.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 50, 20));
 
-        FechaNac1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        FechaNac1.setForeground(new java.awt.Color(102, 102, 102));
-        FechaNac1.setText("Número de departamento del proyecto");
-        jpAltas.add(FechaNac1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, -1, 30));
+        UbiProyecto.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        UbiProyecto.setForeground(new java.awt.Color(102, 102, 102));
+        UbiProyecto.setText("Ubicación del proyecto");
+        jpAltas.add(UbiProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, 30));
 
-        jtfNumProyecto1.setBackground(new java.awt.Color(245, 198, 165));
-        jtfNumProyecto1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jtfNumProyecto1.setBorder(null);
-        jpAltas.add(jtfNumProyecto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 170, 50, 30));
+        jtfUbiProyecto.setBackground(new java.awt.Color(245, 198, 165));
+        jtfUbiProyecto.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfUbiProyecto.setBorder(null);
+        jpAltas.add(jtfUbiProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 159, 30));
+        jpAltas.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 159, 20));
+
+        NumDptoProyecto.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NumDptoProyecto.setForeground(new java.awt.Color(102, 102, 102));
+        NumDptoProyecto.setText("Número de departamento del proyecto");
+        jpAltas.add(NumDptoProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, -1, 30));
+
+        jtfNumDptoProyecto.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNumDptoProyecto.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfNumDptoProyecto.setBorder(null);
+        jpAltas.add(jtfNumDptoProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 170, 50, 30));
         jpAltas.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 200, 50, 20));
-
-        btnCancelar.setBackground(new java.awt.Color(162, 65, 107));
-        btnCancelar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar.setText("Cancelar");
-        btnCancelar.setBorder(null);
-        jpAltas.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 120, 30));
-
-        btnBorrar.setBackground(new java.awt.Color(162, 65, 107));
-        btnBorrar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
-        btnBorrar.setText("Borrar");
-        btnBorrar.setBorder(null);
-        jpAltas.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 120, 30));
 
         btnAgregar.setBackground(new java.awt.Color(162, 65, 107));
         btnAgregar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
@@ -188,7 +188,31 @@ public class MenuProyecto extends javax.swing.JPanel {
         btnAgregar.setText("Agregar");
         btnAgregar.setBorder(null);
         btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarActionPerformed(evt);
+            }
+        });
         jpAltas.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 120, 30));
+
+        btnBorrar.setBackground(new java.awt.Color(162, 65, 107));
+        btnBorrar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar.setText("Borrar");
+        btnBorrar.setBorder(null);
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
+        jpAltas.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 120, 30));
+
+        btnCancelar.setBackground(new java.awt.Color(162, 65, 107));
+        btnCancelar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar.setText("Cancelar");
+        btnCancelar.setBorder(null);
+        jpAltas.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 120, 30));
 
         jtpContenidoABCC.addTab("Altas", jpAltas);
 
@@ -203,15 +227,20 @@ public class MenuProyecto extends javax.swing.JPanel {
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         jpBajas.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 840, 21));
 
-        FechaNac2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        FechaNac2.setForeground(new java.awt.Color(102, 102, 102));
-        FechaNac2.setText("Número de proyecto");
-        jpBajas.add(FechaNac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, 30));
+        NumProyecto1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NumProyecto1.setForeground(new java.awt.Color(102, 102, 102));
+        NumProyecto1.setText("Número de proyecto");
+        jpBajas.add(NumProyecto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, 30));
 
-        jtfNumProyecto2.setBackground(new java.awt.Color(245, 198, 165));
-        jtfNumProyecto2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jtfNumProyecto2.setBorder(null);
-        jpBajas.add(jtfNumProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 50, 30));
+        jtfNumProyecto1.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNumProyecto1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfNumProyecto1.setBorder(null);
+        jtfNumProyecto1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNumProyecto1ActionPerformed(evt);
+            }
+        });
+        jpBajas.add(jtfNumProyecto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 50, 30));
         jpBajas.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 50, 20));
 
         btnBuscar1.setBackground(new java.awt.Color(162, 65, 107));
@@ -243,6 +272,11 @@ public class MenuProyecto extends javax.swing.JPanel {
         btnBorrar1.setForeground(new java.awt.Color(255, 255, 255));
         btnBorrar1.setText("Borrar");
         btnBorrar1.setBorder(null);
+        btnBorrar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrar1ActionPerformed(evt);
+            }
+        });
         jpBajas.add(btnBorrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 120, 30));
 
         btnCancelar1.setBackground(new java.awt.Color(162, 65, 107));
@@ -265,48 +299,53 @@ public class MenuProyecto extends javax.swing.JPanel {
         jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
         jpCambios.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 840, 21));
 
-        DniEmpleado2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        DniEmpleado2.setForeground(new java.awt.Color(102, 102, 102));
-        DniEmpleado2.setText("Nombre del proyecto");
-        jpCambios.add(DniEmpleado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, 30));
+        NomProyecto2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NomProyecto2.setForeground(new java.awt.Color(102, 102, 102));
+        NomProyecto2.setText("Nombre del proyecto");
+        jpCambios.add(NomProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, 30));
 
-        jtfDniEmpleado2.setBackground(new java.awt.Color(245, 198, 165));
-        jtfDniEmpleado2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jtfDniEmpleado2.setBorder(null);
-        jpCambios.add(jtfDniEmpleado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 159, 30));
+        jtfNomProyecto2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNomProyecto2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfNomProyecto2.setBorder(null);
+        jpCambios.add(jtfNomProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 159, 30));
         jpCambios.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 159, 20));
 
-        FechaNac3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        FechaNac3.setForeground(new java.awt.Color(102, 102, 102));
-        FechaNac3.setText("Número de proyecto");
-        jpCambios.add(FechaNac3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
+        NumProyecto2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NumProyecto2.setForeground(new java.awt.Color(102, 102, 102));
+        NumProyecto2.setText("Número de proyecto");
+        jpCambios.add(NumProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
 
-        jtfNumProyecto3.setBackground(new java.awt.Color(245, 198, 165));
-        jtfNumProyecto3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jtfNumProyecto3.setBorder(null);
-        jpCambios.add(jtfNumProyecto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 50, 30));
+        jtfNumProyecto2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNumProyecto2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfNumProyecto2.setBorder(null);
+        jtfNumProyecto2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNumProyecto2ActionPerformed(evt);
+            }
+        });
+        jpCambios.add(jtfNumProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 50, 30));
         jpCambios.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 50, 20));
 
-        DniEmpleado3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        DniEmpleado3.setForeground(new java.awt.Color(102, 102, 102));
-        DniEmpleado3.setText("Ubicación del proyecto");
-        jpCambios.add(DniEmpleado3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, 30));
+        UbiProyecto2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        UbiProyecto2.setForeground(new java.awt.Color(102, 102, 102));
+        UbiProyecto2.setText("Ubicación del proyecto");
+        jpCambios.add(UbiProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, 30));
 
-        jtfDniEmpleado3.setBackground(new java.awt.Color(245, 198, 165));
-        jtfDniEmpleado3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jtfDniEmpleado3.setBorder(null);
-        jpCambios.add(jtfDniEmpleado3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 159, 30));
+        jtfUbiProyecto2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfUbiProyecto2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfUbiProyecto2.setBorder(null);
+        jpCambios.add(jtfUbiProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 159, 30));
         jpCambios.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 159, 20));
 
-        FechaNac4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        FechaNac4.setForeground(new java.awt.Color(102, 102, 102));
-        FechaNac4.setText("Número de departamento del proyecto");
-        jpCambios.add(FechaNac4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, -1, 30));
+        NumDptoProyecto2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NumDptoProyecto2.setForeground(new java.awt.Color(102, 102, 102));
+        NumDptoProyecto2.setText("Número de departamento del proyecto");
+        jpCambios.add(NumDptoProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, -1, 30));
 
-        jtfNumProyecto4.setBackground(new java.awt.Color(245, 198, 165));
-        jtfNumProyecto4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jtfNumProyecto4.setBorder(null);
-        jpCambios.add(jtfNumProyecto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 170, 50, 30));
+        jtfNumDptoProyecto2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNumDptoProyecto2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfNumDptoProyecto2.setBorder(null);
+        jpCambios.add(jtfNumDptoProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 170, 50, 30));
         jpCambios.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 200, 50, 20));
 
         btnBuscar2.setBackground(new java.awt.Color(162, 65, 107));
@@ -387,11 +426,21 @@ public class MenuProyecto extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar1ActionPerformed
-        // TODO add your handling code here:
+        if(jtfNumProyecto1.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes ingresar el numero de proyecto");
+        }
     }//GEN-LAST:event_btnBuscar1ActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        // TODO add your handling code here:
+        byte num = Byte.parseByte(jtfNumProyecto1.getText());
+        ProyectoDAO pDAO = new ProyectoDAO();
+        if(jtfNumProyecto1.getText().equals("")) {
+            JOptionPane.showMessageDialog(rootPane,"Debes ingresar el número de proyecto");
+	}else if(pDAO.eliminarRegistro(num)) {
+            JOptionPane.showMessageDialog(rootPane,"Se eliminó correctamente de la base de datos");
+	}else {
+            JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar eliminar a la base de datos");
+	}
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar2ActionPerformed
@@ -403,27 +452,88 @@ public class MenuProyecto extends javax.swing.JPanel {
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
     private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
-        // TODO add your handling code here:
+        restablecerComponentes(jtfNomProyecto2,jtfNumProyecto2,jtfUbiProyecto2,jtfNumDptoProyecto2);
     }//GEN-LAST:event_btnBorrar2ActionPerformed
 
     private void btnCancelar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCancelar2ActionPerformed
 
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        restablecerComponentes(jtfNomProyecto,jtfNumProyecto,jtfUbiProyecto,jtfNumDptoProyecto);
+    }//GEN-LAST:event_btnBorrarActionPerformed
+
+    private void jtfNumProyecto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNumProyecto1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNumProyecto1ActionPerformed
+
+    private void jtfNumProyecto2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNumProyecto2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNumProyecto2ActionPerformed
+
+    private void btnBorrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar1ActionPerformed
+        restablecerComponentes(jtfNumProyecto1);
+    }//GEN-LAST:event_btnBorrar1ActionPerformed
+
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+        ProyectoDAO pDAO = new ProyectoDAO();
+        if(jtfNomProyecto.getText().equals("")||jtfNumProyecto.getText().equals("")||
+                jtfUbiProyecto.getText().equals("")||jtfNumDptoProyecto.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
+        }else{
+            Proyecto p = new Proyecto(jtfNomProyecto.getText(),Integer.parseInt(jtfNumProyecto.getText()),
+            jtfUbiProyecto.getText(),Byte.parseByte(jtfNumDptoProyecto.getText()));
+            
+            if(pDAO.insertarRragistro(p)){
+                JOptionPane.showMessageDialog(rootPane,"Se agregó correctamente a la base de datos");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar agregar a la base de datos");
+            }
+            
+        }
+    }//GEN-LAST:event_btnAgregarActionPerformed
+
+    
+    
+    public void restablecerComponentes(Component...componentesGraficos) {
+	for (Component c: componentesGraficos) {
+            if (c instanceof JTextField) {
+		((JTextField)c).setText("");
+            }
+        }
+    }
+    
+    public void mostrarTabla(){
+        ResultSetTableModel modeloDatos = null;
+	try {
+            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa","SELECT * FROM proyecto");
+	} catch (ClassNotFoundException e1) {
+            e1.printStackTrace();
+	} catch (SQLException e1) {
+            e1.printStackTrace();
+	}
+        
+        jpTabla.remove(jScrollPane1);
+        jTable1 = new JTable(modeloDatos);
+        jScrollPane1 = new JScrollPane(jTable1);
+        jpTabla.add(jScrollPane1);  
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel DniEmpleado;
-    private javax.swing.JLabel DniEmpleado1;
-    private javax.swing.JLabel DniEmpleado2;
-    private javax.swing.JLabel DniEmpleado3;
-    private javax.swing.JLabel FechaNac;
-    private javax.swing.JLabel FechaNac1;
-    private javax.swing.JLabel FechaNac2;
-    private javax.swing.JLabel FechaNac3;
-    private javax.swing.JLabel FechaNac4;
+    private javax.swing.JLabel NomProyecto;
+    private javax.swing.JLabel NomProyecto2;
+    private javax.swing.JLabel NumDptoProyecto;
+    private javax.swing.JLabel NumDptoProyecto2;
+    private javax.swing.JLabel NumProyecto;
+    private javax.swing.JLabel NumProyecto1;
+    private javax.swing.JLabel NumProyecto2;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo2;
+    private javax.swing.JLabel UbiProyecto;
+    private javax.swing.JLabel UbiProyecto2;
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnBorrar1;
@@ -456,15 +566,15 @@ public class MenuProyecto extends javax.swing.JPanel {
     private javax.swing.JPanel jpConsultas;
     private javax.swing.JPanel jpTabla;
     private javax.swing.JPanel jpTitulo;
-    private javax.swing.JTextField jtfDniEmpleado;
-    private javax.swing.JTextField jtfDniEmpleado1;
-    private javax.swing.JTextField jtfDniEmpleado2;
-    private javax.swing.JTextField jtfDniEmpleado3;
+    private javax.swing.JTextField jtfNomProyecto;
+    private javax.swing.JTextField jtfNomProyecto2;
+    private javax.swing.JTextField jtfNumDptoProyecto;
+    private javax.swing.JTextField jtfNumDptoProyecto2;
     private javax.swing.JTextField jtfNumProyecto;
     private javax.swing.JTextField jtfNumProyecto1;
     private javax.swing.JTextField jtfNumProyecto2;
-    private javax.swing.JTextField jtfNumProyecto3;
-    private javax.swing.JTextField jtfNumProyecto4;
+    private javax.swing.JTextField jtfUbiProyecto;
+    private javax.swing.JTextField jtfUbiProyecto2;
     private javax.swing.JTabbedPane jtpContenidoABCC;
     // End of variables declaration//GEN-END:variables
 }
