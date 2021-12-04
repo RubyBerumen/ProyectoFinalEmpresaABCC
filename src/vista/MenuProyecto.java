@@ -48,9 +48,38 @@ public class MenuProyecto extends javax.swing.JPanel {
         btnBorrar = new javax.swing.JButton();
         btnAgregar = new javax.swing.JButton();
         jpBajas = new javax.swing.JPanel();
+        Titulo1 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        FechaNac2 = new javax.swing.JLabel();
+        jtfNumProyecto2 = new javax.swing.JTextField();
+        jSeparator11 = new javax.swing.JSeparator();
+        btnBuscar1 = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnBorrar1 = new javax.swing.JButton();
+        btnCancelar1 = new javax.swing.JButton();
         jpCambios = new javax.swing.JPanel();
+        Titulo2 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        DniEmpleado2 = new javax.swing.JLabel();
+        jtfDniEmpleado2 = new javax.swing.JTextField();
+        jSeparator7 = new javax.swing.JSeparator();
+        FechaNac3 = new javax.swing.JLabel();
+        jtfNumProyecto3 = new javax.swing.JTextField();
+        jSeparator13 = new javax.swing.JSeparator();
+        DniEmpleado3 = new javax.swing.JLabel();
+        jtfDniEmpleado3 = new javax.swing.JTextField();
+        jSeparator8 = new javax.swing.JSeparator();
+        FechaNac4 = new javax.swing.JLabel();
+        jtfNumProyecto4 = new javax.swing.JTextField();
+        jSeparator14 = new javax.swing.JSeparator();
+        btnBuscar2 = new javax.swing.JButton();
+        btnGuardar2 = new javax.swing.JButton();
+        btnBorrar2 = new javax.swing.JButton();
+        btnCancelar2 = new javax.swing.JButton();
         jpConsultas = new javax.swing.JPanel();
         jpTabla = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(245, 198, 165));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -165,10 +194,169 @@ public class MenuProyecto extends javax.swing.JPanel {
 
         jpBajas.setBackground(new java.awt.Color(245, 198, 165));
         jpBajas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Titulo1.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
+        Titulo1.setForeground(new java.awt.Color(255, 255, 255));
+        Titulo1.setText("Eliminar proyecto");
+        jpBajas.add(Titulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 30, 500, 41));
+
+        jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
+        jpBajas.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 840, 21));
+
+        FechaNac2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        FechaNac2.setForeground(new java.awt.Color(102, 102, 102));
+        FechaNac2.setText("Número de proyecto");
+        jpBajas.add(FechaNac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, 30));
+
+        jtfNumProyecto2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNumProyecto2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfNumProyecto2.setBorder(null);
+        jpBajas.add(jtfNumProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 50, 30));
+        jpBajas.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 50, 20));
+
+        btnBuscar1.setBackground(new java.awt.Color(162, 65, 107));
+        btnBuscar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnBuscar1.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscar1.setText("Buscar");
+        btnBuscar1.setBorder(null);
+        btnBuscar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscar1ActionPerformed(evt);
+            }
+        });
+        jpBajas.add(btnBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 120, 30));
+
+        btnEliminar.setBackground(new java.awt.Color(162, 65, 107));
+        btnEliminar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminar.setText("Eliminar");
+        btnEliminar.setBorder(null);
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
+        jpBajas.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 120, 30));
+
+        btnBorrar1.setBackground(new java.awt.Color(162, 65, 107));
+        btnBorrar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnBorrar1.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar1.setText("Borrar");
+        btnBorrar1.setBorder(null);
+        jpBajas.add(btnBorrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 120, 30));
+
+        btnCancelar1.setBackground(new java.awt.Color(162, 65, 107));
+        btnCancelar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnCancelar1.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar1.setText("Cancelar");
+        btnCancelar1.setBorder(null);
+        jpBajas.add(btnCancelar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 230, 120, 30));
+
         jtpContenidoABCC.addTab("Bajas", jpBajas);
 
         jpCambios.setBackground(new java.awt.Color(245, 198, 165));
         jpCambios.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Titulo2.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
+        Titulo2.setForeground(new java.awt.Color(255, 255, 255));
+        Titulo2.setText("Modificar proyecto");
+        jpCambios.add(Titulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 30, 500, 41));
+
+        jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
+        jpCambios.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 840, 21));
+
+        DniEmpleado2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        DniEmpleado2.setForeground(new java.awt.Color(102, 102, 102));
+        DniEmpleado2.setText("Nombre del proyecto");
+        jpCambios.add(DniEmpleado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, 30));
+
+        jtfDniEmpleado2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfDniEmpleado2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfDniEmpleado2.setBorder(null);
+        jpCambios.add(jtfDniEmpleado2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 159, 30));
+        jpCambios.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 159, 20));
+
+        FechaNac3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        FechaNac3.setForeground(new java.awt.Color(102, 102, 102));
+        FechaNac3.setText("Número de proyecto");
+        jpCambios.add(FechaNac3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
+
+        jtfNumProyecto3.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNumProyecto3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfNumProyecto3.setBorder(null);
+        jpCambios.add(jtfNumProyecto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 50, 30));
+        jpCambios.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 50, 20));
+
+        DniEmpleado3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        DniEmpleado3.setForeground(new java.awt.Color(102, 102, 102));
+        DniEmpleado3.setText("Ubicación del proyecto");
+        jpCambios.add(DniEmpleado3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, 30));
+
+        jtfDniEmpleado3.setBackground(new java.awt.Color(245, 198, 165));
+        jtfDniEmpleado3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfDniEmpleado3.setBorder(null);
+        jpCambios.add(jtfDniEmpleado3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 159, 30));
+        jpCambios.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 159, 20));
+
+        FechaNac4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        FechaNac4.setForeground(new java.awt.Color(102, 102, 102));
+        FechaNac4.setText("Número de departamento del proyecto");
+        jpCambios.add(FechaNac4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, -1, 30));
+
+        jtfNumProyecto4.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNumProyecto4.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfNumProyecto4.setBorder(null);
+        jpCambios.add(jtfNumProyecto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 170, 50, 30));
+        jpCambios.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 200, 50, 20));
+
+        btnBuscar2.setBackground(new java.awt.Color(162, 65, 107));
+        btnBuscar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnBuscar2.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscar2.setText("Buscar");
+        btnBuscar2.setBorder(null);
+        btnBuscar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscar2ActionPerformed(evt);
+            }
+        });
+        jpCambios.add(btnBuscar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 120, 30));
+
+        btnGuardar2.setBackground(new java.awt.Color(162, 65, 107));
+        btnGuardar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnGuardar2.setForeground(new java.awt.Color(255, 255, 255));
+        btnGuardar2.setText("Guardar cambios");
+        btnGuardar2.setBorder(null);
+        btnGuardar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardar2ActionPerformed(evt);
+            }
+        });
+        jpCambios.add(btnGuardar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 160, 30));
+
+        btnBorrar2.setBackground(new java.awt.Color(162, 65, 107));
+        btnBorrar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnBorrar2.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar2.setText("Borrar");
+        btnBorrar2.setBorder(null);
+        btnBorrar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrar2ActionPerformed(evt);
+            }
+        });
+        jpCambios.add(btnBorrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 120, 30));
+
+        btnCancelar2.setBackground(new java.awt.Color(162, 65, 107));
+        btnCancelar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnCancelar2.setForeground(new java.awt.Color(255, 255, 255));
+        btnCancelar2.setText("Cancelar");
+        btnCancelar2.setBorder(null);
+        btnCancelar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelar2ActionPerformed(evt);
+            }
+        });
+        jpCambios.add(btnCancelar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 240, 120, 30));
+
         jtpContenidoABCC.addTab("Cambios", jpCambios);
 
         jpConsultas.setBackground(new java.awt.Color(245, 198, 165));
@@ -178,37 +366,90 @@ public class MenuProyecto extends javax.swing.JPanel {
         add(jtpContenidoABCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 330));
 
         jpTabla.setBackground(new java.awt.Color(255, 255, 255));
+        jpTabla.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jpTablaLayout = new javax.swing.GroupLayout(jpTabla);
-        jpTabla.setLayout(jpTablaLayout);
-        jpTablaLayout.setHorizontalGroup(
-            jpTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 960, Short.MAX_VALUE)
-        );
-        jpTablaLayout.setVerticalGroup(
-            jpTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 270, Short.MAX_VALUE)
-        );
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jpTabla.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 920, 230));
 
         add(jpTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 960, 270));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBuscar1ActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void btnBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBuscar2ActionPerformed
+
+    private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGuardar2ActionPerformed
+
+    private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBorrar2ActionPerformed
+
+    private void btnCancelar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCancelar2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DniEmpleado;
     private javax.swing.JLabel DniEmpleado1;
+    private javax.swing.JLabel DniEmpleado2;
+    private javax.swing.JLabel DniEmpleado3;
     private javax.swing.JLabel FechaNac;
     private javax.swing.JLabel FechaNac1;
+    private javax.swing.JLabel FechaNac2;
+    private javax.swing.JLabel FechaNac3;
+    private javax.swing.JLabel FechaNac4;
     private javax.swing.JLabel Titulo;
+    private javax.swing.JLabel Titulo1;
+    private javax.swing.JLabel Titulo2;
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnBorrar;
+    private javax.swing.JButton btnBorrar1;
+    private javax.swing.JButton btnBorrar2;
+    private javax.swing.JButton btnBuscar1;
+    private javax.swing.JButton btnBuscar2;
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnCancelar1;
+    private javax.swing.JButton btnCancelar2;
+    private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnGuardar2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
+    private javax.swing.JSeparator jSeparator13;
+    private javax.swing.JSeparator jSeparator14;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JTable jTable1;
     private javax.swing.JPanel jpAltas;
     private javax.swing.JPanel jpBajas;
     private javax.swing.JPanel jpCambios;
@@ -217,8 +458,13 @@ public class MenuProyecto extends javax.swing.JPanel {
     private javax.swing.JPanel jpTitulo;
     private javax.swing.JTextField jtfDniEmpleado;
     private javax.swing.JTextField jtfDniEmpleado1;
+    private javax.swing.JTextField jtfDniEmpleado2;
+    private javax.swing.JTextField jtfDniEmpleado3;
     private javax.swing.JTextField jtfNumProyecto;
     private javax.swing.JTextField jtfNumProyecto1;
+    private javax.swing.JTextField jtfNumProyecto2;
+    private javax.swing.JTextField jtfNumProyecto3;
+    private javax.swing.JTextField jtfNumProyecto4;
     private javax.swing.JTabbedPane jtpContenidoABCC;
     // End of variables declaration//GEN-END:variables
 }

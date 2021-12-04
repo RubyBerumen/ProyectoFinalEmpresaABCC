@@ -275,8 +275,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         MenuEmpleado me = new MenuEmpleado();
         mostrarPanelMenuABCC(me);
         
-        me.mostrarTabla("SELECT * FROM empleado");
-        
+           
     }//GEN-LAST:event_jpEmpleadoMouseClicked
 
     private void jpTrabajaEnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpTrabajaEnMouseClicked
