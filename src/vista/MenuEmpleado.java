@@ -4,6 +4,14 @@
  */
 package vista;
 
+import java.awt.Component;
+import java.sql.SQLException;
+import javax.swing.JComboBox;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
+
 /**
  *
  * @author clara
@@ -68,7 +76,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jpBajas = new javax.swing.JPanel();
         jpCambios = new javax.swing.JPanel();
         jpConsultas = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        jpTabla = new javax.swing.JPanel();
+        jspTabla = new javax.swing.JScrollPane();
+        jtTabla = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(245, 198, 165));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -287,6 +297,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
         btnBorrar.setText("Borrar");
         btnBorrar.setBorder(null);
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
         jpAltas.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, 120, 30));
 
         btnAgregar.setBackground(new java.awt.Color(162, 65, 107));
@@ -294,6 +309,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         btnAgregar.setForeground(new java.awt.Color(255, 255, 255));
         btnAgregar.setText("Agregar");
         btnAgregar.setBorder(null);
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarActionPerformed(evt);
+            }
+        });
         jpAltas.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 120, 30));
 
         jtpContenidoABCC.addTab("Altas", jpAltas);
@@ -312,20 +332,26 @@ public class MenuEmpleado extends javax.swing.JPanel {
 
         add(jtpContenidoABCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 390));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jpTabla.setBackground(new java.awt.Color(255, 255, 255));
+        jpTabla.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 960, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
-        );
+        jtTabla.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jtTabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jspTabla.setViewportView(jtTabla);
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 960, 210));
+        jpTabla.add(jspTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 27, 903, 135));
+
+        add(jpTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 960, 210));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jtfNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNombreActionPerformed
@@ -352,6 +378,45 @@ public class MenuEmpleado extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfNombreKeyTyped
 
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+        
+    }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        restablecerComponentes(jtfNombre, jtfAp,jtfAm, jtfDni, jcbDia, jcbMes, jcbAño, jtfDireccion, jcbSexo, jtfSueldo, jtfDniSuper, jtfNoDpto);
+    }//GEN-LAST:event_btnBorrarActionPerformed
+
+    
+    
+    public void mostrarTabla(String sql) {
+        ResultSetTableModel modeloDatos =null;
+	try {
+            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa","sql");
+            } catch (ClassNotFoundException e1) {
+		e1.printStackTrace();
+            } catch (SQLException e1) {
+		e1.printStackTrace();
+	}
+        
+        jpTabla.remove(jspTabla);
+        jtTabla = new JTable(modeloDatos);
+        jspTabla = new JScrollPane(jtTabla);
+        jspTabla.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        jpTabla.add(jspTabla);
+        
+    }
+    
+    public void restablecerComponentes(Component...componentesGraficos) {
+	for (Component c: componentesGraficos) {
+            if (c instanceof JComboBox) {
+		((JComboBox<?>)c).setSelectedIndex(0);
+            }else if (c instanceof JTextField) {
+		((JTextField)c).setText("");
+            }
+        }
+    }
+
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ApellidoM;
@@ -369,7 +434,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
@@ -387,7 +451,10 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private javax.swing.JPanel jpBajas;
     private javax.swing.JPanel jpCambios;
     private javax.swing.JPanel jpConsultas;
+    private javax.swing.JPanel jpTabla;
     private javax.swing.JPanel jpTitulo;
+    private javax.swing.JScrollPane jspTabla;
+    private javax.swing.JTable jtTabla;
     private javax.swing.JTextField jtfAm;
     private javax.swing.JTextField jtfAp;
     private javax.swing.JTextField jtfDireccion;

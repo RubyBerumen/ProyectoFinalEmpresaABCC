@@ -50,7 +50,7 @@ public class MenuProyecto extends javax.swing.JPanel {
         jpBajas = new javax.swing.JPanel();
         jpCambios = new javax.swing.JPanel();
         jpConsultas = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        jpTabla = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(245, 198, 165));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -177,20 +177,20 @@ public class MenuProyecto extends javax.swing.JPanel {
 
         add(jtpContenidoABCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 330));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jpTabla.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jpTablaLayout = new javax.swing.GroupLayout(jpTabla);
+        jpTabla.setLayout(jpTablaLayout);
+        jpTablaLayout.setHorizontalGroup(
+            jpTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 960, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jpTablaLayout.setVerticalGroup(
+            jpTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 270, Short.MAX_VALUE)
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 960, 270));
+        add(jpTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 960, 270));
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -204,7 +204,6 @@ public class MenuProyecto extends javax.swing.JPanel {
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator12;
@@ -214,6 +213,7 @@ public class MenuProyecto extends javax.swing.JPanel {
     private javax.swing.JPanel jpBajas;
     private javax.swing.JPanel jpCambios;
     private javax.swing.JPanel jpConsultas;
+    private javax.swing.JPanel jpTabla;
     private javax.swing.JPanel jpTitulo;
     private javax.swing.JTextField jtfDniEmpleado;
     private javax.swing.JTextField jtfDniEmpleado1;

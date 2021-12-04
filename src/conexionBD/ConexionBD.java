@@ -24,7 +24,7 @@ public class ConexionBD {
 			
 			conexion = DriverManager.getConnection(URL,"ruby","aguacate");
 			
-			System.out.println("Conexion establecida");
+			System.out.println("Conexion establecida!");
 			
 		} catch (ClassNotFoundException e) {
 			System.out.printf("Error de Driver");
