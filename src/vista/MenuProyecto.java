@@ -407,33 +407,56 @@ public class MenuProyecto extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar1ActionPerformed
+        String sql =  "SELECT * FROM proyecto WHERE NumProyecto = '"+jtfNumProyecto1.getText()+"'";
         if(jtfNumProyecto1.getText().equals("")){
             JOptionPane.showMessageDialog(rootPane, "Debes ingresar el numero de proyecto");
         }else{
-            
+            mostrarTabla(sql);
         }
-        mostrarTabla();
+        
     }//GEN-LAST:event_btnBuscar1ActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        byte num = Byte.parseByte(jtfNumProyecto1.getText());
+       
         ProyectoDAO pDAO = new ProyectoDAO();
         if(jtfNumProyecto1.getText().equals("")) {
             JOptionPane.showMessageDialog(rootPane,"Debes ingresar el número de proyecto");
-	}else if(pDAO.eliminarRegistro(num)) {
-            JOptionPane.showMessageDialog(rootPane,"Se eliminó correctamente de la base de datos");
 	}else {
-            JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar eliminar a la base de datos");
+             byte num = Byte.parseByte(jtfNumProyecto1.getText());
+            if(pDAO.eliminarRegistro(num)) {
+                JOptionPane.showMessageDialog(rootPane,"Se eliminó correctamente de la base de datos");
+            }else{
+                 JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar eliminar a la base de datos");
+            }
+           
 	}
-        mostrarTabla();
+        mostrarTabla("SELECT * FROM proyecto");
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar2ActionPerformed
-        // TODO add your handling code here:
+        String sql =  "SELECT * FROM proyecto WHERE NumProyecto = '"+jtfNumProyecto2.getText()+"'";
+        if(jtfNumProyecto2.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes ingresar el numero de proyecto");
+        }else{
+            mostrarTabla(sql);
+        }
     }//GEN-LAST:event_btnBuscar2ActionPerformed
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
-        // TODO add your handling code here:
+        ProyectoDAO pDAO = new ProyectoDAO();
+        if(jtfNomProyecto2.getText().equals("")||jtfNumProyecto2.getText().equals("")||
+                jtfUbiProyecto2.getText().equals("")||jtfNumDptoProyecto2.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
+        }else{
+            Proyecto p = new Proyecto(jtfNomProyecto2.getText(),Integer.parseInt(jtfNumProyecto2.getText()),
+            jtfUbiProyecto2.getText(),Byte.parseByte(jtfNumDptoProyecto2.getText()));
+            if(pDAO.modificarRegistro(p)){
+                JOptionPane.showMessageDialog(rootPane, "Datos modificados exitosamente");
+            }else{
+                JOptionPane.showMessageDialog(rootPane, "No se pudieron modificar los datos");
+            }
+            mostrarTabla("SELECT * FROM proyecto");
+        }
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
     private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
@@ -472,7 +495,7 @@ public class MenuProyecto extends javax.swing.JPanel {
             }
             
         }
-        mostrarTabla();
+        mostrarTabla("SELECT * FROM proyecto");
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void jtfNumProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNumProyectoActionPerformed
@@ -494,10 +517,10 @@ public class MenuProyecto extends javax.swing.JPanel {
         }
     }
     
-    public void mostrarTabla(){
+    public void mostrarTabla(String sql){
         ResultSetTableModel modeloDatos = null;
 	try {
-            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa","SELECT * FROM proyecto");
+            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa",sql);
 	} catch (ClassNotFoundException e1) {
             e1.printStackTrace();
 	} catch (SQLException e1) {
@@ -511,16 +534,16 @@ public class MenuProyecto extends javax.swing.JPanel {
                 obtenerRegistroTabla();
             }
         });
-                jScrollPane1.getViewport().add(jTable1);
+        jScrollPane1.getViewport().add(jTable1);
         
     }
     
     
     public void obtenerRegistroTabla(){
-        jtfNomProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
-        jtfNumProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
-        jtfUbiProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
-        jtfNumDptoProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
+        jtfNomProyecto2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfNumProyecto2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
+        jtfUbiProyecto2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        jtfNumDptoProyecto2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
         
     }
     

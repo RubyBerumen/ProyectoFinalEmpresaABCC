@@ -50,8 +50,9 @@ public class ProyectoDAO {
 	boolean resultado = false;
 		
 	String sql = "UPDATE proyecto SET NombreProyecto='"+p.getNombreProyecto()+"', UbicacionProyecto='"+p.getUbicaciónProyecto()+"', "
-                + " NumDptoProyecto='"+p.getNumDptoProyecto()+"', "
+                + " NumDptoProyecto='"+p.getNumDptoProyecto()+"' "
                 + " WHERE NumProyecto='"+p.getNumProyecto()+"';";
+        System.out.println(sql);
 	resultado = conexion.ejecutarInstruccion(sql);
 		
 	return resultado;
