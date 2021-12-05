@@ -4,6 +4,7 @@
  */
 package vista;
 
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JPanel;
@@ -17,6 +18,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form VentanaPrincipal
      */
+    
+    
     public VentanaPrincipal() {
         initComponents();
         setLocationRelativeTo(null);
@@ -281,6 +284,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void jpTrabajaEnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpTrabajaEnMouseClicked
         MenuTrabajaEn mt = new MenuTrabajaEn();
         mostrarPanelMenuABCC(mt);
+        mt.mostrarTabla();
     }//GEN-LAST:event_jpTrabajaEnMouseClicked
 
     private void jpProyectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpProyectoMouseClicked

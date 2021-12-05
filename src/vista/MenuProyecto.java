@@ -60,7 +60,6 @@ public class MenuProyecto extends javax.swing.JPanel {
         jSeparator12 = new javax.swing.JSeparator();
         btnAgregar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
         jpBajas = new javax.swing.JPanel();
         Titulo1 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -70,7 +69,6 @@ public class MenuProyecto extends javax.swing.JPanel {
         btnBuscar1 = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         btnBorrar1 = new javax.swing.JButton();
-        btnCancelar1 = new javax.swing.JButton();
         jpCambios = new javax.swing.JPanel();
         Titulo2 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
@@ -89,7 +87,6 @@ public class MenuProyecto extends javax.swing.JPanel {
         btnBuscar2 = new javax.swing.JButton();
         btnGuardar2 = new javax.swing.JButton();
         btnBorrar2 = new javax.swing.JButton();
-        btnCancelar2 = new javax.swing.JButton();
         jpConsultas = new javax.swing.JPanel();
         jpTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -146,6 +143,11 @@ public class MenuProyecto extends javax.swing.JPanel {
         jtfNomProyecto.setBackground(new java.awt.Color(245, 198, 165));
         jtfNomProyecto.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfNomProyecto.setBorder(null);
+        jtfNomProyecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNomProyectoActionPerformed(evt);
+            }
+        });
         jpAltas.add(jtfNomProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 159, 30));
         jpAltas.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 159, 20));
 
@@ -157,6 +159,11 @@ public class MenuProyecto extends javax.swing.JPanel {
         jtfNumProyecto.setBackground(new java.awt.Color(245, 198, 165));
         jtfNumProyecto.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfNumProyecto.setBorder(null);
+        jtfNumProyecto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNumProyectoActionPerformed(evt);
+            }
+        });
         jpAltas.add(jtfNumProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 50, 30));
         jpAltas.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 50, 20));
 
@@ -193,7 +200,7 @@ public class MenuProyecto extends javax.swing.JPanel {
                 btnAgregarActionPerformed(evt);
             }
         });
-        jpAltas.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 120, 30));
+        jpAltas.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 240, 120, 30));
 
         btnBorrar.setBackground(new java.awt.Color(162, 65, 107));
         btnBorrar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
@@ -205,14 +212,7 @@ public class MenuProyecto extends javax.swing.JPanel {
                 btnBorrarActionPerformed(evt);
             }
         });
-        jpAltas.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 240, 120, 30));
-
-        btnCancelar.setBackground(new java.awt.Color(162, 65, 107));
-        btnCancelar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar.setText("Cancelar");
-        btnCancelar.setBorder(null);
-        jpAltas.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, 120, 30));
+        jpAltas.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 120, 30));
 
         jtpContenidoABCC.addTab("Altas", jpAltas);
 
@@ -278,13 +278,6 @@ public class MenuProyecto extends javax.swing.JPanel {
             }
         });
         jpBajas.add(btnBorrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 120, 30));
-
-        btnCancelar1.setBackground(new java.awt.Color(162, 65, 107));
-        btnCancelar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnCancelar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar1.setText("Cancelar");
-        btnCancelar1.setBorder(null);
-        jpBajas.add(btnCancelar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 230, 120, 30));
 
         jtpContenidoABCC.addTab("Bajas", jpBajas);
 
@@ -384,18 +377,6 @@ public class MenuProyecto extends javax.swing.JPanel {
         });
         jpCambios.add(btnBorrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 240, 120, 30));
 
-        btnCancelar2.setBackground(new java.awt.Color(162, 65, 107));
-        btnCancelar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnCancelar2.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar2.setText("Cancelar");
-        btnCancelar2.setBorder(null);
-        btnCancelar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelar2ActionPerformed(evt);
-            }
-        });
-        jpCambios.add(btnCancelar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 240, 120, 30));
-
         jtpContenidoABCC.addTab("Cambios", jpCambios);
 
         jpConsultas.setBackground(new java.awt.Color(245, 198, 165));
@@ -428,7 +409,10 @@ public class MenuProyecto extends javax.swing.JPanel {
     private void btnBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar1ActionPerformed
         if(jtfNumProyecto1.getText().equals("")){
             JOptionPane.showMessageDialog(rootPane, "Debes ingresar el numero de proyecto");
+        }else{
+            
         }
+        mostrarTabla();
     }//GEN-LAST:event_btnBuscar1ActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
@@ -441,6 +425,7 @@ public class MenuProyecto extends javax.swing.JPanel {
 	}else {
             JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar eliminar a la base de datos");
 	}
+        mostrarTabla();
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar2ActionPerformed
@@ -454,10 +439,6 @@ public class MenuProyecto extends javax.swing.JPanel {
     private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
         restablecerComponentes(jtfNomProyecto2,jtfNumProyecto2,jtfUbiProyecto2,jtfNumDptoProyecto2);
     }//GEN-LAST:event_btnBorrar2ActionPerformed
-
-    private void btnCancelar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCancelar2ActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
         restablecerComponentes(jtfNomProyecto,jtfNumProyecto,jtfUbiProyecto,jtfNumDptoProyecto);
@@ -491,7 +472,17 @@ public class MenuProyecto extends javax.swing.JPanel {
             }
             
         }
+        mostrarTabla();
     }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void jtfNumProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNumProyectoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNumProyectoActionPerformed
+
+    private void jtfNomProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNomProyectoActionPerformed
+        //if ((ke.getKeyChar() >= '0' && ke.getKeyChar() <= '9')||(code==KeyEvent.VK_BACK_SPACE)) {}
+        
+    }//GEN-LAST:event_jtfNomProyectoActionPerformed
 
     
     
@@ -512,11 +503,25 @@ public class MenuProyecto extends javax.swing.JPanel {
 	} catch (SQLException e1) {
             e1.printStackTrace();
 	}
-        
-        jpTabla.remove(jScrollPane1);
+        jScrollPane1.getViewport().remove(jTable1);
         jTable1 = new JTable(modeloDatos);
-        jScrollPane1 = new JScrollPane(jTable1);
-        jpTabla.add(jScrollPane1);  
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                obtenerRegistroTabla();
+            }
+        });
+                jScrollPane1.getViewport().add(jTable1);
+        
+    }
+    
+    
+    public void obtenerRegistroTabla(){
+        jtfNomProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfNumProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
+        jtfUbiProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        jtfNumDptoProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
+        
     }
     
     
@@ -540,9 +545,6 @@ public class MenuProyecto extends javax.swing.JPanel {
     private javax.swing.JButton btnBorrar2;
     private javax.swing.JButton btnBuscar1;
     private javax.swing.JButton btnBuscar2;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnCancelar1;
-    private javax.swing.JButton btnCancelar2;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnGuardar2;
     private javax.swing.JLabel jLabel1;

@@ -88,15 +88,7 @@ public class MenuHorasEmpleado extends javax.swing.JPanel {
         add(jpTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 600));
     }// </editor-fold>//GEN-END:initComponents
 
-    
-    public void restablecerComponentes(Component...componentesGraficos) {
-	for (Component c: componentesGraficos) {
-            if  (c instanceof JTextField) {
-		((JTextField)c).setText("");
-            }
-        }
-    }
-    
+            
     public void mostrarTabla(){
         ResultSetTableModel modeloDatos = null;
 	try {
@@ -107,10 +99,16 @@ public class MenuHorasEmpleado extends javax.swing.JPanel {
             e1.printStackTrace();
 	}
         
-        jpTabla.remove(jScrollPane1);
+        jScrollPane1.getViewport().remove(jTable1);
         jTable1 = new JTable(modeloDatos);
-        jScrollPane1 = new JScrollPane(jTable1);
-        jpTabla.add(jScrollPane1);  
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                //obtenerRegistroTabla();
+            }
+        });
+                jScrollPane1.getViewport().add(jTable1);
+        
     }
     
 

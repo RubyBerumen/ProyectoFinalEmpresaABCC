@@ -53,9 +53,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDni = new javax.swing.JTextField();
         jSeparator5 = new javax.swing.JSeparator();
         FechaNac = new javax.swing.JLabel();
-        jcbDia = new javax.swing.JComboBox<>();
-        jcbMes = new javax.swing.JComboBox<>();
         jcbAño = new javax.swing.JComboBox<>();
+        jcbMes = new javax.swing.JComboBox<>();
+        jcbDia = new javax.swing.JComboBox<>();
         Direccion = new javax.swing.JLabel();
         jtfDireccion = new javax.swing.JTextField();
         jSeparator6 = new javax.swing.JSeparator();
@@ -237,28 +237,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
         FechaNac.setText("Fecha de nacimiento");
         jpAltas.add(FechaNac, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, 30));
 
-        jcbDia.setBackground(new java.awt.Color(162, 65, 107));
-        jcbDia.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jcbDia.setForeground(new java.awt.Color(102, 102, 102));
-        jcbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        jcbDia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbDiaActionPerformed(evt);
-            }
-        });
-        jpAltas.add(jcbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, -1, 30));
-
-        jcbMes.setBackground(new java.awt.Color(162, 65, 107));
-        jcbMes.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jcbMes.setForeground(new java.awt.Color(102, 102, 102));
-        jcbMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Nov", "Dic" }));
-        jcbMes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbMesActionPerformed(evt);
-            }
-        });
-        jpAltas.add(jcbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, -1, 30));
-
         jcbAño.setBackground(new java.awt.Color(162, 65, 107));
         jcbAño.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAño.setForeground(new java.awt.Color(102, 102, 102));
@@ -269,6 +247,28 @@ public class MenuEmpleado extends javax.swing.JPanel {
             }
         });
         jpAltas.add(jcbAño, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, -1, 30));
+
+        jcbMes.setBackground(new java.awt.Color(162, 65, 107));
+        jcbMes.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jcbMes.setForeground(new java.awt.Color(102, 102, 102));
+        jcbMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", " " }));
+        jcbMes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbMesActionPerformed(evt);
+            }
+        });
+        jpAltas.add(jcbMes, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, -1, 30));
+
+        jcbDia.setBackground(new java.awt.Color(162, 65, 107));
+        jcbDia.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jcbDia.setForeground(new java.awt.Color(102, 102, 102));
+        jcbDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        jcbDia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbDiaActionPerformed(evt);
+            }
+        });
+        jpAltas.add(jcbDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, -1, 30));
 
         Direccion.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         Direccion.setForeground(new java.awt.Color(102, 102, 102));
@@ -530,7 +530,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jcbDia1.setBackground(new java.awt.Color(162, 65, 107));
         jcbDia1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbDia1.setForeground(new java.awt.Color(102, 102, 102));
-        jcbDia1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        jcbDia1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
         jcbDia1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbDia1ActionPerformed(evt);
@@ -541,13 +541,13 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jcbMes1.setBackground(new java.awt.Color(162, 65, 107));
         jcbMes1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbMes1.setForeground(new java.awt.Color(102, 102, 102));
-        jcbMes1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Nov", "Dic" }));
+        jcbMes1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", " " }));
         jcbMes1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbMes1ActionPerformed(evt);
             }
         });
-        jpCambios.add(jcbMes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, -1, 30));
+        jpCambios.add(jcbMes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, -1, 30));
 
         jcbAño1.setBackground(new java.awt.Color(162, 65, 107));
         jcbAño1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
@@ -706,14 +706,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfNombreActionPerformed
 
-    private void jcbDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDiaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jcbDiaActionPerformed
-
-    private void jcbMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbMesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jcbMesActionPerformed
-
     private void jcbAñoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAñoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbAñoActionPerformed
@@ -794,6 +786,14 @@ public class MenuEmpleado extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
+    private void jcbMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbMesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbMesActionPerformed
+
+    private void jcbDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbDiaActionPerformed
+
     
     public void restablecerComponentes(Component...componentesGraficos) {
 	for (Component c: componentesGraficos) {
@@ -805,6 +805,37 @@ public class MenuEmpleado extends javax.swing.JPanel {
         }
     }
 
+    
+        public void mostrarTabla(){
+        ResultSetTableModel modeloDatos = null;
+	try {
+            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa","SELECT * FROM empleado");
+	} catch (ClassNotFoundException e1) {
+            e1.printStackTrace();
+	} catch (SQLException e1) {
+            e1.printStackTrace();
+	}
+        jScrollPane1.getViewport().remove(jTable1);
+        jTable1 = new JTable(modeloDatos);
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                obtenerRegistroTabla();
+            }
+        });
+                jScrollPane1.getViewport().add(jTable1);
+        
+    }
+    
+    
+    public void obtenerRegistroTabla(){
+        /*jtfNomProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfNumProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
+        jtfUbiProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        jtfNumDptoProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));*/
+        
+    }
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

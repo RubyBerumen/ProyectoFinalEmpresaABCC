@@ -29,6 +29,7 @@ public class ProyectoDAO {
 		
 	String sql="INSERT INTO proyecto VALUES('"+p.getNombreProyecto()+"', '"+p.getNumProyecto()+"',"
                 + " '"+p.getUbicaciónProyecto()+"', '"+p.getNumDptoProyecto()+"' );";
+        System.out.println(sql);
 	resultado = conexion.ejecutarInstruccion(sql);
 		
 	return resultado;

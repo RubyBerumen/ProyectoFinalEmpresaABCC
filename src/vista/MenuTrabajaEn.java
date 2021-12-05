@@ -5,7 +5,9 @@
 package vista;
 
 import java.awt.Component;
+import java.sql.SQLException;
 import javax.swing.JComboBox;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 
 /**
@@ -411,6 +413,35 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
 		((JTextField)c).setText("");
             }
         }
+    }
+    
+    public void mostrarTabla(){
+        ResultSetTableModel modeloDatos = null;
+	try {
+            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa","SELECT * FROM trabaja_en");
+	} catch (ClassNotFoundException e1) {
+            e1.printStackTrace();
+	} catch (SQLException e1) {
+            e1.printStackTrace();
+	}
+        jScrollPane1.getViewport().remove(jTable1);
+        jTable1 = new JTable(modeloDatos);
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                obtenerRegistroTabla();
+            }
+        });
+                jScrollPane1.getViewport().add(jTable1);
+        
+    }
+    
+    public void obtenerRegistroTabla(){
+        jtfDniEmpleado.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfNumProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
+        jtfHoras.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        
+        
     }
     
 
