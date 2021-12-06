@@ -12,7 +12,7 @@ import java.sql.*;
 
 public class ConexionBD {
 	
-	private Connection conexion;
+	private static Connection conexion;
 	private Statement stm;
 	private ResultSet rs;
 	
@@ -33,6 +33,15 @@ public class ConexionBD {
 		}
 	}
 	
+        
+        public static Connection getConexion(){
+
+         if (conexion == null){
+             new ConexionBD();
+         }
+
+         return conexion;
+        }
 	
 	public void cerrarConexion(){
 		try {

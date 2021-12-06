@@ -84,6 +84,17 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         btnGuardar2 = new javax.swing.JButton();
         btnBorrar2 = new javax.swing.JButton();
         jpConsultas = new javax.swing.JPanel();
+        Titulo3 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        DniEmpleado3 = new javax.swing.JLabel();
+        jtfDniEmpleado3 = new javax.swing.JTextField();
+        jSeparator8 = new javax.swing.JSeparator();
+        NumProyecto3 = new javax.swing.JLabel();
+        jtfNumProyecto3 = new javax.swing.JTextField();
+        jSeparator15 = new javax.swing.JSeparator();
+        Horas3 = new javax.swing.JLabel();
+        jtfHoras3 = new javax.swing.JTextField();
+        jSeparator16 = new javax.swing.JSeparator();
         jpTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -342,6 +353,43 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
 
         jpConsultas.setBackground(new java.awt.Color(245, 198, 165));
         jpConsultas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Titulo3.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
+        Titulo3.setForeground(new java.awt.Color(255, 255, 255));
+        Titulo3.setText("Buscar");
+        jpConsultas.add(Titulo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 30, 500, 41));
+        jpConsultas.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 840, 21));
+
+        DniEmpleado3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        DniEmpleado3.setForeground(new java.awt.Color(102, 102, 102));
+        DniEmpleado3.setText("Dni empleado");
+        jpConsultas.add(DniEmpleado3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, 30));
+
+        jtfDniEmpleado3.setBackground(new java.awt.Color(245, 198, 165));
+        jtfDniEmpleado3.setBorder(null);
+        jpConsultas.add(jtfDniEmpleado3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 159, 30));
+        jpConsultas.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 159, 20));
+
+        NumProyecto3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NumProyecto3.setForeground(new java.awt.Color(102, 102, 102));
+        NumProyecto3.setText("Número de proyecto");
+        jpConsultas.add(NumProyecto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, 30));
+
+        jtfNumProyecto3.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNumProyecto3.setBorder(null);
+        jpConsultas.add(jtfNumProyecto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 50, 30));
+        jpConsultas.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 50, 20));
+
+        Horas3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Horas3.setForeground(new java.awt.Color(102, 102, 102));
+        Horas3.setText("Horas");
+        jpConsultas.add(Horas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, -1, 30));
+
+        jtfHoras3.setBackground(new java.awt.Color(245, 198, 165));
+        jtfHoras3.setBorder(null);
+        jpConsultas.add(jtfHoras3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 80, 30));
+        jpConsultas.add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 140, 80, 20));
+
         jtpContenidoABCC.addTab("Consultas", jpConsultas);
 
         add(jtpContenidoABCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 270));
@@ -362,7 +410,7 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jpTabla.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 920, 290));
+        jpTabla.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 570, 290));
 
         add(jpTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 960, 330));
     }// </editor-fold>//GEN-END:initComponents
@@ -521,14 +569,18 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
     private javax.swing.JLabel DniEmpleado;
     private javax.swing.JLabel DniEmpleado1;
     private javax.swing.JLabel DniEmpleado2;
+    private javax.swing.JLabel DniEmpleado3;
     private javax.swing.JLabel Horas;
     private javax.swing.JLabel Horas2;
+    private javax.swing.JLabel Horas3;
     private javax.swing.JLabel NumProyecto;
     private javax.swing.JLabel NumProyecto1;
     private javax.swing.JLabel NumProyecto2;
+    private javax.swing.JLabel NumProyecto3;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo2;
+    private javax.swing.JLabel Titulo3;
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnBorrar1;
@@ -545,11 +597,15 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator14;
+    private javax.swing.JSeparator jSeparator15;
+    private javax.swing.JSeparator jSeparator16;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
     private javax.swing.JTable jTable1;
     private javax.swing.JPanel jpAltas;
     private javax.swing.JPanel jpBajas;
@@ -560,11 +616,14 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
     private javax.swing.JTextField jtfDniEmpleado;
     private javax.swing.JTextField jtfDniEmpleado1;
     private javax.swing.JTextField jtfDniEmpleado2;
+    private javax.swing.JTextField jtfDniEmpleado3;
     private javax.swing.JTextField jtfHoras;
     private javax.swing.JTextField jtfHoras2;
+    private javax.swing.JTextField jtfHoras3;
     private javax.swing.JTextField jtfNumProyecto;
     private javax.swing.JTextField jtfNumProyecto1;
     private javax.swing.JTextField jtfNumProyecto2;
+    private javax.swing.JTextField jtfNumProyecto3;
     private javax.swing.JTabbedPane jtpContenidoABCC;
     // End of variables declaration//GEN-END:variables
 }

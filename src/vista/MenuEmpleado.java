@@ -124,6 +124,38 @@ public class MenuEmpleado extends javax.swing.JPanel {
         btnGuardar2 = new javax.swing.JButton();
         btnBorrar2 = new javax.swing.JButton();
         jpConsultas = new javax.swing.JPanel();
+        Titulo3 = new javax.swing.JLabel();
+        jSeparator21 = new javax.swing.JSeparator();
+        Nombre2 = new javax.swing.JLabel();
+        jtfNombre2 = new javax.swing.JTextField();
+        jSeparator22 = new javax.swing.JSeparator();
+        ApellidoP2 = new javax.swing.JLabel();
+        jtfAp2 = new javax.swing.JTextField();
+        jSeparator23 = new javax.swing.JSeparator();
+        ApellidoM2 = new javax.swing.JLabel();
+        jtfAm2 = new javax.swing.JTextField();
+        jSeparator24 = new javax.swing.JSeparator();
+        Dni3 = new javax.swing.JLabel();
+        jtfDni3 = new javax.swing.JTextField();
+        jSeparator25 = new javax.swing.JSeparator();
+        FechaNac2 = new javax.swing.JLabel();
+        jcbDia2 = new javax.swing.JComboBox<>();
+        jcbMes2 = new javax.swing.JComboBox<>();
+        jcbAño2 = new javax.swing.JComboBox<>();
+        Direccion2 = new javax.swing.JLabel();
+        jtfDireccion2 = new javax.swing.JTextField();
+        jSeparator26 = new javax.swing.JSeparator();
+        Sexo2 = new javax.swing.JLabel();
+        jcbSexo2 = new javax.swing.JComboBox<>();
+        Sueldo2 = new javax.swing.JLabel();
+        jtfSueldo2 = new javax.swing.JTextField();
+        jSeparator27 = new javax.swing.JSeparator();
+        DniSuper2 = new javax.swing.JLabel();
+        jtfDniSuper2 = new javax.swing.JTextField();
+        jSeparator28 = new javax.swing.JSeparator();
+        NoDpto2 = new javax.swing.JLabel();
+        jtfNoDpto2 = new javax.swing.JTextField();
+        jSeparator29 = new javax.swing.JSeparator();
         jpTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -654,6 +686,181 @@ public class MenuEmpleado extends javax.swing.JPanel {
 
         jpConsultas.setBackground(new java.awt.Color(245, 198, 165));
         jpConsultas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Titulo3.setBackground(new java.awt.Color(255, 255, 255));
+        Titulo3.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
+        Titulo3.setForeground(new java.awt.Color(255, 255, 255));
+        Titulo3.setText("Buscar");
+        jpConsultas.add(Titulo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, 41));
+
+        jSeparator21.setForeground(new java.awt.Color(255, 255, 255));
+        jpConsultas.add(jSeparator21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 880, 21));
+
+        Nombre2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Nombre2.setForeground(new java.awt.Color(102, 102, 102));
+        Nombre2.setText("Nombre(s)");
+        jpConsultas.add(Nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, 30));
+
+        jtfNombre2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNombre2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfNombre2.setBorder(null);
+        jtfNombre2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtfNombre2ActionPerformed(evt);
+            }
+        });
+        jtfNombre2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtfNombre2KeyTyped(evt);
+            }
+        });
+        jpConsultas.add(jtfNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 159, 30));
+
+        jSeparator22.setForeground(new java.awt.Color(255, 255, 255));
+        jpConsultas.add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 159, 20));
+
+        ApellidoP2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        ApellidoP2.setForeground(new java.awt.Color(102, 102, 102));
+        ApellidoP2.setText("Apellido paterno");
+        jpConsultas.add(ApellidoP2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, -1, 30));
+
+        jtfAp2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfAp2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfAp2.setBorder(null);
+        jpConsultas.add(jtfAp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 159, 30));
+
+        jSeparator23.setForeground(new java.awt.Color(255, 255, 255));
+        jpConsultas.add(jSeparator23, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 159, 20));
+
+        ApellidoM2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        ApellidoM2.setForeground(new java.awt.Color(102, 102, 102));
+        ApellidoM2.setText("Apellido materno");
+        jpConsultas.add(ApellidoM2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 110, -1, 30));
+
+        jtfAm2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfAm2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfAm2.setBorder(null);
+        jpConsultas.add(jtfAm2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, 159, 30));
+
+        jSeparator24.setForeground(new java.awt.Color(255, 255, 255));
+        jpConsultas.add(jSeparator24, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, 159, 20));
+
+        Dni3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Dni3.setForeground(new java.awt.Color(102, 102, 102));
+        Dni3.setText("Dni");
+        jpConsultas.add(Dni3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, 30));
+
+        jtfDni3.setBackground(new java.awt.Color(245, 198, 165));
+        jtfDni3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfDni3.setBorder(null);
+        jpConsultas.add(jtfDni3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 159, 30));
+
+        jSeparator25.setForeground(new java.awt.Color(255, 255, 255));
+        jpConsultas.add(jSeparator25, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 159, 20));
+
+        FechaNac2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        FechaNac2.setForeground(new java.awt.Color(102, 102, 102));
+        FechaNac2.setText("Fecha de nacimiento");
+        jpConsultas.add(FechaNac2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, 30));
+
+        jcbDia2.setBackground(new java.awt.Color(162, 65, 107));
+        jcbDia2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jcbDia2.setForeground(new java.awt.Color(102, 102, 102));
+        jcbDia2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        jcbDia2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbDia2ActionPerformed(evt);
+            }
+        });
+        jpConsultas.add(jcbDia2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, -1, 30));
+
+        jcbMes2.setBackground(new java.awt.Color(162, 65, 107));
+        jcbMes2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jcbMes2.setForeground(new java.awt.Color(102, 102, 102));
+        jcbMes2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", " " }));
+        jcbMes2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbMes2ActionPerformed(evt);
+            }
+        });
+        jpConsultas.add(jcbMes2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, -1, 30));
+
+        jcbAño2.setBackground(new java.awt.Color(162, 65, 107));
+        jcbAño2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jcbAño2.setForeground(new java.awt.Color(102, 102, 102));
+        jcbAño2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005" }));
+        jcbAño2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbAño2ActionPerformed(evt);
+            }
+        });
+        jpConsultas.add(jcbAño2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, -1, 30));
+
+        Direccion2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Direccion2.setForeground(new java.awt.Color(102, 102, 102));
+        Direccion2.setText("Dirección");
+        jpConsultas.add(Direccion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 170, -1, 30));
+
+        jtfDireccion2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfDireccion2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfDireccion2.setBorder(null);
+        jpConsultas.add(jtfDireccion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 170, 190, 30));
+
+        jSeparator26.setForeground(new java.awt.Color(255, 255, 255));
+        jpConsultas.add(jSeparator26, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 190, 20));
+
+        Sexo2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Sexo2.setForeground(new java.awt.Color(102, 102, 102));
+        Sexo2.setText("Sexo");
+        jpConsultas.add(Sexo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, 30));
+
+        jcbSexo2.setBackground(new java.awt.Color(162, 65, 107));
+        jcbSexo2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jcbSexo2.setForeground(new java.awt.Color(102, 102, 102));
+        jcbSexo2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M", "H" }));
+        jcbSexo2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbSexo2ActionPerformed(evt);
+            }
+        });
+        jpConsultas.add(jcbSexo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, -1, 30));
+
+        Sueldo2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        Sueldo2.setForeground(new java.awt.Color(102, 102, 102));
+        Sueldo2.setText("Sueldo");
+        jpConsultas.add(Sueldo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, 30));
+
+        jtfSueldo2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfSueldo2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfSueldo2.setBorder(null);
+        jpConsultas.add(jtfSueldo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 130, 30));
+
+        jSeparator27.setForeground(new java.awt.Color(255, 255, 255));
+        jpConsultas.add(jSeparator27, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 130, 20));
+
+        DniSuper2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        DniSuper2.setForeground(new java.awt.Color(102, 102, 102));
+        DniSuper2.setText("Dni supervisor");
+        jpConsultas.add(DniSuper2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, -1, 30));
+
+        jtfDniSuper2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfDniSuper2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfDniSuper2.setBorder(null);
+        jpConsultas.add(jtfDniSuper2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 159, 30));
+
+        jSeparator28.setForeground(new java.awt.Color(255, 255, 255));
+        jpConsultas.add(jSeparator28, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 260, 159, 20));
+
+        NoDpto2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        NoDpto2.setForeground(new java.awt.Color(102, 102, 102));
+        NoDpto2.setText("Número departamento");
+        jpConsultas.add(NoDpto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 230, -1, 30));
+
+        jtfNoDpto2.setBackground(new java.awt.Color(245, 198, 165));
+        jtfNoDpto2.setBorder(null);
+        jpConsultas.add(jtfNoDpto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 230, 40, 30));
+        jpConsultas.add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 260, 40, 20));
+
         jtpContenidoABCC.addTab("Consultas", jpConsultas);
 
         add(jtpContenidoABCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 390));
@@ -841,6 +1048,30 @@ public class MenuEmpleado extends javax.swing.JPanel {
         mostrarTabla(sqlE);
     }//GEN-LAST:event_jtpContenidoABCCMouseClicked
 
+    private void jtfNombre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNombre2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNombre2ActionPerformed
+
+    private void jtfNombre2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNombre2KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtfNombre2KeyTyped
+
+    private void jcbDia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbDia2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbDia2ActionPerformed
+
+    private void jcbMes2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbMes2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbMes2ActionPerformed
+
+    private void jcbAño2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbAño2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbAño2ActionPerformed
+
+    private void jcbSexo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbSexo2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbSexo2ActionPerformed
+
     
     public void restablecerComponentes(Component...componentesGraficos) {
 	for (Component c: componentesGraficos) {
@@ -900,28 +1131,39 @@ public class MenuEmpleado extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ApellidoM;
     private javax.swing.JLabel ApellidoM1;
+    private javax.swing.JLabel ApellidoM2;
     private javax.swing.JLabel ApellidoP;
     private javax.swing.JLabel ApellidoP1;
+    private javax.swing.JLabel ApellidoP2;
     private javax.swing.JLabel Direccion;
     private javax.swing.JLabel Direccion1;
+    private javax.swing.JLabel Direccion2;
     private javax.swing.JLabel Dni;
     private javax.swing.JLabel Dni1;
     private javax.swing.JLabel Dni2;
+    private javax.swing.JLabel Dni3;
     private javax.swing.JLabel DniSuper;
     private javax.swing.JLabel DniSuper1;
+    private javax.swing.JLabel DniSuper2;
     private javax.swing.JLabel FechaNac;
     private javax.swing.JLabel FechaNac1;
+    private javax.swing.JLabel FechaNac2;
     private javax.swing.JLabel NoDpto;
     private javax.swing.JLabel NoDpto1;
+    private javax.swing.JLabel NoDpto2;
     private javax.swing.JLabel Nombre;
     private javax.swing.JLabel Nombre1;
+    private javax.swing.JLabel Nombre2;
     private javax.swing.JLabel Sexo;
     private javax.swing.JLabel Sexo1;
+    private javax.swing.JLabel Sexo2;
     private javax.swing.JLabel Sueldo;
     private javax.swing.JLabel Sueldo1;
+    private javax.swing.JLabel Sueldo2;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo2;
+    private javax.swing.JLabel Titulo3;
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnBorrar1;
@@ -945,6 +1187,15 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator19;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator20;
+    private javax.swing.JSeparator jSeparator21;
+    private javax.swing.JSeparator jSeparator22;
+    private javax.swing.JSeparator jSeparator23;
+    private javax.swing.JSeparator jSeparator24;
+    private javax.swing.JSeparator jSeparator25;
+    private javax.swing.JSeparator jSeparator26;
+    private javax.swing.JSeparator jSeparator27;
+    private javax.swing.JSeparator jSeparator28;
+    private javax.swing.JSeparator jSeparator29;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
@@ -955,12 +1206,16 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private javax.swing.JTable jTable1;
     private javax.swing.JComboBox<String> jcbAño;
     private javax.swing.JComboBox<String> jcbAño1;
+    private javax.swing.JComboBox<String> jcbAño2;
     private javax.swing.JComboBox<String> jcbDia;
     private javax.swing.JComboBox<String> jcbDia1;
+    private javax.swing.JComboBox<String> jcbDia2;
     private javax.swing.JComboBox<String> jcbMes;
     private javax.swing.JComboBox<String> jcbMes1;
+    private javax.swing.JComboBox<String> jcbMes2;
     private javax.swing.JComboBox<String> jcbSexo;
     private javax.swing.JComboBox<String> jcbSexo1;
+    private javax.swing.JComboBox<String> jcbSexo2;
     private javax.swing.JPanel jpAltas;
     private javax.swing.JPanel jpBajas;
     private javax.swing.JPanel jpCambios;
@@ -969,21 +1224,29 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private javax.swing.JPanel jpTitulo;
     private javax.swing.JTextField jtfAm;
     private javax.swing.JTextField jtfAm1;
+    private javax.swing.JTextField jtfAm2;
     private javax.swing.JTextField jtfAp;
     private javax.swing.JTextField jtfAp1;
+    private javax.swing.JTextField jtfAp2;
     private javax.swing.JTextField jtfDireccion;
     private javax.swing.JTextField jtfDireccion1;
+    private javax.swing.JTextField jtfDireccion2;
     private javax.swing.JTextField jtfDni;
     private javax.swing.JTextField jtfDni1;
     private javax.swing.JTextField jtfDni2;
+    private javax.swing.JTextField jtfDni3;
     private javax.swing.JTextField jtfDniSuper;
     private javax.swing.JTextField jtfDniSuper1;
+    private javax.swing.JTextField jtfDniSuper2;
     private javax.swing.JTextField jtfNoDpto;
     private javax.swing.JTextField jtfNoDpto1;
+    private javax.swing.JTextField jtfNoDpto2;
     private javax.swing.JTextField jtfNombre;
     private javax.swing.JTextField jtfNombre1;
+    private javax.swing.JTextField jtfNombre2;
     private javax.swing.JTextField jtfSueldo;
     private javax.swing.JTextField jtfSueldo1;
+    private javax.swing.JTextField jtfSueldo2;
     private javax.swing.JTabbedPane jtpContenidoABCC;
     // End of variables declaration//GEN-END:variables
 }

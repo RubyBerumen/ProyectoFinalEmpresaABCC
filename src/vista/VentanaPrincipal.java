@@ -172,7 +172,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jpMenu.add(jpTrabajaEn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 240, 70));
+        jpMenu.add(jpTrabajaEn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 240, 70));
 
         jpProyecto.setBackground(new java.awt.Color(133, 39, 71));
         jpProyecto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -209,7 +209,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jpMenu.add(jpProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 240, 70));
+        jpMenu.add(jpProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 240, 70));
 
         background.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 700));
 
