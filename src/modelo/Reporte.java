@@ -12,7 +12,6 @@ import net.sf.jasperreports.view.JasperDesignViewer;
 import net.sf.jasperreports.view.JasperViewer;
 
 
-
 /**
  *
  * @author clara

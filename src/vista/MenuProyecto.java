@@ -66,6 +66,7 @@ public class MenuProyecto extends javax.swing.JPanel {
         jSeparator12 = new javax.swing.JSeparator();
         btnAgregar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
+        NumDptoProyecto1 = new javax.swing.JLabel();
         jpBajas = new javax.swing.JPanel();
         Titulo1 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -93,6 +94,7 @@ public class MenuProyecto extends javax.swing.JPanel {
         btnBuscar2 = new javax.swing.JButton();
         btnGuardar2 = new javax.swing.JButton();
         btnBorrar2 = new javax.swing.JButton();
+        NumDptoProyecto4 = new javax.swing.JLabel();
         jpConsultas = new javax.swing.JPanel();
         Titulo3 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
@@ -108,11 +110,15 @@ public class MenuProyecto extends javax.swing.JPanel {
         NumDptoProyecto3 = new javax.swing.JLabel();
         jtfNumDptoProyecto3 = new javax.swing.JTextField();
         jSeparator17 = new javax.swing.JSeparator();
+        btnBorrar3 = new javax.swing.JButton();
         jpGrafica = new javax.swing.JPanel();
         btnGenerarG = new javax.swing.JButton();
         jpTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        TabLoc = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(245, 198, 165));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -207,24 +213,26 @@ public class MenuProyecto extends javax.swing.JPanel {
         UbiProyecto.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         UbiProyecto.setForeground(new java.awt.Color(102, 102, 102));
         UbiProyecto.setText("Ubicación del proyecto");
-        jpAltas.add(UbiProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, 30));
+        jpAltas.add(UbiProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, 30));
 
+        jtfUbiProyecto.setEditable(false);
         jtfUbiProyecto.setBackground(new java.awt.Color(245, 198, 165));
         jtfUbiProyecto.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfUbiProyecto.setBorder(null);
-        jpAltas.add(jtfUbiProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 159, 30));
-        jpAltas.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 159, 20));
+        jpAltas.add(jtfUbiProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 159, 30));
+        jpAltas.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 159, 20));
 
         NumDptoProyecto.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         NumDptoProyecto.setForeground(new java.awt.Color(102, 102, 102));
         NumDptoProyecto.setText("Número de departamento del proyecto");
-        jpAltas.add(NumDptoProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, -1, 30));
+        jpAltas.add(NumDptoProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, -1, 30));
 
+        jtfNumDptoProyecto.setEditable(false);
         jtfNumDptoProyecto.setBackground(new java.awt.Color(245, 198, 165));
         jtfNumDptoProyecto.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfNumDptoProyecto.setBorder(null);
-        jpAltas.add(jtfNumDptoProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 170, 50, 30));
-        jpAltas.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 200, 50, 20));
+        jpAltas.add(jtfNumDptoProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 160, 50, 30));
+        jpAltas.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 190, 50, 20));
 
         btnAgregar.setBackground(new java.awt.Color(162, 65, 107));
         btnAgregar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
@@ -250,6 +258,11 @@ public class MenuProyecto extends javax.swing.JPanel {
             }
         });
         jpAltas.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 120, 30));
+
+        NumDptoProyecto1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        NumDptoProyecto1.setForeground(new java.awt.Color(102, 102, 102));
+        NumDptoProyecto1.setText("La ubicación y número de departamento deben ser selecionados de la tabla localizaciones");
+        jpAltas.add(NumDptoProyecto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, -1, 30));
 
         jtpContenidoABCC.addTab("Altas", jpAltas);
 
@@ -359,24 +372,26 @@ public class MenuProyecto extends javax.swing.JPanel {
         UbiProyecto2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         UbiProyecto2.setForeground(new java.awt.Color(102, 102, 102));
         UbiProyecto2.setText("Ubicación del proyecto");
-        jpCambios.add(UbiProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, 30));
+        jpCambios.add(UbiProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, 30));
 
+        jtfUbiProyecto2.setEditable(false);
         jtfUbiProyecto2.setBackground(new java.awt.Color(245, 198, 165));
         jtfUbiProyecto2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfUbiProyecto2.setBorder(null);
-        jpCambios.add(jtfUbiProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 159, 30));
-        jpCambios.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 159, 20));
+        jpCambios.add(jtfUbiProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 159, 30));
+        jpCambios.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 159, 20));
 
         NumDptoProyecto2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         NumDptoProyecto2.setForeground(new java.awt.Color(102, 102, 102));
         NumDptoProyecto2.setText("Número de departamento del proyecto");
-        jpCambios.add(NumDptoProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, -1, 30));
+        jpCambios.add(NumDptoProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, -1, 30));
 
+        jtfNumDptoProyecto2.setEditable(false);
         jtfNumDptoProyecto2.setBackground(new java.awt.Color(245, 198, 165));
         jtfNumDptoProyecto2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfNumDptoProyecto2.setBorder(null);
-        jpCambios.add(jtfNumDptoProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 170, 50, 30));
-        jpCambios.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 200, 50, 20));
+        jpCambios.add(jtfNumDptoProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 150, 50, 30));
+        jpCambios.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 180, 50, 20));
 
         btnBuscar2.setBackground(new java.awt.Color(162, 65, 107));
         btnBuscar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
@@ -413,6 +428,11 @@ public class MenuProyecto extends javax.swing.JPanel {
             }
         });
         jpCambios.add(btnBorrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, 120, 30));
+
+        NumDptoProyecto4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        NumDptoProyecto4.setForeground(new java.awt.Color(102, 102, 102));
+        NumDptoProyecto4.setText("La ubicación y número de departamento deben ser selecionados de la tabla localizaciones");
+        jpCambios.add(NumDptoProyecto4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, -1, 30));
 
         jtpContenidoABCC.addTab("Cambios", jpCambios);
 
@@ -472,6 +492,11 @@ public class MenuProyecto extends javax.swing.JPanel {
         jtfUbiProyecto3.setBackground(new java.awt.Color(245, 198, 165));
         jtfUbiProyecto3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfUbiProyecto3.setBorder(null);
+        jtfUbiProyecto3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfUbiProyecto3KeyReleased(evt);
+            }
+        });
         jpConsultas.add(jtfUbiProyecto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 159, 30));
         jpConsultas.add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 159, 20));
 
@@ -483,17 +508,35 @@ public class MenuProyecto extends javax.swing.JPanel {
         jtfNumDptoProyecto3.setBackground(new java.awt.Color(245, 198, 165));
         jtfNumDptoProyecto3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfNumDptoProyecto3.setBorder(null);
+        jtfNumDptoProyecto3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfNumDptoProyecto3KeyReleased(evt);
+            }
+        });
         jpConsultas.add(jtfNumDptoProyecto3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 170, 50, 30));
         jpConsultas.add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 200, 50, 20));
 
+        btnBorrar3.setBackground(new java.awt.Color(162, 65, 107));
+        btnBorrar3.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnBorrar3.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar3.setText("Borrar");
+        btnBorrar3.setBorder(null);
+        btnBorrar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrar3ActionPerformed(evt);
+            }
+        });
+        jpConsultas.add(btnBorrar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 120, 30));
+
         jtpContenidoABCC.addTab("Consultas", jpConsultas);
 
+        jpGrafica.setBackground(new java.awt.Color(245, 198, 165));
         jpGrafica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnGenerarG.setBackground(new java.awt.Color(162, 65, 107));
         btnGenerarG.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
         btnGenerarG.setForeground(new java.awt.Color(255, 255, 255));
-        btnGenerarG.setText("Generar grafico");
+        btnGenerarG.setText("Generar gráfica");
         btnGenerarG.setBorder(null);
         btnGenerarG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -502,7 +545,7 @@ public class MenuProyecto extends javax.swing.JPanel {
         });
         jpGrafica.add(btnGenerarG, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 140, 40));
 
-        jtpContenidoABCC.addTab("tab5", jpGrafica);
+        jtpContenidoABCC.addTab("Gráfica", jpGrafica);
 
         add(jtpContenidoABCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 330));
 
@@ -523,6 +566,26 @@ public class MenuProyecto extends javax.swing.JPanel {
         jScrollPane1.setViewportView(jTable1);
 
         jpTabla.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 610, 230));
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        jpTabla.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 50, 250, 200));
+
+        TabLoc.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        TabLoc.setForeground(new java.awt.Color(102, 102, 102));
+        TabLoc.setText("Tabla localizaciones");
+        jpTabla.add(TabLoc, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 20, 150, 20));
 
         add(jpTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 960, 270));
     }// </editor-fold>//GEN-END:initComponents
@@ -664,11 +727,26 @@ public class MenuProyecto extends javax.swing.JPanel {
            jpGrafica.add(g.dibujar(),new BorderLayout().NORTH);
            
        }else{
-           System.out.println("No jala ");
+           System.out.println("No funciona");
        }
         
-    
     }//GEN-LAST:event_btnGenerarGActionPerformed
+
+    private void jtfUbiProyecto3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfUbiProyecto3KeyReleased
+        String filtro = jtfUbiProyecto3.getText();
+        String sql =  "SELECT * FROM proyecto WHERE UbicacionProyecto LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfUbiProyecto3KeyReleased
+
+    private void jtfNumDptoProyecto3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNumDptoProyecto3KeyReleased
+        String filtro = jtfNumDptoProyecto3.getText();
+        String sql =  "SELECT * FROM proyecto WHERE NumDptoProyecto LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfNumDptoProyecto3KeyReleased
+
+    private void btnBorrar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar3ActionPerformed
+        restablecerComponentes(jtfNomProyecto3,jtfNumProyecto3,jtfUbiProyecto3,jtfNumDptoProyecto3);
+    }//GEN-LAST:event_btnBorrar3ActionPerformed
 
     
     
@@ -704,9 +782,42 @@ public class MenuProyecto extends javax.swing.JPanel {
     
     public void obtenerRegistroTabla(){
         jtfNomProyecto2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfNomProyecto3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfNumProyecto1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
         jtfNumProyecto2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
+        jtfNumProyecto3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
         jtfUbiProyecto2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        jtfUbiProyecto3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
         jtfNumDptoProyecto2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
+        jtfNumDptoProyecto3.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
+        
+    }
+    
+    public void mostrarTabla2(){
+        ResultSetTableModel modeloDatos = null;
+	try {
+            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa","SELECT * FROM localizaciones_dpto");
+	} catch (ClassNotFoundException e1) {
+            e1.printStackTrace();
+	} catch (SQLException e1) {
+            e1.printStackTrace();
+	}
+        jScrollPane2.getViewport().remove(jTable2);
+        jTable2 = new JTable(modeloDatos);
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                obtenerRegistroTabla2();
+            }
+        });
+        jScrollPane2.getViewport().add(jTable2);
+        
+    }
+    public void obtenerRegistroTabla2(){
+        jtfUbiProyecto.setText(""+jTable2.getValueAt(jTable2.getSelectedRow(),1));
+        jtfUbiProyecto2.setText(""+jTable2.getValueAt(jTable2.getSelectedRow(),1));
+        jtfNumDptoProyecto.setText(""+jTable2.getValueAt(jTable2.getSelectedRow(),0));
+        jtfNumDptoProyecto2.setText(""+jTable2.getValueAt(jTable2.getSelectedRow(),0));
         
     }
     
@@ -737,12 +848,15 @@ public class MenuProyecto extends javax.swing.JPanel {
     private javax.swing.JLabel NomProyecto2;
     private javax.swing.JLabel NomProyecto3;
     private javax.swing.JLabel NumDptoProyecto;
+    private javax.swing.JLabel NumDptoProyecto1;
     private javax.swing.JLabel NumDptoProyecto2;
     private javax.swing.JLabel NumDptoProyecto3;
+    private javax.swing.JLabel NumDptoProyecto4;
     private javax.swing.JLabel NumProyecto;
     private javax.swing.JLabel NumProyecto1;
     private javax.swing.JLabel NumProyecto2;
     private javax.swing.JLabel NumProyecto3;
+    private javax.swing.JLabel TabLoc;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo2;
@@ -754,6 +868,7 @@ public class MenuProyecto extends javax.swing.JPanel {
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnBorrar1;
     private javax.swing.JButton btnBorrar2;
+    private javax.swing.JButton btnBorrar3;
     private javax.swing.JButton btnBuscar1;
     private javax.swing.JButton btnBuscar2;
     private javax.swing.JButton btnEliminar;
@@ -761,6 +876,7 @@ public class MenuProyecto extends javax.swing.JPanel {
     private javax.swing.JButton btnGuardar2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -779,6 +895,7 @@ public class MenuProyecto extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JPanel jpAltas;
     private javax.swing.JPanel jpBajas;
     private javax.swing.JPanel jpCambios;

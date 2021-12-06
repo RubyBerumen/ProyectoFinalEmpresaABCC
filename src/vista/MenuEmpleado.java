@@ -159,6 +159,8 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jSeparator29 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
         btnGenerarR = new javax.swing.JButton();
+        Titulo4 = new javax.swing.JLabel();
+        jSeparator30 = new javax.swing.JSeparator();
         jpTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -866,6 +868,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
 
         jtpContenidoABCC.addTab("Consultas", jpConsultas);
 
+        jPanel1.setBackground(new java.awt.Color(245, 198, 165));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         btnGenerarR.setBackground(new java.awt.Color(162, 65, 107));
         btnGenerarR.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
         btnGenerarR.setForeground(new java.awt.Color(255, 255, 255));
@@ -876,25 +881,18 @@ public class MenuEmpleado extends javax.swing.JPanel {
                 btnGenerarRActionPerformed(evt);
             }
         });
+        jPanel1.add(btnGenerarR, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 140, 50));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(btnGenerarR, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(791, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(btnGenerarR, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(273, Short.MAX_VALUE))
-        );
+        Titulo4.setBackground(new java.awt.Color(255, 255, 255));
+        Titulo4.setFont(new java.awt.Font("Century Gothic", 3, 24)); // NOI18N
+        Titulo4.setForeground(new java.awt.Color(255, 255, 255));
+        Titulo4.setText("Generar reporte de empleados");
+        jPanel1.add(Titulo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, 41));
 
-        jtpContenidoABCC.addTab("tab5", jPanel1);
+        jSeparator30.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(jSeparator30, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 880, 21));
+
+        jtpContenidoABCC.addTab("Reporte", jPanel1);
 
         add(jtpContenidoABCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 390));
 
@@ -1202,6 +1200,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo2;
     private javax.swing.JLabel Titulo3;
+    private javax.swing.JLabel Titulo4;
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnBorrar1;
@@ -1237,6 +1236,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator28;
     private javax.swing.JSeparator jSeparator29;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator30;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
