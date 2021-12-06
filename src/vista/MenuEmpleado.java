@@ -4,13 +4,16 @@
  */
 package vista;
 
+import contolador.EmpleadoDAO;
 import java.awt.Component;
 import java.sql.SQLException;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
+import modelo.Empleado;
 
 /**
  *
@@ -21,6 +24,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
     /**
      * Creates new form MenuEmpleado1
      */
+    String sqlE = "SELECT * FROM empleado";
+    private Component rootPane;
+    
     public MenuEmpleado() {
         initComponents();
     }
@@ -71,7 +77,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfNoDpto = new javax.swing.JTextField();
         jSeparator9 = new javax.swing.JSeparator();
         btnAgregar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
         jpBajas = new javax.swing.JPanel();
         Titulo1 = new javax.swing.JLabel();
@@ -82,7 +87,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
         btnBuscar1 = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         btnBorrar1 = new javax.swing.JButton();
-        btnCancelar1 = new javax.swing.JButton();
         jpCambios = new javax.swing.JPanel();
         Titulo2 = new javax.swing.JLabel();
         jSeparator12 = new javax.swing.JSeparator();
@@ -119,7 +123,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
         btnBuscar2 = new javax.swing.JButton();
         btnGuardar2 = new javax.swing.JButton();
         btnBorrar2 = new javax.swing.JButton();
-        btnCancelar2 = new javax.swing.JButton();
         jpConsultas = new javax.swing.JPanel();
         jpTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -156,6 +159,16 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtpContenidoABCC.setBackground(new java.awt.Color(245, 198, 165));
         jtpContenidoABCC.setForeground(new java.awt.Color(102, 102, 102));
         jtpContenidoABCC.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jtpContenidoABCC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtpContenidoABCCMouseClicked(evt);
+            }
+        });
+        jtpContenidoABCC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtpContenidoABCCKeyPressed(evt);
+            }
+        });
 
         jpAltas.setBackground(new java.awt.Color(245, 198, 165));
         jpAltas.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -347,18 +360,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
         });
         jpAltas.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, 120, 30));
 
-        btnCancelar.setBackground(new java.awt.Color(162, 65, 107));
-        btnCancelar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar.setText("Cancelar");
-        btnCancelar.setBorder(null);
-        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarActionPerformed(evt);
-            }
-        });
-        jpAltas.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, 120, 30));
-
         btnBorrar.setBackground(new java.awt.Color(162, 65, 107));
         btnBorrar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
         btnBorrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -433,18 +434,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
             }
         });
         jpBajas.add(btnBorrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 120, 30));
-
-        btnCancelar1.setBackground(new java.awt.Color(162, 65, 107));
-        btnCancelar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnCancelar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar1.setText("Cancelar");
-        btnCancelar1.setBorder(null);
-        btnCancelar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelar1ActionPerformed(evt);
-            }
-        });
-        jpBajas.add(btnCancelar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 300, 120, 30));
 
         jtpContenidoABCC.addTab("Bajas", jpBajas);
 
@@ -661,18 +650,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
         });
         jpCambios.add(btnBorrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 300, 120, 30));
 
-        btnCancelar2.setBackground(new java.awt.Color(162, 65, 107));
-        btnCancelar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnCancelar2.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar2.setText("Cancelar");
-        btnCancelar2.setBorder(null);
-        btnCancelar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelar2ActionPerformed(evt);
-            }
-        });
-        jpCambios.add(btnCancelar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 300, 120, 30));
-
         jtpContenidoABCC.addTab("Cambios", jpCambios);
 
         jpConsultas.setBackground(new java.awt.Color(245, 198, 165));
@@ -719,6 +696,33 @@ public class MenuEmpleado extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfNombreKeyTyped
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+        EmpleadoDAO eDAO = new EmpleadoDAO();
+        if(jtfNombre.getText().equals("")||jtfAp.getText().equals("")||jtfAm.getText().equals("")||jtfDni.getText().equals("")||
+                (jcbDia.getSelectedItem().equals("01")&&jcbMes.getSelectedItem().equals("01")&&jcbAño.getSelectedItem().equals("1940"))||
+                jtfDireccion.getText().equals("")||jtfSueldo.getText().equals("")||jtfDniSuper.getText().equals("")||
+                jtfNoDpto.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes completar todos los campos");
+        }else{
+            String nombre = jtfNombre.getText();
+            String ap = jtfAp.getText();
+            String am = jtfAm.getText();
+            String dni = jtfDni.getText();
+            String fecha = obtenerFecha(jcbDia, jcbMes, jcbAño);
+            String direccion = jtfDireccion.getText();
+            String sexo = (String) jcbSexo.getSelectedItem();
+            int sueldo = Integer.parseInt(jtfSueldo.getText());
+            String dniSuper = jtfDniSuper.getText();
+            byte noDpto = Byte.parseByte(jtfNoDpto.getText());
+            Empleado e = new Empleado(nombre,ap,am,dni,fecha,direccion,sexo,sueldo,dniSuper,noDpto);
+            
+            if(eDAO.insertarRragistro(e)){
+                JOptionPane.showMessageDialog(rootPane,"Se agregó correctamente a la base de datos");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar agregar a la base de datos");
+            }
+            mostrarTabla(sqlE);
+        }
+        
         
     }//GEN-LAST:event_btnAgregarActionPerformed
 
@@ -726,24 +730,32 @@ public class MenuEmpleado extends javax.swing.JPanel {
         restablecerComponentes(jtfNombre, jtfAp,jtfAm, jtfDni, jcbDia, jcbMes, jcbAño, jtfDireccion, jcbSexo, jtfSueldo, jtfDniSuper, jtfNoDpto);
     }//GEN-LAST:event_btnBorrarActionPerformed
 
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-       
-    }//GEN-LAST:event_btnCancelarActionPerformed
-
     private void btnBorrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar1ActionPerformed
         restablecerComponentes(jtfDni1);
     }//GEN-LAST:event_btnBorrar1ActionPerformed
 
-    private void btnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCancelar1ActionPerformed
-
     private void btnBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar1ActionPerformed
-        // TODO add your handling code here:
+        String sql =  "SELECT * FROM empleado WHERE Dni = '"+jtfDni1.getText()+"'";
+        if(jtfDni1.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes ingresar el dni de un empleado");
+        }else{
+            mostrarTabla(sql);
+        }
     }//GEN-LAST:event_btnBuscar1ActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        // TODO add your handling code here:
+        EmpleadoDAO eDAO = new EmpleadoDAO();
+        if(jtfDni1.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane,"Debes ingresar el dni de un empleado");
+        }else{
+            String dni = jtfDni1.getText();
+            if(eDAO.eliminarRegistro(dni)){
+                JOptionPane.showMessageDialog(rootPane,"Se eliminó correctamente de la base de datos");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar eliminar a la base de datos");
+            }
+        }
+        mostrarTabla(sqlE);     
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void jtfNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNombre1ActionPerformed
@@ -770,10 +782,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbAño1ActionPerformed
 
-    private void btnCancelar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCancelar2ActionPerformed
-
     private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
         restablecerComponentes(jtfNombre1, jtfAp1,jtfAm1, jtfDni2, jcbDia1, jcbMes1, jcbAño1, jtfDireccion1, jcbSexo1, jtfSueldo1, jtfDniSuper1, jtfNoDpto1);
     }//GEN-LAST:event_btnBorrar2ActionPerformed
@@ -794,6 +802,14 @@ public class MenuEmpleado extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbDiaActionPerformed
 
+    private void jtpContenidoABCCKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtpContenidoABCCKeyPressed
+        mostrarTabla(sqlE);
+    }//GEN-LAST:event_jtpContenidoABCCKeyPressed
+
+    private void jtpContenidoABCCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtpContenidoABCCMouseClicked
+        mostrarTabla(sqlE);
+    }//GEN-LAST:event_jtpContenidoABCCMouseClicked
+
     
     public void restablecerComponentes(Component...componentesGraficos) {
 	for (Component c: componentesGraficos) {
@@ -806,10 +822,10 @@ public class MenuEmpleado extends javax.swing.JPanel {
     }
 
     
-        public void mostrarTabla(){
+        public void mostrarTabla(String sql){
         ResultSetTableModel modeloDatos = null;
 	try {
-            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa","SELECT * FROM empleado");
+            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa",sql);
 	} catch (ClassNotFoundException e1) {
             e1.printStackTrace();
 	} catch (SQLException e1) {
@@ -823,7 +839,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
                 obtenerRegistroTabla();
             }
         });
-                jScrollPane1.getViewport().add(jTable1);
+        jScrollPane1.getViewport().add(jTable1);
         
     }
     
@@ -834,6 +850,13 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfUbiProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
         jtfNumDptoProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));*/
         
+    }
+    
+    public String obtenerFecha(JComboBox dia,JComboBox mes,JComboBox año){
+        String d = (String) dia.getSelectedItem();
+        String m = (String) mes.getSelectedItem();
+        String a = (String) año.getSelectedItem();
+        return a+"-"+m+"-"+d;
     }
     
     
@@ -869,9 +892,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private javax.swing.JButton btnBorrar2;
     private javax.swing.JButton btnBuscar1;
     private javax.swing.JButton btnBuscar2;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnCancelar1;
-    private javax.swing.JButton btnCancelar2;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnGuardar2;
     private javax.swing.JLabel jLabel1;

@@ -501,8 +501,6 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         jtfDniEmpleado2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
         jtfNumProyecto2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
         jtfHoras2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
-        
-        
     }
     
     public void validacionNumeros(KeyEvent evt, JTextField jtf){
@@ -514,6 +512,10 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
             jtf.setEditable(false);
         }  
     }
+    
+        
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DniEmpleado;

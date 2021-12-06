@@ -30,6 +30,7 @@ public class EmpleadoDAO {
 	String sql="INSERT INTO empleado VALUES('"+e.getNombre()+"', '"+e.getApellido1()+"', '"+e.getApellido2()+"', "
                 + "'"+e.getDni()+"', '"+e.getFechaNac()+"', '"+e.getDireccion()+"', '"+e.getSexo()+"', "
                 + "'"+e.getSueldo()+"', '"+e.getSuperDni()+"', '"+e.getDno()+"' );";
+        System.out.println(sql);
 	resultado = conexion.ejecutarInstruccion(sql);
 		
 	return resultado;
