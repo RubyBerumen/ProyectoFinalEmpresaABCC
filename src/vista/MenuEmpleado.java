@@ -14,6 +14,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import modelo.Empleado;
+import modelo.Reporte;
 
 /**
  *
@@ -156,6 +157,8 @@ public class MenuEmpleado extends javax.swing.JPanel {
         NoDpto2 = new javax.swing.JLabel();
         jtfNoDpto2 = new javax.swing.JTextField();
         jSeparator29 = new javax.swing.JSeparator();
+        jPanel1 = new javax.swing.JPanel();
+        btnGenerarR = new javax.swing.JButton();
         jpTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -863,6 +866,36 @@ public class MenuEmpleado extends javax.swing.JPanel {
 
         jtpContenidoABCC.addTab("Consultas", jpConsultas);
 
+        btnGenerarR.setBackground(new java.awt.Color(162, 65, 107));
+        btnGenerarR.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnGenerarR.setForeground(new java.awt.Color(255, 255, 255));
+        btnGenerarR.setText("Generar reporte");
+        btnGenerarR.setBorder(null);
+        btnGenerarR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGenerarRActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(btnGenerarR, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(791, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(btnGenerarR, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(273, Short.MAX_VALUE))
+        );
+
+        jtpContenidoABCC.addTab("tab5", jPanel1);
+
         add(jtpContenidoABCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 960, 390));
 
         jpTabla.setBackground(new java.awt.Color(255, 255, 255));
@@ -1072,6 +1105,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbSexo2ActionPerformed
 
+    private void btnGenerarRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarRActionPerformed
+        Reporte r = new Reporte();
+        r.mostrarReporte();
+    }//GEN-LAST:event_btnGenerarRActionPerformed
+
     
     public void restablecerComponentes(Component...componentesGraficos) {
 	for (Component c: componentesGraficos) {
@@ -1171,8 +1209,10 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private javax.swing.JButton btnBuscar1;
     private javax.swing.JButton btnBuscar2;
     private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnGenerarR;
     private javax.swing.JButton btnGuardar2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;

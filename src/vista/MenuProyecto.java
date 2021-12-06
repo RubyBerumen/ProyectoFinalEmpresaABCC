@@ -109,7 +109,7 @@ public class MenuProyecto extends javax.swing.JPanel {
         jtfNumDptoProyecto3 = new javax.swing.JTextField();
         jSeparator17 = new javax.swing.JSeparator();
         jpGrafica = new javax.swing.JPanel();
-        btnBuscar3 = new javax.swing.JButton();
+        btnGenerarG = new javax.swing.JButton();
         jpTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -490,17 +490,17 @@ public class MenuProyecto extends javax.swing.JPanel {
 
         jpGrafica.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnBuscar3.setBackground(new java.awt.Color(162, 65, 107));
-        btnBuscar3.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnBuscar3.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscar3.setText("Generar grafico");
-        btnBuscar3.setBorder(null);
-        btnBuscar3.addActionListener(new java.awt.event.ActionListener() {
+        btnGenerarG.setBackground(new java.awt.Color(162, 65, 107));
+        btnGenerarG.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnGenerarG.setForeground(new java.awt.Color(255, 255, 255));
+        btnGenerarG.setText("Generar grafico");
+        btnGenerarG.setBorder(null);
+        btnGenerarG.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscar3ActionPerformed(evt);
+                btnGenerarGActionPerformed(evt);
             }
         });
-        jpGrafica.add(btnBuscar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 140, 40));
+        jpGrafica.add(btnGenerarG, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 140, 40));
 
         jtpContenidoABCC.addTab("tab5", jpGrafica);
 
@@ -656,7 +656,7 @@ public class MenuProyecto extends javax.swing.JPanel {
         mostrarTabla(sql);
     }//GEN-LAST:event_jtfNumProyecto3KeyReleased
 
-    private void btnBuscar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar3ActionPerformed
+    private void btnGenerarGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarGActionPerformed
        Grafica g = new Grafica();
      
        if(g.dibujar()!=null){
@@ -668,7 +668,7 @@ public class MenuProyecto extends javax.swing.JPanel {
        }
         
     
-    }//GEN-LAST:event_btnBuscar3ActionPerformed
+    }//GEN-LAST:event_btnGenerarGActionPerformed
 
     
     
@@ -756,8 +756,8 @@ public class MenuProyecto extends javax.swing.JPanel {
     private javax.swing.JButton btnBorrar2;
     private javax.swing.JButton btnBuscar1;
     private javax.swing.JButton btnBuscar2;
-    private javax.swing.JButton btnBuscar3;
     private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnGenerarG;
     private javax.swing.JButton btnGuardar2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
