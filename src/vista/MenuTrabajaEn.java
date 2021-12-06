@@ -399,11 +399,33 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar2ActionPerformed
-        // TODO add your handling code here:
+        String sql =  "SELECT * FROM trabaja_en WHERE DniEmpleado = '"+jtfDniEmpleado2.getText()+"' AND  NumProyecto = '"+jtfNumProyecto2.getText()+"'";
+        System.out.println(sql);
+        if(jtfDniEmpleado2.getText().equals("") ){
+            JOptionPane.showMessageDialog(rootPane, "Debes ingresar el Dni de un empleado");
+        }else if(jtfNumProyecto2.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes ingresar el numero de proyecto");
+        }else{
+            mostrarTabla(sql);
+        }
     }//GEN-LAST:event_btnBuscar2ActionPerformed
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
-        // TODO add your handling code here:
+        TrabajaEnDAO teDAO = new TrabajaEnDAO();
+        if(jtfDniEmpleado2.getText().equals("")||jtfNumProyecto2.getText().equals("")||
+                jtfHoras2.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
+        }else{
+            TrabajaEn te = new TrabajaEn(jtfDniEmpleado2.getText(),Integer.parseInt(jtfNumProyecto2.getText()),
+                Double.parseDouble(jtfHoras2.getText()));
+            if(teDAO.modificarRegistro(te)){
+                JOptionPane.showMessageDialog(rootPane,"Datos modificados exisotosamente");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"No se pudieron modificar los datos");
+            }
+            
+        }
+        mostrarTabla(sqlT);
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
     private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed

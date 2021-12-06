@@ -48,8 +48,9 @@ public class TrabajaEnDAO {
     public boolean modificarRegistro(TrabajaEn te) {
 	boolean resultado = false;
 		
-	String sql = "UPDATE proyecto SET Horas='"+te.getHoras()+"', "
+	String sql = "UPDATE trabaja_en SET Horas='"+te.getHoras()+"' "
                 + " WHERE DniEmpleado='"+te.getDniEmpleado()+"' AND NumProyecto='"+te.getNumProyecto()+"';";
+        System.out.println(sql);
 	resultado = conexion.ejecutarInstruccion(sql);
 		
 	return resultado;
