@@ -41,6 +41,7 @@ public class EmpleadoDAO {
 	boolean resultado = false;
 		
 	String sql =  "DELETE FROM empleado WHERE dni = \""+dni+"\"";
+        System.out.println(sql);
 	resultado = conexion.ejecutarInstruccion(sql);
 		
 	return resultado;

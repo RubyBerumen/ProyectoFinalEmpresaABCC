@@ -787,11 +787,42 @@ public class MenuEmpleado extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBorrar2ActionPerformed
 
     private void btnBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar2ActionPerformed
-        // TODO add your handling code here:
+       String sql =  "SELECT * FROM empleado WHERE Dni = '"+jtfDni2.getText()+"'";
+        if(jtfDni2.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes ingresar el dni de un empleado");
+        }else{
+            mostrarTabla(sql);
+        }
     }//GEN-LAST:event_btnBuscar2ActionPerformed
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
-        // TODO add your handling code here:
+        EmpleadoDAO eDAO = new EmpleadoDAO();
+        if(jtfNombre1.getText().equals("")||jtfAp1.getText().equals("")||jtfAm1.getText().equals("")||jtfDni2.getText().equals("")||
+                (jcbDia1.getSelectedItem().equals("01")&&jcbMes1.getSelectedItem().equals("01")&&jcbAño1.getSelectedItem().equals("1940"))||
+                jtfDireccion1.getText().equals("")||jtfSueldo1.getText().equals("")||jtfDniSuper1.getText().equals("")||
+                jtfNoDpto1.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes completar todos los campos");
+        }else{
+            String nombre = jtfNombre1.getText();
+            String ap = jtfAp1.getText();
+            String am = jtfAm1.getText();
+            String dni = jtfDni2.getText();
+            String fecha = obtenerFecha(jcbDia1, jcbMes1, jcbAño1);
+            String direccion = jtfDireccion1.getText();
+            String sexo = (String) jcbSexo1.getSelectedItem();
+            int sueldo = Integer.parseInt(jtfSueldo1.getText());
+            String dniSuper = jtfDniSuper1.getText();
+            byte noDpto = Byte.parseByte(jtfNoDpto1.getText());
+            
+            Empleado e = new Empleado(nombre,ap,am,dni,fecha,direccion,sexo,sueldo,dniSuper,noDpto);
+            
+            if(eDAO.modificarRegistro(e)){
+                JOptionPane.showMessageDialog(rootPane,"Datos modificados exisotosamente");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"No se pudieron modificar lod datos");
+            }
+            mostrarTabla(sqlE);
+        }
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
     private void jcbMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbMesActionPerformed
@@ -845,11 +876,16 @@ public class MenuEmpleado extends javax.swing.JPanel {
     
     
     public void obtenerRegistroTabla(){
-        /*jtfNomProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
-        jtfNumProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
-        jtfUbiProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
-        jtfNumDptoProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));*/
+        jtfNombre1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfAp1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
+        jtfAm1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        jtfDni2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
         
+        jtfDireccion1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),5));
+       
+        jtfSueldo1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),7));
+        jtfDniSuper1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),8));
+        jtfNoDpto1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),9));
     }
     
     public String obtenerFecha(JComboBox dia,JComboBox mes,JComboBox año){
