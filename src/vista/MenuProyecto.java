@@ -6,6 +6,7 @@ package vista;
 
 import contolador.ProyectoDAO;
 import java.awt.Component;
+import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,6 +24,7 @@ import modelo.Proyecto;
 public class MenuProyecto extends javax.swing.JPanel {
 
     private Component rootPane;
+    String sqlP = "SELECT * FROM proyecto";
 
     /**
      * Creates new form MenuEmpleado1
@@ -123,6 +125,11 @@ public class MenuProyecto extends javax.swing.JPanel {
         jtpContenidoABCC.setBackground(new java.awt.Color(245, 198, 165));
         jtpContenidoABCC.setForeground(new java.awt.Color(102, 102, 102));
         jtpContenidoABCC.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jtpContenidoABCC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtpContenidoABCCMouseClicked(evt);
+            }
+        });
 
         jpAltas.setBackground(new java.awt.Color(245, 198, 165));
         jpAltas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -148,6 +155,11 @@ public class MenuProyecto extends javax.swing.JPanel {
                 jtfNomProyectoActionPerformed(evt);
             }
         });
+        jtfNomProyecto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNomProyectoKeyPressed(evt);
+            }
+        });
         jpAltas.add(jtfNomProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 159, 30));
         jpAltas.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 159, 20));
 
@@ -162,6 +174,11 @@ public class MenuProyecto extends javax.swing.JPanel {
         jtfNumProyecto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfNumProyectoActionPerformed(evt);
+            }
+        });
+        jtfNumProyecto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNumProyectoKeyPressed(evt);
             }
         });
         jpAltas.add(jtfNumProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 50, 30));
@@ -430,7 +447,7 @@ public class MenuProyecto extends javax.swing.JPanel {
             }
            
 	}
-        mostrarTabla("SELECT * FROM proyecto");
+        mostrarTabla(sqlP);
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar2ActionPerformed
@@ -455,7 +472,7 @@ public class MenuProyecto extends javax.swing.JPanel {
             }else{
                 JOptionPane.showMessageDialog(rootPane, "No se pudieron modificar los datos");
             }
-            mostrarTabla("SELECT * FROM proyecto");
+            mostrarTabla(sqlP);
         }
     }//GEN-LAST:event_btnGuardar2ActionPerformed
 
@@ -495,7 +512,7 @@ public class MenuProyecto extends javax.swing.JPanel {
             }
             
         }
-        mostrarTabla("SELECT * FROM proyecto");
+        mostrarTabla(sqlP);
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void jtfNumProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfNumProyectoActionPerformed
@@ -506,6 +523,18 @@ public class MenuProyecto extends javax.swing.JPanel {
         //if ((ke.getKeyChar() >= '0' && ke.getKeyChar() <= '9')||(code==KeyEvent.VK_BACK_SPACE)) {}
         
     }//GEN-LAST:event_jtfNomProyectoActionPerformed
+
+    private void jtpContenidoABCCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtpContenidoABCCMouseClicked
+        mostrarTabla(sqlP);
+    }//GEN-LAST:event_jtpContenidoABCCMouseClicked
+
+    private void jtfNomProyectoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNomProyectoKeyPressed
+        validacionLetras(evt,jtfNomProyecto);
+    }//GEN-LAST:event_jtfNomProyectoKeyPressed
+
+    private void jtfNumProyectoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNumProyectoKeyPressed
+        validacionNumeros(evt, jtfNumProyecto);
+    }//GEN-LAST:event_jtfNumProyectoKeyPressed
 
     
     
@@ -547,7 +576,25 @@ public class MenuProyecto extends javax.swing.JPanel {
         
     }
     
+    public void validacionLetras(KeyEvent evt, JTextField jtf){
+        int code = evt.getKeyCode();
+        int limite = 20;
+        if ((evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9')) {
+            jtf.setEditable(false);
+	}else{
+            jtf.setEditable(true);
+	}
+    }
     
+    public void validacionNumeros(KeyEvent evt, JTextField jtf){
+        int code=evt.getKeyCode();
+        int limite=3;    
+        if (((evt.getKeyChar() >= '0'&&evt.getKeyChar() <= '9'))&&jtf.getText().length()<limite||(code==KeyEvent.VK_BACK_SPACE)) {
+            jtf.setEditable(true);
+        }else{
+            jtf.setEditable(false);
+        }  
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel NomProyecto;

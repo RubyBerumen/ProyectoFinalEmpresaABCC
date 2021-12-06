@@ -4,17 +4,24 @@
  */
 package vista;
 
+import contolador.TrabajaEnDAO;
 import java.awt.Component;
+import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import modelo.TrabajaEn;
 
 /**
  *
  * @author clara
  */
 public class MenuTrabajaEn extends javax.swing.JPanel {
+
+    private Component rootPane;
+    String sqlT = "SELECT * FROM trabaja_en";
 
     /**
      * Creates new form MenuEmpleado1
@@ -49,7 +56,6 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         jSeparator11 = new javax.swing.JSeparator();
         btnAgregar = new javax.swing.JButton();
         btnBorrar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
         jpBajas = new javax.swing.JPanel();
         Titulo1 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -62,7 +68,6 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         btnBuscar1 = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         btnBorrar1 = new javax.swing.JButton();
-        btnCancelar1 = new javax.swing.JButton();
         jpCambios = new javax.swing.JPanel();
         Titulo2 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
@@ -78,7 +83,6 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         btnBuscar2 = new javax.swing.JButton();
         btnGuardar2 = new javax.swing.JButton();
         btnBorrar2 = new javax.swing.JButton();
-        btnCancelar2 = new javax.swing.JButton();
         jpConsultas = new javax.swing.JPanel();
         jpTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -115,6 +119,11 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         jtpContenidoABCC.setBackground(new java.awt.Color(245, 198, 165));
         jtpContenidoABCC.setForeground(new java.awt.Color(102, 102, 102));
         jtpContenidoABCC.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jtpContenidoABCC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtpContenidoABCCMouseClicked(evt);
+            }
+        });
 
         jpAltas.setBackground(new java.awt.Color(245, 198, 165));
         jpAltas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -132,6 +141,11 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
 
         jtfDniEmpleado.setBackground(new java.awt.Color(245, 198, 165));
         jtfDniEmpleado.setBorder(null);
+        jtfDniEmpleado.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfDniEmpleadoKeyPressed(evt);
+            }
+        });
         jpAltas.add(jtfDniEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 159, 30));
         jpAltas.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 159, 20));
 
@@ -161,6 +175,11 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         btnAgregar.setText("Agregar");
         btnAgregar.setBorder(null);
         btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarActionPerformed(evt);
+            }
+        });
         jpAltas.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 120, 30));
 
         btnBorrar.setBackground(new java.awt.Color(162, 65, 107));
@@ -174,13 +193,6 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
             }
         });
         jpAltas.add(btnBorrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 120, 30));
-
-        btnCancelar.setBackground(new java.awt.Color(162, 65, 107));
-        btnCancelar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnCancelar.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar.setText("Cancelar");
-        btnCancelar.setBorder(null);
-        jpAltas.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 190, 120, 30));
 
         jtpContenidoABCC.addTab("Altas", jpAltas);
 
@@ -248,13 +260,6 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
             }
         });
         jpBajas.add(btnBorrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, 120, 30));
-
-        btnCancelar1.setBackground(new java.awt.Color(162, 65, 107));
-        btnCancelar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnCancelar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar1.setText("Cancelar");
-        btnCancelar1.setBorder(null);
-        jpBajas.add(btnCancelar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 190, 120, 30));
 
         jtpContenidoABCC.addTab("Bajas", jpBajas);
 
@@ -333,18 +338,6 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         });
         jpCambios.add(btnBorrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 190, 120, 30));
 
-        btnCancelar2.setBackground(new java.awt.Color(162, 65, 107));
-        btnCancelar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnCancelar2.setForeground(new java.awt.Color(255, 255, 255));
-        btnCancelar2.setText("Cancelar");
-        btnCancelar2.setBorder(null);
-        btnCancelar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelar2ActionPerformed(evt);
-            }
-        });
-        jpCambios.add(btnCancelar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 120, 30));
-
         jtpContenidoABCC.addTab("Cambios", jpCambios);
 
         jpConsultas.setBackground(new java.awt.Color(245, 198, 165));
@@ -375,11 +368,34 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar1ActionPerformed
-        // TODO add your handling code here:
+        String sql =  "SELECT * FROM trabaja_en WHERE DniEmpleado = '"+jtfDniEmpleado1.getText()+"' AND  NumProyecto = '"+jtfNumProyecto1.getText()+"'";
+        System.out.println(sql);
+        if(jtfDniEmpleado1.getText().equals("") ){
+            JOptionPane.showMessageDialog(rootPane, "Debes ingresar el Dni de un empleado");
+        }else if(jtfNumProyecto1.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes ingresar el numero de proyecto");
+        }else{
+            mostrarTabla(sql);
+        }
     }//GEN-LAST:event_btnBuscar1ActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        // TODO add your handling code here:
+        TrabajaEnDAO teDAO = new TrabajaEnDAO();
+        if(jtfNumProyecto1.getText().equals("")) {
+            JOptionPane.showMessageDialog(rootPane,"Debes ingresar el número de proyecto");
+        }else if(jtfDniEmpleado1.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane,"Debes ingresar Dni");
+	}else {
+            String dni = jtfDniEmpleado1.getText();
+            int numP = Integer.parseInt(jtfNumProyecto1.getText());
+            if(teDAO.eliminarRegistro(dni,numP)) {
+                JOptionPane.showMessageDialog(rootPane,"Se eliminó correctamente de la base de datos");
+            }else{
+                 JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar eliminar a la base de datos");
+            }
+           
+	}
+        mostrarTabla(sqlT);
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar2ActionPerformed
@@ -394,10 +410,6 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         restablecerComponentes(jtfDniEmpleado2,jtfNumProyecto2,jtfHoras2);
     }//GEN-LAST:event_btnBorrar2ActionPerformed
 
-    private void btnCancelar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCancelar2ActionPerformed
-
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
         restablecerComponentes(jtfDniEmpleado,jtfNumProyecto,jtfHoras);
     }//GEN-LAST:event_btnBorrarActionPerformed
@@ -405,6 +417,33 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
     private void btnBorrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar1ActionPerformed
         restablecerComponentes(jtfDniEmpleado1,jtfNumProyecto1);
     }//GEN-LAST:event_btnBorrar1ActionPerformed
+
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+        TrabajaEnDAO teDAO = new TrabajaEnDAO();
+        if(jtfDniEmpleado.getText().equals("")||jtfNumProyecto.getText().equals("")||
+                jtfHoras.getText().equals("")){
+            JOptionPane.showMessageDialog(rootPane, "Debes completar los campos");
+        }else{
+            TrabajaEn te = new TrabajaEn(jtfDniEmpleado.getText(),Integer.parseInt(jtfNumProyecto.getText()),
+                Double.parseDouble(jtfHoras.getText()));
+            
+            if(teDAO.insertarRragistro(te)){
+                JOptionPane.showMessageDialog(rootPane,"Se agregó correctamente a la base de datos");
+            }else{
+                JOptionPane.showMessageDialog(rootPane,"Hubo un error al intentar agregar a la base de datos");
+            }
+            
+        }
+        mostrarTabla(sqlT);
+    }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void jtpContenidoABCCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtpContenidoABCCMouseClicked
+        mostrarTabla(sqlT);
+    }//GEN-LAST:event_jtpContenidoABCCMouseClicked
+
+    private void jtfDniEmpleadoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDniEmpleadoKeyPressed
+        validacionNumeros(evt, jtfDniEmpleado);
+    }//GEN-LAST:event_jtfDniEmpleadoKeyPressed
 
     
     public void restablecerComponentes(Component...componentesGraficos) {
@@ -415,10 +454,10 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         }
     }
     
-    public void mostrarTabla(){
+    public void mostrarTabla(String sql){
         ResultSetTableModel modeloDatos = null;
 	try {
-            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa","SELECT * FROM trabaja_en");
+            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa",sql);
 	} catch (ClassNotFoundException e1) {
             e1.printStackTrace();
 	} catch (SQLException e1) {
@@ -437,13 +476,22 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
     }
     
     public void obtenerRegistroTabla(){
-        jtfDniEmpleado.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
-        jtfNumProyecto.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
-        jtfHoras.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        jtfDniEmpleado2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
+        jtfNumProyecto2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
+        jtfHoras2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
         
         
     }
     
+    public void validacionNumeros(KeyEvent evt, JTextField jtf){
+        int code=evt.getKeyCode();
+        int limite=3;    
+        if (((evt.getKeyChar() >= '0'&&evt.getKeyChar() <= '9'))&&jtf.getText().length()<limite||(code==KeyEvent.VK_BACK_SPACE)) {
+            jtf.setEditable(true);
+        }else{
+            jtf.setEditable(false);
+        }  
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel DniEmpleado;
@@ -463,9 +511,6 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
     private javax.swing.JButton btnBorrar2;
     private javax.swing.JButton btnBuscar1;
     private javax.swing.JButton btnBuscar2;
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnCancelar1;
-    private javax.swing.JButton btnCancelar2;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnGuardar2;
     private javax.swing.JLabel jLabel1;
