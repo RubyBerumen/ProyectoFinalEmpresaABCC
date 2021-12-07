@@ -6,6 +6,7 @@ package vista;
 
 import contolador.EmpleadoDAO;
 import java.awt.Component;
+import java.awt.event.KeyEvent;
 import java.sql.SQLException;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
@@ -226,7 +227,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
 
         Nombre.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         Nombre.setForeground(new java.awt.Color(102, 102, 102));
-        Nombre.setText("Nombre(s)");
+        Nombre.setText("Nombre");
         jpAltas.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, 30));
 
         jtfNombre.setBackground(new java.awt.Color(245, 198, 165));
@@ -238,14 +239,17 @@ public class MenuEmpleado extends javax.swing.JPanel {
             }
         });
         jtfNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNombreKeyPressed(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtfNombreKeyTyped(evt);
             }
         });
-        jpAltas.add(jtfNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 159, 30));
+        jpAltas.add(jtfNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 110, 180, 30));
 
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
-        jpAltas.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 159, 20));
+        jpAltas.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 140, 180, 20));
 
         ApellidoP.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         ApellidoP.setForeground(new java.awt.Color(102, 102, 102));
@@ -255,6 +259,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfAp.setBackground(new java.awt.Color(245, 198, 165));
         jtfAp.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfAp.setBorder(null);
+        jtfAp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfApKeyPressed(evt);
+            }
+        });
         jpAltas.add(jtfAp, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 159, 30));
 
         jSeparator3.setForeground(new java.awt.Color(255, 255, 255));
@@ -268,6 +277,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfAm.setBackground(new java.awt.Color(245, 198, 165));
         jtfAm.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfAm.setBorder(null);
+        jtfAm.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfAmKeyPressed(evt);
+            }
+        });
         jpAltas.add(jtfAm, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, 159, 30));
 
         jSeparator4.setForeground(new java.awt.Color(255, 255, 255));
@@ -281,6 +295,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDni.setBackground(new java.awt.Color(245, 198, 165));
         jtfDni.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDni.setBorder(null);
+        jtfDni.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfDniKeyPressed(evt);
+            }
+        });
         jpAltas.add(jtfDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 159, 30));
 
         jSeparator5.setForeground(new java.awt.Color(255, 255, 255));
@@ -332,6 +351,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDireccion.setBackground(new java.awt.Color(245, 198, 165));
         jtfDireccion.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDireccion.setBorder(null);
+        jtfDireccion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfDireccionKeyPressed(evt);
+            }
+        });
         jpAltas.add(jtfDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 170, 190, 30));
 
         jSeparator6.setForeground(new java.awt.Color(255, 255, 255));
@@ -361,6 +385,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfSueldo.setBackground(new java.awt.Color(245, 198, 165));
         jtfSueldo.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfSueldo.setBorder(null);
+        jtfSueldo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfSueldoKeyPressed(evt);
+            }
+        });
         jpAltas.add(jtfSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 130, 30));
 
         jSeparator7.setForeground(new java.awt.Color(255, 255, 255));
@@ -375,6 +404,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDniSuper.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDniSuper.setBorder(null);
         jtfDniSuper.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfDniSuperKeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfDniSuperKeyReleased(evt);
             }
@@ -392,6 +424,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfNoDpto.setBackground(new java.awt.Color(245, 198, 165));
         jtfNoDpto.setBorder(null);
         jtfNoDpto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNoDptoKeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfNoDptoKeyReleased(evt);
             }
@@ -446,6 +481,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDni1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDni1.setBorder(null);
         jtfDni1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfDni1KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfDni1KeyReleased(evt);
             }
@@ -495,7 +533,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
 
         Nombre1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         Nombre1.setForeground(new java.awt.Color(102, 102, 102));
-        Nombre1.setText("Nombre(s)");
+        Nombre1.setText("Nombre");
         jpCambios.add(Nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, 30));
 
         jtfNombre1.setBackground(new java.awt.Color(245, 198, 165));
@@ -507,6 +545,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
             }
         });
         jtfNombre1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNombre1KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfNombre1KeyReleased(evt);
             }
@@ -514,10 +555,10 @@ public class MenuEmpleado extends javax.swing.JPanel {
                 jtfNombre1KeyTyped(evt);
             }
         });
-        jpCambios.add(jtfNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 159, 30));
+        jpCambios.add(jtfNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 110, 180, 30));
 
         jSeparator13.setForeground(new java.awt.Color(255, 255, 255));
-        jpCambios.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 159, 20));
+        jpCambios.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 140, 180, 20));
 
         ApellidoP1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         ApellidoP1.setForeground(new java.awt.Color(102, 102, 102));
@@ -528,6 +569,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfAp1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfAp1.setBorder(null);
         jtfAp1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfAp1KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfAp1KeyReleased(evt);
             }
@@ -546,6 +590,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfAm1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfAm1.setBorder(null);
         jtfAm1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfAm1KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfAm1KeyReleased(evt);
             }
@@ -564,6 +611,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDni2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDni2.setBorder(null);
         jtfDni2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfDni2KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfDni2KeyReleased(evt);
             }
@@ -620,6 +670,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDireccion1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDireccion1.setBorder(null);
         jtfDireccion1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfDireccion1KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfDireccion1KeyReleased(evt);
             }
@@ -654,6 +707,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfSueldo1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfSueldo1.setBorder(null);
         jtfSueldo1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfSueldo1KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfSueldo1KeyReleased(evt);
             }
@@ -672,6 +728,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDniSuper1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDniSuper1.setBorder(null);
         jtfDniSuper1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfDniSuper1KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfDniSuper1KeyReleased(evt);
             }
@@ -689,6 +748,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfNoDpto1.setBackground(new java.awt.Color(245, 198, 165));
         jtfNoDpto1.setBorder(null);
         jtfNoDpto1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNoDpto1KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfNoDpto1KeyReleased(evt);
             }
@@ -736,7 +798,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
 
         Nombre2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         Nombre2.setForeground(new java.awt.Color(102, 102, 102));
-        Nombre2.setText("Nombre(s)");
+        Nombre2.setText("Nombre");
         jpConsultas.add(Nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, 30));
 
         jtfNombre2.setBackground(new java.awt.Color(245, 198, 165));
@@ -748,6 +810,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
             }
         });
         jtfNombre2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNombre2KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfNombre2KeyReleased(evt);
             }
@@ -755,10 +820,10 @@ public class MenuEmpleado extends javax.swing.JPanel {
                 jtfNombre2KeyTyped(evt);
             }
         });
-        jpConsultas.add(jtfNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 159, 30));
+        jpConsultas.add(jtfNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 110, 170, 30));
 
         jSeparator22.setForeground(new java.awt.Color(255, 255, 255));
-        jpConsultas.add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 159, 20));
+        jpConsultas.add(jSeparator22, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 140, 180, 20));
 
         ApellidoP2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         ApellidoP2.setForeground(new java.awt.Color(102, 102, 102));
@@ -769,6 +834,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfAp2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfAp2.setBorder(null);
         jtfAp2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfAp2KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfAp2KeyReleased(evt);
             }
@@ -787,6 +855,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfAm2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfAm2.setBorder(null);
         jtfAm2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfAm2KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfAm2KeyReleased(evt);
             }
@@ -805,6 +876,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDni3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDni3.setBorder(null);
         jtfDni3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfDni3KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfDni3KeyReleased(evt);
             }
@@ -861,6 +935,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDireccion2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDireccion2.setBorder(null);
         jtfDireccion2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfDireccion2KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfDireccion2KeyReleased(evt);
             }
@@ -895,6 +972,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfSueldo2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfSueldo2.setBorder(null);
         jtfSueldo2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfSueldo2KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfSueldo2KeyReleased(evt);
             }
@@ -913,6 +993,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDniSuper2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDniSuper2.setBorder(null);
         jtfDniSuper2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfDniSuper2KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfDniSuper2KeyReleased(evt);
             }
@@ -930,6 +1013,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfNoDpto2.setBackground(new java.awt.Color(245, 198, 165));
         jtfNoDpto2.setBorder(null);
         jtfNoDpto2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNoDpto2KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfNoDpto2KeyReleased(evt);
             }
@@ -1325,6 +1411,106 @@ public class MenuEmpleado extends javax.swing.JPanel {
         restablecerComponentes(jtfNombre2, jtfAp2,jtfAm2, jtfDni3, jcbDia2, jcbMes2, jcbAño2, jtfDireccion2, jcbSexo2, jtfSueldo2, jtfDniSuper2, jtfNoDpto2);
     }//GEN-LAST:event_btnBorrar3ActionPerformed
 
+    private void jtfNombreKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNombreKeyPressed
+        validacionLetras(evt, jtfNombre);
+    }//GEN-LAST:event_jtfNombreKeyPressed
+
+    private void jtfApKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfApKeyPressed
+        validacionLetras(evt, jtfAp);
+    }//GEN-LAST:event_jtfApKeyPressed
+
+    private void jtfAmKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAmKeyPressed
+        validacionLetras(evt, jtfAm);
+    }//GEN-LAST:event_jtfAmKeyPressed
+
+    private void jtfDniKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDniKeyPressed
+        validacionNumeros(evt, jtfDni, 10);
+    }//GEN-LAST:event_jtfDniKeyPressed
+
+    private void jtfDireccionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDireccionKeyPressed
+        validacionString(evt, jtfDireccion);
+    }//GEN-LAST:event_jtfDireccionKeyPressed
+
+    private void jtfSueldoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfSueldoKeyPressed
+        validacionNumeros(evt, jtfSueldo, 6);
+    }//GEN-LAST:event_jtfSueldoKeyPressed
+
+    private void jtfDniSuperKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDniSuperKeyPressed
+        validacionNumeros(evt, jtfDniSuper, 10);
+    }//GEN-LAST:event_jtfDniSuperKeyPressed
+
+    private void jtfNoDptoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNoDptoKeyPressed
+        validacionNumeros(evt, jtfNoDpto, 1);
+    }//GEN-LAST:event_jtfNoDptoKeyPressed
+
+    private void jtfDni1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDni1KeyPressed
+        validacionNumeros(evt, jtfDni1, 10);
+    }//GEN-LAST:event_jtfDni1KeyPressed
+
+    private void jtfNombre1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNombre1KeyPressed
+        validacionLetras(evt, jtfNombre1);
+    }//GEN-LAST:event_jtfNombre1KeyPressed
+
+    private void jtfNombre2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNombre2KeyPressed
+        validacionLetras(evt, jtfNombre2);
+    }//GEN-LAST:event_jtfNombre2KeyPressed
+
+    private void jtfAp1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAp1KeyPressed
+        validacionLetras(evt, jtfAp1);
+    }//GEN-LAST:event_jtfAp1KeyPressed
+
+    private void jtfAp2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAp2KeyPressed
+        validacionLetras(evt, jtfAp2);
+    }//GEN-LAST:event_jtfAp2KeyPressed
+
+    private void jtfAm1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAm1KeyPressed
+        validacionLetras(evt, jtfAm1);
+    }//GEN-LAST:event_jtfAm1KeyPressed
+
+    private void jtfAm2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAm2KeyPressed
+        validacionLetras(evt, jtfAm2);
+    }//GEN-LAST:event_jtfAm2KeyPressed
+
+    private void jtfDni2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDni2KeyPressed
+        validacionNumeros(evt, jtfDni2, 10);
+    }//GEN-LAST:event_jtfDni2KeyPressed
+
+    private void jtfDni3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDni3KeyPressed
+        validacionNumeros(evt, jtfDni3, 10);
+    }//GEN-LAST:event_jtfDni3KeyPressed
+
+    private void jtfDireccion1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDireccion1KeyPressed
+        validacionString(evt, jtfDireccion1);
+    }//GEN-LAST:event_jtfDireccion1KeyPressed
+
+    private void jtfDireccion2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDireccion2KeyPressed
+        validacionString(evt, jtfDireccion);
+    }//GEN-LAST:event_jtfDireccion2KeyPressed
+
+    private void jtfSueldo2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfSueldo2KeyPressed
+        validacionNumeros(evt, jtfSueldo2, 6);
+    }//GEN-LAST:event_jtfSueldo2KeyPressed
+
+    private void jtfSueldo1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfSueldo1KeyPressed
+        validacionNumeros(evt, jtfSueldo1, 6);
+    }//GEN-LAST:event_jtfSueldo1KeyPressed
+
+    private void jtfDniSuper1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDniSuper1KeyPressed
+        validacionNumeros(evt, jtfDniSuper1, 10);
+    }//GEN-LAST:event_jtfDniSuper1KeyPressed
+
+    private void jtfDniSuper2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDniSuper2KeyPressed
+        validacionNumeros(evt, jtfDniSuper2, 10);
+    }//GEN-LAST:event_jtfDniSuper2KeyPressed
+
+    private void jtfNoDpto2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNoDpto2KeyPressed
+        validacionNumeros(evt, jtfNoDpto2, 1);
+    }//GEN-LAST:event_jtfNoDpto2KeyPressed
+
+    private void jtfNoDpto1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNoDpto1KeyPressed
+        validacionNumeros(evt, jtfNoDpto1, 1);
+    }//GEN-LAST:event_jtfNoDpto1KeyPressed
+
     
     public void restablecerComponentes(Component...componentesGraficos) {
 	for (Component c: componentesGraficos) {
@@ -1380,8 +1566,36 @@ public class MenuEmpleado extends javax.swing.JPanel {
         return a+"-"+m+"-"+d;
     }
     
+    public void validacionLetras(KeyEvent evt, JTextField jtf){  
+        char car = evt.getKeyChar();
+	if(Character.isLetter(car)||(car==KeyEvent.VK_BACK_SPACE)){
+            jtf.setEditable(true);
+        }else{
+            jtf.setEditable(false);
+        }
+    }
     
-        public void mostrarTabla2(String sql){
+    public void validacionNumeros(KeyEvent evt, JTextField jtf, int lim){
+        int code=evt.getKeyCode();    
+        if (((evt.getKeyChar() >= '0'&&evt.getKeyChar() <= '9'))&&jtf.getText().length()<lim||(code==KeyEvent.VK_BACK_SPACE)) {
+            jtf.setEditable(true);
+        }else{
+            jtf.setEditable(false);
+        }  
+    }
+    
+    public void validacionString(KeyEvent evt, JTextField jtf){
+        int code = evt.getKeyCode();
+        int limite = 20;
+        if ((jtf.getText().equals("")?true:!(jtf.getText().charAt(jtf.getText().length()-1)==' '&&code==KeyEvent.VK_SPACE))&&(jtf.getText().length()<limite||code==KeyEvent.VK_BACK_SPACE)) {
+                jtf.setEditable(true);
+        }else{
+                jtf.setEditable(false);
+        }
+    }
+    
+    
+    public void mostrarTabla2(String sql){
         ResultSetTableModel modeloDatos = null;
 	try {
             modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa",sql);
