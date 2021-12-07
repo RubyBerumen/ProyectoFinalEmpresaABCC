@@ -55,6 +55,7 @@ public class EmpleadoDAO {
                 + " FechaNac='"+e.getFechaNac()+"', Direccion='"+e.getDireccion()+"', Sexo='"+e.getSexo()+"', "
                 + " Sueldo='"+e.getSueldo()+"', SuperDni='"+e.getSuperDni()+"', Dno='"+e.getDno()+"'"
                 + " WHERE Dni='"+e.getDni()+"';";
+        System.out.println(sql);
 	resultado = conexion.ejecutarInstruccion(sql);
 		
 	return resultado;

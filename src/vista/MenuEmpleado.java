@@ -85,7 +85,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
         Dni1 = new javax.swing.JLabel();
         jtfDni1 = new javax.swing.JTextField();
         jSeparator11 = new javax.swing.JSeparator();
-        btnBuscar1 = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         btnBorrar1 = new javax.swing.JButton();
         jpCambios = new javax.swing.JPanel();
@@ -121,7 +120,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
         NoDpto1 = new javax.swing.JLabel();
         jtfNoDpto1 = new javax.swing.JTextField();
         jSeparator19 = new javax.swing.JSeparator();
-        btnBuscar2 = new javax.swing.JButton();
         btnGuardar2 = new javax.swing.JButton();
         btnBorrar2 = new javax.swing.JButton();
         jpConsultas = new javax.swing.JPanel();
@@ -157,6 +155,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
         NoDpto2 = new javax.swing.JLabel();
         jtfNoDpto2 = new javax.swing.JTextField();
         jSeparator29 = new javax.swing.JSeparator();
+        btnBorrar3 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         btnGenerarR = new javax.swing.JButton();
         Titulo4 = new javax.swing.JLabel();
@@ -164,6 +163,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jpTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        TabDniS = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(245, 198, 165));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -370,6 +374,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDniSuper.setBackground(new java.awt.Color(245, 198, 165));
         jtfDniSuper.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDniSuper.setBorder(null);
+        jtfDniSuper.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfDniSuperKeyReleased(evt);
+            }
+        });
         jpAltas.add(jtfDniSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 159, 30));
 
         jSeparator8.setForeground(new java.awt.Color(255, 255, 255));
@@ -382,6 +391,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
 
         jtfNoDpto.setBackground(new java.awt.Color(245, 198, 165));
         jtfNoDpto.setBorder(null);
+        jtfNoDpto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfNoDptoKeyReleased(evt);
+            }
+        });
         jpAltas.add(jtfNoDpto, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 230, 40, 30));
         jpAltas.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 260, 40, 20));
 
@@ -431,22 +445,15 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDni1.setBackground(new java.awt.Color(245, 198, 165));
         jtfDni1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDni1.setBorder(null);
+        jtfDni1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfDni1KeyReleased(evt);
+            }
+        });
         jpBajas.add(jtfDni1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 159, 30));
 
         jSeparator11.setForeground(new java.awt.Color(255, 255, 255));
         jpBajas.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 159, 20));
-
-        btnBuscar1.setBackground(new java.awt.Color(162, 65, 107));
-        btnBuscar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnBuscar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscar1.setText("Buscar");
-        btnBuscar1.setBorder(null);
-        btnBuscar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscar1ActionPerformed(evt);
-            }
-        });
-        jpBajas.add(btnBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, 120, 30));
 
         btnEliminar.setBackground(new java.awt.Color(162, 65, 107));
         btnEliminar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
@@ -500,6 +507,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
             }
         });
         jtfNombre1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfNombre1KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtfNombre1KeyTyped(evt);
             }
@@ -517,6 +527,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfAp1.setBackground(new java.awt.Color(245, 198, 165));
         jtfAp1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfAp1.setBorder(null);
+        jtfAp1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfAp1KeyReleased(evt);
+            }
+        });
         jpCambios.add(jtfAp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 159, 30));
 
         jSeparator14.setForeground(new java.awt.Color(255, 255, 255));
@@ -530,6 +545,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfAm1.setBackground(new java.awt.Color(245, 198, 165));
         jtfAm1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfAm1.setBorder(null);
+        jtfAm1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfAm1KeyReleased(evt);
+            }
+        });
         jpCambios.add(jtfAm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, 159, 30));
 
         jSeparator15.setForeground(new java.awt.Color(255, 255, 255));
@@ -543,6 +563,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDni2.setBackground(new java.awt.Color(245, 198, 165));
         jtfDni2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDni2.setBorder(null);
+        jtfDni2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfDni2KeyReleased(evt);
+            }
+        });
         jpCambios.add(jtfDni2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 159, 30));
 
         jSeparator18.setForeground(new java.awt.Color(255, 255, 255));
@@ -594,6 +619,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDireccion1.setBackground(new java.awt.Color(245, 198, 165));
         jtfDireccion1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDireccion1.setBorder(null);
+        jtfDireccion1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfDireccion1KeyReleased(evt);
+            }
+        });
         jpCambios.add(jtfDireccion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 170, 190, 30));
 
         jSeparator20.setForeground(new java.awt.Color(255, 255, 255));
@@ -623,6 +653,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfSueldo1.setBackground(new java.awt.Color(245, 198, 165));
         jtfSueldo1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfSueldo1.setBorder(null);
+        jtfSueldo1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfSueldo1KeyReleased(evt);
+            }
+        });
         jpCambios.add(jtfSueldo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 130, 30));
 
         jSeparator17.setForeground(new java.awt.Color(255, 255, 255));
@@ -636,6 +671,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDniSuper1.setBackground(new java.awt.Color(245, 198, 165));
         jtfDniSuper1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDniSuper1.setBorder(null);
+        jtfDniSuper1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfDniSuper1KeyReleased(evt);
+            }
+        });
         jpCambios.add(jtfDniSuper1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 159, 30));
 
         jSeparator16.setForeground(new java.awt.Color(255, 255, 255));
@@ -648,20 +688,13 @@ public class MenuEmpleado extends javax.swing.JPanel {
 
         jtfNoDpto1.setBackground(new java.awt.Color(245, 198, 165));
         jtfNoDpto1.setBorder(null);
-        jpCambios.add(jtfNoDpto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 230, 40, 30));
-        jpCambios.add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 260, 40, 20));
-
-        btnBuscar2.setBackground(new java.awt.Color(162, 65, 107));
-        btnBuscar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnBuscar2.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscar2.setText("Buscar");
-        btnBuscar2.setBorder(null);
-        btnBuscar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscar2ActionPerformed(evt);
+        jtfNoDpto1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfNoDpto1KeyReleased(evt);
             }
         });
-        jpCambios.add(btnBuscar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 120, 30));
+        jpCambios.add(jtfNoDpto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 230, 40, 30));
+        jpCambios.add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 260, 40, 20));
 
         btnGuardar2.setBackground(new java.awt.Color(162, 65, 107));
         btnGuardar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
@@ -715,6 +748,9 @@ public class MenuEmpleado extends javax.swing.JPanel {
             }
         });
         jtfNombre2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfNombre2KeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtfNombre2KeyTyped(evt);
             }
@@ -732,6 +768,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfAp2.setBackground(new java.awt.Color(245, 198, 165));
         jtfAp2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfAp2.setBorder(null);
+        jtfAp2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfAp2KeyReleased(evt);
+            }
+        });
         jpConsultas.add(jtfAp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 110, 159, 30));
 
         jSeparator23.setForeground(new java.awt.Color(255, 255, 255));
@@ -745,6 +786,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfAm2.setBackground(new java.awt.Color(245, 198, 165));
         jtfAm2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfAm2.setBorder(null);
+        jtfAm2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfAm2KeyReleased(evt);
+            }
+        });
         jpConsultas.add(jtfAm2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 110, 159, 30));
 
         jSeparator24.setForeground(new java.awt.Color(255, 255, 255));
@@ -758,6 +804,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDni3.setBackground(new java.awt.Color(245, 198, 165));
         jtfDni3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDni3.setBorder(null);
+        jtfDni3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfDni3KeyReleased(evt);
+            }
+        });
         jpConsultas.add(jtfDni3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 159, 30));
 
         jSeparator25.setForeground(new java.awt.Color(255, 255, 255));
@@ -809,6 +860,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDireccion2.setBackground(new java.awt.Color(245, 198, 165));
         jtfDireccion2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDireccion2.setBorder(null);
+        jtfDireccion2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfDireccion2KeyReleased(evt);
+            }
+        });
         jpConsultas.add(jtfDireccion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 170, 190, 30));
 
         jSeparator26.setForeground(new java.awt.Color(255, 255, 255));
@@ -838,6 +894,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfSueldo2.setBackground(new java.awt.Color(245, 198, 165));
         jtfSueldo2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfSueldo2.setBorder(null);
+        jtfSueldo2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfSueldo2KeyReleased(evt);
+            }
+        });
         jpConsultas.add(jtfSueldo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 130, 30));
 
         jSeparator27.setForeground(new java.awt.Color(255, 255, 255));
@@ -851,6 +912,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfDniSuper2.setBackground(new java.awt.Color(245, 198, 165));
         jtfDniSuper2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfDniSuper2.setBorder(null);
+        jtfDniSuper2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfDniSuper2KeyReleased(evt);
+            }
+        });
         jpConsultas.add(jtfDniSuper2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 159, 30));
 
         jSeparator28.setForeground(new java.awt.Color(255, 255, 255));
@@ -863,8 +929,25 @@ public class MenuEmpleado extends javax.swing.JPanel {
 
         jtfNoDpto2.setBackground(new java.awt.Color(245, 198, 165));
         jtfNoDpto2.setBorder(null);
+        jtfNoDpto2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfNoDpto2KeyReleased(evt);
+            }
+        });
         jpConsultas.add(jtfNoDpto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 230, 40, 30));
         jpConsultas.add(jSeparator29, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 260, 40, 20));
+
+        btnBorrar3.setBackground(new java.awt.Color(162, 65, 107));
+        btnBorrar3.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
+        btnBorrar3.setForeground(new java.awt.Color(255, 255, 255));
+        btnBorrar3.setText("Borrar");
+        btnBorrar3.setBorder(null);
+        btnBorrar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrar3ActionPerformed(evt);
+            }
+        });
+        jpConsultas.add(btnBorrar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, 120, 30));
 
         jtpContenidoABCC.addTab("Consultas", jpConsultas);
 
@@ -912,7 +995,41 @@ public class MenuEmpleado extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jpTabla.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 920, 170));
+        jpTabla.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 770, 190));
+
+        TabDniS.setFont(new java.awt.Font("Century Gothic", 1, 10)); // NOI18N
+        TabDniS.setText("Tablas Dni supervisor y Num dpto");
+        jpTabla.add(TabDniS, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, 160, 20));
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        jpTabla.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 30, 100, 170));
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        jpTabla.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 30, 50, 170));
 
         add(jpTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 960, 210));
     }// </editor-fold>//GEN-END:initComponents
@@ -972,15 +1089,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
         restablecerComponentes(jtfDni1);
     }//GEN-LAST:event_btnBorrar1ActionPerformed
 
-    private void btnBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar1ActionPerformed
-        String sql =  "SELECT * FROM empleado WHERE Dni = '"+jtfDni1.getText()+"'";
-        if(jtfDni1.getText().equals("")){
-            JOptionPane.showMessageDialog(rootPane, "Debes ingresar el dni de un empleado");
-        }else{
-            mostrarTabla(sql);
-        }
-    }//GEN-LAST:event_btnBuscar1ActionPerformed
-
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         EmpleadoDAO eDAO = new EmpleadoDAO();
         if(jtfDni1.getText().equals("")){
@@ -1023,15 +1131,6 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private void btnBorrar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar2ActionPerformed
         restablecerComponentes(jtfNombre1, jtfAp1,jtfAm1, jtfDni2, jcbDia1, jcbMes1, jcbAño1, jtfDireccion1, jcbSexo1, jtfSueldo1, jtfDniSuper1, jtfNoDpto1);
     }//GEN-LAST:event_btnBorrar2ActionPerformed
-
-    private void btnBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar2ActionPerformed
-       String sql =  "SELECT * FROM empleado WHERE Dni = '"+jtfDni2.getText()+"'";
-        if(jtfDni2.getText().equals("")){
-            JOptionPane.showMessageDialog(rootPane, "Debes ingresar el dni de un empleado");
-        }else{
-            mostrarTabla(sql);
-        }
-    }//GEN-LAST:event_btnBuscar2ActionPerformed
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
         EmpleadoDAO eDAO = new EmpleadoDAO();
@@ -1108,6 +1207,124 @@ public class MenuEmpleado extends javax.swing.JPanel {
         r.mostrarReporte();
     }//GEN-LAST:event_btnGenerarRActionPerformed
 
+    private void jtfDniSuperKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDniSuperKeyReleased
+        String filtro = jtfDniSuper.getText();
+        String sql =  "SELECT Dni FROM empleado WHERE Dni LIKE '"+filtro+"%'";
+        mostrarTabla2(sql);
+    }//GEN-LAST:event_jtfDniSuperKeyReleased
+
+    private void jtfNoDptoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNoDptoKeyReleased
+       String filtro = jtfNoDpto.getText();
+       String sql = "SELECT NumeroDpto FROM departamento WHERE NumeroDpto LIKE '"+filtro+"%'";
+       mostrarTabla3(sql);
+    }//GEN-LAST:event_jtfNoDptoKeyReleased
+
+    private void jtfDni1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDni1KeyReleased
+        String filtro = jtfDni1.getText();
+        String sql =  "SELECT * FROM empleado WHERE Dni LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfDni1KeyReleased
+
+    private void jtfNombre1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNombre1KeyReleased
+        String filtro = jtfNombre1.getText();
+        String sql =  "SELECT * FROM empleado WHERE Nombre LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfNombre1KeyReleased
+
+    private void jtfAp1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAp1KeyReleased
+        String filtro = jtfAp1.getText();
+        String sql =  "SELECT * FROM empleado WHERE Apellido1 LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfAp1KeyReleased
+
+    private void jtfAm1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAm1KeyReleased
+        String filtro = jtfAm1.getText();
+        String sql =  "SELECT * FROM empleado WHERE Apellido2 LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfAm1KeyReleased
+
+    private void jtfDni2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDni2KeyReleased
+        String filtro = jtfDni2.getText();
+        String sql =  "SELECT * FROM empleado WHERE Dni LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfDni2KeyReleased
+
+    private void jtfDireccion1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDireccion1KeyReleased
+        String filtro = jtfDireccion1.getText();
+        String sql =  "SELECT * FROM empleado WHERE Direccion LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfDireccion1KeyReleased
+
+    private void jtfSueldo1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfSueldo1KeyReleased
+        String filtro = jtfSueldo1.getText();
+        String sql =  "SELECT * FROM empleado WHERE Sueldo LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfSueldo1KeyReleased
+
+    private void jtfDniSuper1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDniSuper1KeyReleased
+        String filtro = jtfDniSuper1.getText();
+        String sql =  "SELECT Dni FROM empleado WHERE Dni LIKE '"+filtro+"%'";
+        mostrarTabla2(sql);
+    }//GEN-LAST:event_jtfDniSuper1KeyReleased
+
+    private void jtfNoDpto1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNoDpto1KeyReleased
+        String filtro = jtfNoDpto1.getText();
+        String sql = "SELECT NumeroDpto FROM departamento WHERE NumeroDpto LIKE '"+filtro+"%'";
+        mostrarTabla3(sql);
+    }//GEN-LAST:event_jtfNoDpto1KeyReleased
+
+    private void jtfNoDpto2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNoDpto2KeyReleased
+        String filtro = jtfNoDpto2.getText();
+        String sql = "SELECT NumeroDpto FROM departamento WHERE NumeroDpto LIKE '"+filtro+"%'";
+        mostrarTabla3(sql);
+    }//GEN-LAST:event_jtfNoDpto2KeyReleased
+
+    private void jtfNombre2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNombre2KeyReleased
+        String filtro = jtfNombre2.getText();
+        String sql =  "SELECT * FROM empleado WHERE Nombre LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfNombre2KeyReleased
+
+    private void jtfAp2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAp2KeyReleased
+        String filtro = jtfAp2.getText();
+        String sql =  "SELECT * FROM empleado WHERE Apellido1 LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfAp2KeyReleased
+
+    private void jtfAm2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfAm2KeyReleased
+        String filtro = jtfAm2.getText();
+        String sql =  "SELECT * FROM empleado WHERE Apellido2 LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfAm2KeyReleased
+
+    private void jtfDni3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDni3KeyReleased
+        String filtro = jtfDni3.getText();
+        String sql =  "SELECT * FROM empleado WHERE Dni LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfDni3KeyReleased
+
+    private void jtfDireccion2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDireccion2KeyReleased
+        String filtro = jtfDireccion2.getText();
+        String sql =  "SELECT * FROM empleado WHERE Direccion LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfDireccion2KeyReleased
+
+    private void jtfSueldo2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfSueldo2KeyReleased
+        String filtro = jtfSueldo2.getText();
+        String sql =  "SELECT * FROM empleado WHERE Sueldo LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfSueldo2KeyReleased
+
+    private void jtfDniSuper2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDniSuper2KeyReleased
+        String filtro = jtfDniSuper2.getText();
+        String sql =  "SELECT Dni FROM empleado WHERE Dni LIKE '"+filtro+"%'";
+        mostrarTabla2(sql);
+    }//GEN-LAST:event_jtfDniSuper2KeyReleased
+
+    private void btnBorrar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar3ActionPerformed
+        restablecerComponentes(jtfNombre2, jtfAp2,jtfAm2, jtfDni3, jcbDia2, jcbMes2, jcbAño2, jtfDireccion2, jcbSexo2, jtfSueldo2, jtfDniSuper2, jtfNoDpto2);
+    }//GEN-LAST:event_btnBorrar3ActionPerformed
+
     
     public void restablecerComponentes(Component...componentesGraficos) {
 	for (Component c: componentesGraficos) {
@@ -1120,7 +1337,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
     }
 
     
-        public void mostrarTabla(String sql){
+    public void mostrarTabla(String sql){
         ResultSetTableModel modeloDatos = null;
 	try {
             modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa",sql);
@@ -1146,6 +1363,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfNombre1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),0));
         jtfAp1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),1));
         jtfAm1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
+        jtfDni1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
         jtfDni2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
         
         jtfDireccion1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),5));
@@ -1162,6 +1380,57 @@ public class MenuEmpleado extends javax.swing.JPanel {
         return a+"-"+m+"-"+d;
     }
     
+    
+        public void mostrarTabla2(String sql){
+        ResultSetTableModel modeloDatos = null;
+	try {
+            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa",sql);
+	} catch (ClassNotFoundException e1) {
+            e1.printStackTrace();
+	} catch (SQLException e1) {
+            e1.printStackTrace();
+	}
+        jScrollPane2.getViewport().remove(jTable2);
+        jTable2 = new JTable(modeloDatos);
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                obtenerRegistroTabla2();
+            }
+        });
+        jScrollPane2.getViewport().add(jTable2);
+    }    
+    public void obtenerRegistroTabla2(){
+        jtfDniSuper.setText(""+jTable2.getValueAt(jTable2.getSelectedRow(),0));
+        jtfDniSuper1.setText(""+jTable2.getValueAt(jTable2.getSelectedRow(),0));
+        jtfDniSuper2.setText(""+jTable2.getValueAt(jTable2.getSelectedRow(),0));
+    }
+    
+    
+    public void mostrarTabla3(String sql){
+        ResultSetTableModel modeloDatos = null;
+	try {
+            modeloDatos = new ResultSetTableModel("com.mysql.cj.jdbc.Driver","jdbc:mysql://localhost:3306/empresa",sql);
+	} catch (ClassNotFoundException e1) {
+            e1.printStackTrace();
+	} catch (SQLException e1) {
+            e1.printStackTrace();
+	}
+        jScrollPane3.getViewport().remove(jTable3);
+        jTable3 = new JTable(modeloDatos);
+        jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                obtenerRegistroTabla3();
+            }
+        });
+        jScrollPane3.getViewport().add(jTable3);
+    }    
+    public void obtenerRegistroTabla3(){
+        jtfNoDpto.setText(""+jTable3.getValueAt(jTable3.getSelectedRow(),0));
+        jtfNoDpto1.setText(""+jTable3.getValueAt(jTable3.getSelectedRow(),0));
+        jtfNoDpto2.setText(""+jTable3.getValueAt(jTable3.getSelectedRow(),0));
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -1196,6 +1465,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private javax.swing.JLabel Sueldo;
     private javax.swing.JLabel Sueldo1;
     private javax.swing.JLabel Sueldo2;
+    private javax.swing.JLabel TabDniS;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo2;
@@ -1205,14 +1475,15 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private javax.swing.JButton btnBorrar;
     private javax.swing.JButton btnBorrar1;
     private javax.swing.JButton btnBorrar2;
-    private javax.swing.JButton btnBuscar1;
-    private javax.swing.JButton btnBuscar2;
+    private javax.swing.JButton btnBorrar3;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnGenerarR;
     private javax.swing.JButton btnGuardar2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
@@ -1244,6 +1515,8 @@ public class MenuEmpleado extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JComboBox<String> jcbAño;
     private javax.swing.JComboBox<String> jcbAño1;
     private javax.swing.JComboBox<String> jcbAño2;
