@@ -5,6 +5,11 @@
 package vista;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import contolador.UsuarioDAO;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import modelo.Usuario;
 
 /**
  *
@@ -15,6 +20,8 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
+    
+    
     public Login() {
         initComponents();
         setLocationRelativeTo(null);
@@ -35,9 +42,9 @@ public class Login extends javax.swing.JFrame {
         lblIniSesion = new javax.swing.JLabel();
         lblUsuario = new javax.swing.JLabel();
         lblContraseña = new javax.swing.JLabel();
-        usuarioTxtf = new javax.swing.JTextField();
+        jtfUsuario = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        contraseñaPswf = new javax.swing.JPasswordField();
+        jpfContraseña = new javax.swing.JPasswordField();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -85,40 +92,40 @@ public class Login extends javax.swing.JFrame {
         lblContraseña.setText("Contraseña");
         jPanel1.add(lblContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
-        usuarioTxtf.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        usuarioTxtf.setForeground(new java.awt.Color(102, 102, 102));
-        usuarioTxtf.setText("Ingrese su nombre de usuario");
-        usuarioTxtf.setBorder(null);
-        usuarioTxtf.addMouseListener(new java.awt.event.MouseAdapter() {
+        jtfUsuario.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jtfUsuario.setForeground(new java.awt.Color(102, 102, 102));
+        jtfUsuario.setText("Ingrese su nombre de usuario");
+        jtfUsuario.setBorder(null);
+        jtfUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                usuarioTxtfMousePressed(evt);
+                jtfUsuarioMousePressed(evt);
             }
         });
-        usuarioTxtf.addActionListener(new java.awt.event.ActionListener() {
+        jtfUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                usuarioTxtfActionPerformed(evt);
+                jtfUsuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(usuarioTxtf, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 290, -1));
+        jPanel1.add(jtfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 290, -1));
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 290, 20));
 
-        contraseñaPswf.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        contraseñaPswf.setForeground(new java.awt.Color(102, 102, 102));
-        contraseñaPswf.setText("********");
-        contraseñaPswf.setBorder(null);
-        contraseñaPswf.addMouseListener(new java.awt.event.MouseAdapter() {
+        jpfContraseña.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jpfContraseña.setForeground(new java.awt.Color(102, 102, 102));
+        jpfContraseña.setText("********");
+        jpfContraseña.setBorder(null);
+        jpfContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                contraseñaPswfMousePressed(evt);
+                jpfContraseñaMousePressed(evt);
             }
         });
-        contraseñaPswf.addActionListener(new java.awt.event.ActionListener() {
+        jpfContraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contraseñaPswfActionPerformed(evt);
+                jpfContraseñaActionPerformed(evt);
             }
         });
-        jPanel1.add(contraseñaPswf, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 290, -1));
+        jPanel1.add(jpfContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 290, -1));
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
         jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 290, 20));
@@ -161,42 +168,56 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void usuarioTxtfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioTxtfActionPerformed
+    private void jtfUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_usuarioTxtfActionPerformed
+    }//GEN-LAST:event_jtfUsuarioActionPerformed
 
-    private void contraseñaPswfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraseñaPswfActionPerformed
+    private void jpfContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpfContraseñaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_contraseñaPswfActionPerformed
+    }//GEN-LAST:event_jpfContraseñaActionPerformed
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnIngresarActionPerformed
 
-    private void usuarioTxtfMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usuarioTxtfMousePressed
-       if (usuarioTxtf.getText().equals("Ingrese su nombre de usuario")){
-           usuarioTxtf.setText("");
-           usuarioTxtf.setForeground(Color.black);
+    private void jtfUsuarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtfUsuarioMousePressed
+       if (jtfUsuario.getText().equals("Ingrese su nombre de usuario")){
+           jtfUsuario.setText("");
+           jtfUsuario.setForeground(Color.black);
        }
         
-    }//GEN-LAST:event_usuarioTxtfMousePressed
+    }//GEN-LAST:event_jtfUsuarioMousePressed
 
-    private void contraseñaPswfMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_contraseñaPswfMousePressed
-        if(String.valueOf(contraseñaPswf.getPassword()).equals("********")){
-            contraseñaPswf.setText("");
-            contraseñaPswf.setForeground(Color.black);
+    private void jpfContraseñaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpfContraseñaMousePressed
+        if(String.valueOf(jpfContraseña.getPassword()).equals("********")){
+            jpfContraseña.setText("");
+            jpfContraseña.setForeground(Color.black);
         }
         
-    }//GEN-LAST:event_contraseñaPswfMousePressed
+    }//GEN-LAST:event_jpfContraseñaMousePressed
 
     private void btnIngresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_btnIngresarMouseClicked
 
+    
+    
     private void btnIngresar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresar1ActionPerformed
-        // TODO add your handling code here:
+        if (verificar()) {
+            SwingUtilities.invokeLater(new Runnable() {
+		@Override
+                public void run() {
+                    new VentanaPrincipal().setVisible(true);				
+                }
+            });
+            setVisible(false);
+	}else {
+            JOptionPane.showMessageDialog(null, "El nombre de usuario o la contraseña son incorrectos");
+	}
     }//GEN-LAST:event_btnIngresar1ActionPerformed
 
+    
+    
     private void btnIngresar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresar1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_btnIngresar1MouseClicked
@@ -204,21 +225,36 @@ public class Login extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    //public static void
-
+    //public stat
+    
+    public boolean verificar() {
+	try {
+            UsuarioDAO uDAO = new UsuarioDAO();
+            ArrayList<Usuario> listaUsuarios = uDAO.buscarUsuario("SELECT * FROM Usuario WHERE Nombre = '"+jtfUsuario.getText()+"'");
+			uDAO.setFiltro("SELECT * FROM Usuario WHERE nombre = '"+jtfUsuario.getText()+"'");
+            if (listaUsuarios.size()!=0) {
+		Usuario usuario = listaUsuarios.get(0);
+		return usuario.getContraseña().equals(jpfContraseña.getText());
+            }
+	} catch (NullPointerException e) {
+            e.printStackTrace();
+	}
+	return false;
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIngresar;
     private javax.swing.JButton btnIngresar1;
-    private javax.swing.JPasswordField contraseñaPswf;
     private javax.swing.JLabel imgUser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JPasswordField jpfContraseña;
+    private javax.swing.JTextField jtfUsuario;
     private javax.swing.JLabel lblContraseña;
     private javax.swing.JLabel lblIniSesion;
     private javax.swing.JLabel lblUsuario;
-    private javax.swing.JTextField usuarioTxtf;
     // End of variables declaration//GEN-END:variables
 }

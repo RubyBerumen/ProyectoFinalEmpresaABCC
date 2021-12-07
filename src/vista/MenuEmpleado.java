@@ -8,6 +8,7 @@ import contolador.EmpleadoDAO;
 import java.awt.Component;
 import java.awt.event.KeyEvent;
 import java.sql.SQLException;
+import java.util.Date;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
@@ -632,6 +633,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jcbDia1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbDia1.setForeground(new java.awt.Color(102, 102, 102));
         jcbDia1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
+        jcbDia1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbDia1ItemStateChanged(evt);
+            }
+        });
         jcbDia1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbDia1ActionPerformed(evt);
@@ -643,6 +649,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jcbMes1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbMes1.setForeground(new java.awt.Color(102, 102, 102));
         jcbMes1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", " " }));
+        jcbMes1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbMes1ItemStateChanged(evt);
+            }
+        });
         jcbMes1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbMes1ActionPerformed(evt);
@@ -654,6 +665,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jcbAño1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAño1.setForeground(new java.awt.Color(102, 102, 102));
         jcbAño1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005" }));
+        jcbAño1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbAño1ItemStateChanged(evt);
+            }
+        });
         jcbAño1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbAño1ActionPerformed(evt);
@@ -691,6 +707,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jcbSexo1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbSexo1.setForeground(new java.awt.Color(102, 102, 102));
         jcbSexo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M", "H" }));
+        jcbSexo1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbSexo1ItemStateChanged(evt);
+            }
+        });
         jcbSexo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbSexo1ActionPerformed(evt);
@@ -919,6 +940,11 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jcbAño2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbAño2.setForeground(new java.awt.Color(102, 102, 102));
         jcbAño2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1940", "1941", "1942", "1943", "1944", "1945", "1946", "1947", "1948", "1949", "1950", "1951", "1952", "1953", "1954", "1955", "1956", "1957", "1958", "1959", "1960", "1961", "1962", "1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005" }));
+        jcbAño2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbAño2ItemStateChanged(evt);
+            }
+        });
         jcbAño2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbAño2ActionPerformed(evt);
@@ -956,6 +982,16 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jcbSexo2.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jcbSexo2.setForeground(new java.awt.Color(102, 102, 102));
         jcbSexo2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "M", "H" }));
+        jcbSexo2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jcbSexo2ItemStateChanged(evt);
+            }
+        });
+        jcbSexo2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jcbSexo2MouseClicked(evt);
+            }
+        });
         jcbSexo2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jcbSexo2ActionPerformed(evt);
@@ -1285,7 +1321,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
     }//GEN-LAST:event_jcbAño2ActionPerformed
 
     private void jcbSexo2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbSexo2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jcbSexo2ActionPerformed
 
     private void btnGenerarRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarRActionPerformed
@@ -1511,6 +1547,44 @@ public class MenuEmpleado extends javax.swing.JPanel {
         validacionNumeros(evt, jtfNoDpto1, 1);
     }//GEN-LAST:event_jtfNoDpto1KeyPressed
 
+    private void jcbSexo2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jcbSexo2MouseClicked
+        String filtro = jcbSexo2.getSelectedItem().toString();
+        String sql =  "SELECT * FROM empleado WHERE Sexo LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbSexo2MouseClicked
+
+    private void jcbSexo2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbSexo2ItemStateChanged
+        String filtro = jcbSexo2.getSelectedItem().toString();
+        String sql =  "SELECT * FROM empleado WHERE Sexo LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbSexo2ItemStateChanged
+
+    private void jcbSexo1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbSexo1ItemStateChanged
+        String filtro = jcbSexo1.getSelectedItem().toString();
+        String sql =  "SELECT * FROM empleado WHERE Sexo LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbSexo1ItemStateChanged
+
+    private void jcbDia1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbDia1ItemStateChanged
+        
+    }//GEN-LAST:event_jcbDia1ItemStateChanged
+
+    private void jcbMes1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbMes1ItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcbMes1ItemStateChanged
+
+    private void jcbAño1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbAño1ItemStateChanged
+        String filtro = jcbAño1.getSelectedItem().toString();
+        String sql =  "SELECT * FROM empleado WHERE FechaNac LIKE '%"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbAño1ItemStateChanged
+
+    private void jcbAño2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jcbAño2ItemStateChanged
+        String filtro = jcbAño2.getSelectedItem().toString();
+        String sql =  "SELECT * FROM empleado WHERE FechaNac LIKE '%"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jcbAño2ItemStateChanged
+
     
     public void restablecerComponentes(Component...componentesGraficos) {
 	for (Component c: componentesGraficos) {
@@ -1551,13 +1625,19 @@ public class MenuEmpleado extends javax.swing.JPanel {
         jtfAm1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),2));
         jtfDni1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
         jtfDni2.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),3));
-        
+        Date fn = (Date) jTable1.getValueAt(jTable1.getSelectedRow(), 4);
+            String sfn = fn+"";
+            String[] na = sfn.split("-");
+            jcbDia1.setSelectedItem(na[2]);
+            jcbMes1.setSelectedItem(na[1]);
+            jcbAño1.setSelectedItem(na[0]);
         jtfDireccion1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),5));
-       
+        jcbSexo1.setSelectedItem(""+jTable1.getValueAt(jTable1.getSelectedRow(),6));
         jtfSueldo1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),7));
         jtfDniSuper1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),8));
         jtfNoDpto1.setText(""+jTable1.getValueAt(jTable1.getSelectedRow(),9));
     }
+    
     
     public String obtenerFecha(JComboBox dia,JComboBox mes,JComboBox año){
         String d = (String) dia.getSelectedItem();
@@ -1565,6 +1645,7 @@ public class MenuEmpleado extends javax.swing.JPanel {
         String a = (String) año.getSelectedItem();
         return a+"-"+m+"-"+d;
     }
+    
     
     public void validacionLetras(KeyEvent evt, JTextField jtf){  
         char car = evt.getKeyChar();

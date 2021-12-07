@@ -194,6 +194,11 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
 
         jtfHoras.setBackground(new java.awt.Color(245, 198, 165));
         jtfHoras.setBorder(null);
+        jtfHoras.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfHorasKeyPressed(evt);
+            }
+        });
         jpAltas.add(jtfHoras, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 110, 80, 30));
         jpAltas.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 140, 80, 20));
 
@@ -645,7 +650,7 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfNumProyecto2KeyPressed
 
     private void jtfHoras2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfHoras2KeyPressed
-        // TODO add your handling code here:
+        validacionDouble(evt, jtfHoras2);
     }//GEN-LAST:event_jtfHoras2KeyPressed
 
     private void jtfDniEmpleado3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDniEmpleado3KeyPressed
@@ -657,7 +662,7 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
     }//GEN-LAST:event_jtfNumProyecto3KeyPressed
 
     private void jtfHoras3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfHoras3KeyPressed
-        // TODO add your handling code here:
+        validacionDouble(evt, jtfHoras3);
     }//GEN-LAST:event_jtfHoras3KeyPressed
 
     private void jtfDniEmpleadoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfDniEmpleadoKeyReleased
@@ -695,6 +700,10 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         String sql =  "SELECT * FROM trabaja_en WHERE NumProyecto LIKE '"+filtro+"%'";
         mostrarTabla(sql);
     }//GEN-LAST:event_jtfNumProyecto2KeyReleased
+
+    private void jtfHorasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfHorasKeyPressed
+        validacionDouble(evt, jtfHoras);
+    }//GEN-LAST:event_jtfHorasKeyPressed
 
     
     public void restablecerComponentes(Component...componentesGraficos) {
@@ -741,6 +750,15 @@ public class MenuTrabajaEn extends javax.swing.JPanel {
         }else{
             jtf.setEditable(false);
         }  
+    }
+    
+    public void validacionDouble(KeyEvent evt, JTextField jtf){
+        int code=evt.getKeyCode();
+        if (((evt.getKeyChar() >= '0'&&evt.getKeyChar() <= '9')||evt.getKeyChar()=='.'||(code==KeyEvent.VK_BACK_SPACE)) ){
+            jtf.setEditable(true);
+        }else {
+            jtf.setEditable(false);
+        }
     }
     
     public void mostrarTabla2(String sql){
