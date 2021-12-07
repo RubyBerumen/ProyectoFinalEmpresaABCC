@@ -73,7 +73,6 @@ public class MenuProyecto extends javax.swing.JPanel {
         NumProyecto1 = new javax.swing.JLabel();
         jtfNumProyecto1 = new javax.swing.JTextField();
         jSeparator11 = new javax.swing.JSeparator();
-        btnBuscar1 = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         btnBorrar1 = new javax.swing.JButton();
         jpCambios = new javax.swing.JPanel();
@@ -91,7 +90,6 @@ public class MenuProyecto extends javax.swing.JPanel {
         NumDptoProyecto2 = new javax.swing.JLabel();
         jtfNumDptoProyecto2 = new javax.swing.JTextField();
         jSeparator14 = new javax.swing.JSeparator();
-        btnBuscar2 = new javax.swing.JButton();
         btnGuardar2 = new javax.swing.JButton();
         btnBorrar2 = new javax.swing.JButton();
         NumDptoProyecto4 = new javax.swing.JLabel();
@@ -290,20 +288,16 @@ public class MenuProyecto extends javax.swing.JPanel {
                 jtfNumProyecto1ActionPerformed(evt);
             }
         });
-        jpBajas.add(jtfNumProyecto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 50, 30));
-        jpBajas.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 50, 20));
-
-        btnBuscar1.setBackground(new java.awt.Color(162, 65, 107));
-        btnBuscar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnBuscar1.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscar1.setText("Buscar");
-        btnBuscar1.setBorder(null);
-        btnBuscar1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscar1ActionPerformed(evt);
+        jtfNumProyecto1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNumProyecto1KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfNumProyecto1KeyReleased(evt);
             }
         });
-        jpBajas.add(btnBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 120, 30));
+        jpBajas.add(jtfNumProyecto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 50, 30));
+        jpBajas.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 50, 20));
 
         btnEliminar.setBackground(new java.awt.Color(162, 65, 107));
         btnEliminar.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
@@ -315,7 +309,7 @@ public class MenuProyecto extends javax.swing.JPanel {
                 btnEliminarActionPerformed(evt);
             }
         });
-        jpBajas.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 230, 120, 30));
+        jpBajas.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 120, 30));
 
         btnBorrar1.setBackground(new java.awt.Color(162, 65, 107));
         btnBorrar1.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
@@ -327,7 +321,7 @@ public class MenuProyecto extends javax.swing.JPanel {
                 btnBorrar1ActionPerformed(evt);
             }
         });
-        jpBajas.add(btnBorrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, 120, 30));
+        jpBajas.add(btnBorrar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 120, 30));
 
         jtpContenidoABCC.addTab("Bajas", jpBajas);
 
@@ -350,6 +344,14 @@ public class MenuProyecto extends javax.swing.JPanel {
         jtfNomProyecto2.setBackground(new java.awt.Color(245, 198, 165));
         jtfNomProyecto2.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfNomProyecto2.setBorder(null);
+        jtfNomProyecto2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNomProyecto2KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfNomProyecto2KeyReleased(evt);
+            }
+        });
         jpCambios.add(jtfNomProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 159, 30));
         jpCambios.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 159, 20));
 
@@ -364,6 +366,14 @@ public class MenuProyecto extends javax.swing.JPanel {
         jtfNumProyecto2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfNumProyecto2ActionPerformed(evt);
+            }
+        });
+        jtfNumProyecto2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNumProyecto2KeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jtfNumProyecto2KeyReleased(evt);
             }
         });
         jpCambios.add(jtfNumProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, 50, 30));
@@ -393,18 +403,6 @@ public class MenuProyecto extends javax.swing.JPanel {
         jpCambios.add(jtfNumDptoProyecto2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 150, 50, 30));
         jpCambios.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 180, 50, 20));
 
-        btnBuscar2.setBackground(new java.awt.Color(162, 65, 107));
-        btnBuscar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
-        btnBuscar2.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscar2.setText("Buscar");
-        btnBuscar2.setBorder(null);
-        btnBuscar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscar2ActionPerformed(evt);
-            }
-        });
-        jpCambios.add(btnBuscar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 120, 30));
-
         btnGuardar2.setBackground(new java.awt.Color(162, 65, 107));
         btnGuardar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
         btnGuardar2.setForeground(new java.awt.Color(255, 255, 255));
@@ -415,7 +413,7 @@ public class MenuProyecto extends javax.swing.JPanel {
                 btnGuardar2ActionPerformed(evt);
             }
         });
-        jpCambios.add(btnGuardar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 240, 160, 30));
+        jpCambios.add(btnGuardar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, 160, 30));
 
         btnBorrar2.setBackground(new java.awt.Color(162, 65, 107));
         btnBorrar2.setFont(new java.awt.Font("Century Gothic", 1, 15)); // NOI18N
@@ -427,7 +425,7 @@ public class MenuProyecto extends javax.swing.JPanel {
                 btnBorrar2ActionPerformed(evt);
             }
         });
-        jpCambios.add(btnBorrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 240, 120, 30));
+        jpCambios.add(btnBorrar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 240, 120, 30));
 
         NumDptoProyecto4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         NumDptoProyecto4.setForeground(new java.awt.Color(102, 102, 102));
@@ -456,6 +454,9 @@ public class MenuProyecto extends javax.swing.JPanel {
         jtfNomProyecto3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfNomProyecto3.setBorder(null);
         jtfNomProyecto3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNomProyecto3KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfNomProyecto3KeyReleased(evt);
             }
@@ -477,6 +478,9 @@ public class MenuProyecto extends javax.swing.JPanel {
             }
         });
         jtfNumProyecto3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNumProyecto3KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfNumProyecto3KeyReleased(evt);
             }
@@ -493,6 +497,9 @@ public class MenuProyecto extends javax.swing.JPanel {
         jtfUbiProyecto3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfUbiProyecto3.setBorder(null);
         jtfUbiProyecto3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfUbiProyecto3KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfUbiProyecto3KeyReleased(evt);
             }
@@ -509,6 +516,9 @@ public class MenuProyecto extends javax.swing.JPanel {
         jtfNumDptoProyecto3.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jtfNumDptoProyecto3.setBorder(null);
         jtfNumDptoProyecto3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jtfNumDptoProyecto3KeyPressed(evt);
+            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jtfNumDptoProyecto3KeyReleased(evt);
             }
@@ -590,16 +600,6 @@ public class MenuProyecto extends javax.swing.JPanel {
         add(jpTabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 960, 270));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar1ActionPerformed
-        String sql =  "SELECT * FROM proyecto WHERE NumProyecto = '"+jtfNumProyecto1.getText()+"'";
-        if(jtfNumProyecto1.getText().equals("")){
-            JOptionPane.showMessageDialog(rootPane, "Debes ingresar el numero de proyecto");
-        }else{
-            mostrarTabla(sql);
-        }
-        
-    }//GEN-LAST:event_btnBuscar1ActionPerformed
-
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
        
         ProyectoDAO pDAO = new ProyectoDAO();
@@ -616,15 +616,6 @@ public class MenuProyecto extends javax.swing.JPanel {
 	}
         mostrarTabla(sqlP);
     }//GEN-LAST:event_btnEliminarActionPerformed
-
-    private void btnBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar2ActionPerformed
-        String sql =  "SELECT * FROM proyecto WHERE NumProyecto = '"+jtfNumProyecto2.getText()+"'";
-        if(jtfNumProyecto2.getText().equals("")){
-            JOptionPane.showMessageDialog(rootPane, "Debes ingresar el numero de proyecto");
-        }else{
-            mostrarTabla(sql);
-        }
-    }//GEN-LAST:event_btnBuscar2ActionPerformed
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
         ProyectoDAO pDAO = new ProyectoDAO();
@@ -693,6 +684,7 @@ public class MenuProyecto extends javax.swing.JPanel {
 
     private void jtpContenidoABCCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtpContenidoABCCMouseClicked
         mostrarTabla(sqlP);
+        mostrarTabla2();
     }//GEN-LAST:event_jtpContenidoABCCMouseClicked
 
     private void jtfNomProyectoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNomProyectoKeyPressed
@@ -747,6 +739,52 @@ public class MenuProyecto extends javax.swing.JPanel {
     private void btnBorrar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrar3ActionPerformed
         restablecerComponentes(jtfNomProyecto3,jtfNumProyecto3,jtfUbiProyecto3,jtfNumDptoProyecto3);
     }//GEN-LAST:event_btnBorrar3ActionPerformed
+
+    private void jtfNomProyecto2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNomProyecto2KeyPressed
+        validacionLetras(evt,jtfNomProyecto2);
+    }//GEN-LAST:event_jtfNomProyecto2KeyPressed
+
+    private void jtfNomProyecto3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNomProyecto3KeyPressed
+        validacionLetras(evt,jtfNomProyecto3);
+    }//GEN-LAST:event_jtfNomProyecto3KeyPressed
+
+    private void jtfNumProyecto1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNumProyecto1KeyPressed
+        validacionNumeros(evt, jtfNumProyecto1);
+    }//GEN-LAST:event_jtfNumProyecto1KeyPressed
+
+    private void jtfNumProyecto2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNumProyecto2KeyPressed
+        validacionNumeros(evt, jtfNumProyecto2);
+    }//GEN-LAST:event_jtfNumProyecto2KeyPressed
+
+    private void jtfNumProyecto3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNumProyecto3KeyPressed
+        validacionNumeros(evt, jtfNumProyecto3);
+    }//GEN-LAST:event_jtfNumProyecto3KeyPressed
+
+    private void jtfUbiProyecto3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfUbiProyecto3KeyPressed
+        validacionLetras(evt,jtfUbiProyecto3);
+    }//GEN-LAST:event_jtfUbiProyecto3KeyPressed
+
+    private void jtfNumDptoProyecto3KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNumDptoProyecto3KeyPressed
+        validacionNumeros(evt, jtfNumDptoProyecto3);
+    }//GEN-LAST:event_jtfNumDptoProyecto3KeyPressed
+
+    private void jtfNomProyecto2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNomProyecto2KeyReleased
+        String filtro = jtfNomProyecto2.getText();
+        String sql =  "SELECT * FROM proyecto WHERE NombreProyecto LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfNomProyecto2KeyReleased
+
+    private void jtfNumProyecto2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNumProyecto2KeyReleased
+        String filtro = jtfNumProyecto2.getText();
+        String sql =  "SELECT * FROM proyecto WHERE NumProyecto LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfNumProyecto2KeyReleased
+
+    private void jtfNumProyecto1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfNumProyecto1KeyReleased
+        String filtro = jtfNumProyecto1.getText();
+        String sql =  "SELECT * FROM proyecto WHERE NumProyecto LIKE '"+filtro+"%'";
+        mostrarTabla(sql);
+    }//GEN-LAST:event_jtfNumProyecto1KeyReleased
 
     
     
@@ -821,14 +859,13 @@ public class MenuProyecto extends javax.swing.JPanel {
         
     }
     
-    public void validacionLetras(KeyEvent evt, JTextField jtf){
-        int code = evt.getKeyCode();
-        int limite = 20;
-        if ((evt.getKeyChar() >= '0' && evt.getKeyChar() <= '9')) {
-            jtf.setEditable(false);
-	}else{
+    public void validacionLetras(KeyEvent evt, JTextField jtf){  
+        char car = evt.getKeyChar();
+	if(Character.isLetter(car)||(car==KeyEvent.VK_BACK_SPACE)){
             jtf.setEditable(true);
-	}
+        }else{
+            jtf.setEditable(false);
+        }
     }
     
     public void validacionNumeros(KeyEvent evt, JTextField jtf){
@@ -869,8 +906,6 @@ public class MenuProyecto extends javax.swing.JPanel {
     private javax.swing.JButton btnBorrar1;
     private javax.swing.JButton btnBorrar2;
     private javax.swing.JButton btnBorrar3;
-    private javax.swing.JButton btnBuscar1;
-    private javax.swing.JButton btnBuscar2;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnGenerarG;
     private javax.swing.JButton btnGuardar2;

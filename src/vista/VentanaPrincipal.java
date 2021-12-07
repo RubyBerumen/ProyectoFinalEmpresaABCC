@@ -135,7 +135,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(22, 22, 22))
         );
 
-        jpMenu.add(jpEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 240, 70));
+        jpMenu.add(jpEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 240, 70));
 
         jpTrabajaEn.setBackground(new java.awt.Color(133, 39, 71));
         jpTrabajaEn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -209,7 +209,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jpMenu.add(jpProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 240, 70));
+        jpMenu.add(jpProyecto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 240, 70));
 
         background.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 700));
 
@@ -284,6 +284,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         MenuTrabajaEn mt = new MenuTrabajaEn();
         mostrarPanelMenuABCC(mt);
         mt.mostrarTabla("SELECT * FROM trabaja_en");
+        mt.mostrarTabla2("SELECT Dni FROM empleado");
+        mt.mostrarTabla3("SELECT NumProyecto FROM proyecto");
     }//GEN-LAST:event_jpTrabajaEnMouseClicked
 
     private void jpProyectoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jpProyectoMouseClicked
